@@ -46,7 +46,7 @@ public class InitialSetup extends Activity {
 			Base.refresh();
 		}
 		// requestWindowFeature(Window.FEATURE_NO_TITLE);
-		setContentView(R.layout.act_setup);
+		setContentView(R.layout.setup);
 		if (Base.debug) {
 			Log.d(TAG, "onCreate() called...");
 		}
