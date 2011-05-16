@@ -25,7 +25,7 @@
     <string name="password_tooshort">Password too short</string>
     <string name="password_show">Show password</string>
     
-    <string name="setup_warningfirsttime">It looks like DroidSSHd is running for the very first time on this device. Proceed with initial setup?</string>
+    <string name="setup_warningfirsttime">It looks like DroidSSHd is running for the first time on this device. Default password is "password".\n\nProceed with initial setup?</string>
     <string name="setup_confirmyes">Yes, let\'s do this now!</string>
     <string name="setup_cancelno">No, quit DroidSSHd.</string>
     <string name="table_runningasroot">Running as root:</string>
