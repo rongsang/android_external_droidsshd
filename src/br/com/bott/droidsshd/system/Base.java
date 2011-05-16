@@ -36,9 +36,11 @@ public class Base {
 	public static final String DROPBEAR_AUTHORIZED_KEYS = "authorized_keys";
 	
 	public static final String DROPBEAR_BIN_MUL = "dropbearmulti";
+
 	public static final String DROPBEAR_BIN_SRV = "dropbear";
 	public static final String DROPBEAR_BIN_KEY = "dropbearkey";
 	public static final String DROPBEAR_BIN_SCP = "scp";
+	public static final String DROPBEAR_BIN_SFT = "sftp-server";
 	
 	
 	public static final int DAEMON_STATUS_UNKNOWN = -1;

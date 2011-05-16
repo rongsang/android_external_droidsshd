@@ -193,7 +193,10 @@ public class InitialSetup extends Activity {
 	}
 
 	protected boolean deployDropbearBinaries() {
-		String path = Base.getDropbearBinDirPath() + "/" + Base.DROPBEAR_BIN_MUL;
+		String path = Base.getDropbearBinDirPath();
+
+/*		path = path + "/" + Base.DROPBEAR_BIN_MUL;
+
 		File dest = new File(path);
 		if (dest.exists()) {
 			Log.e(TAG, "deployDropbearBinaries: " + path + " already exists!");
@@ -216,6 +219,7 @@ public class InitialSetup extends Activity {
 			e.printStackTrace();
 			return false;
 		}
+
 		Util.chmod(path, 0755);
 		Util.symlink(path, Base.getDropbearBinDirPath() + "/"
 				+ Base.DROPBEAR_BIN_SRV);
@@ -223,6 +227,12 @@ public class InitialSetup extends Activity {
 				+ Base.DROPBEAR_BIN_KEY);
 		Util.symlink(path, Base.getDropbearBinDirPath() + "/"
 				+ Base.DROPBEAR_BIN_SCP);
+*/
+		Util.symlink("/system/xbin/" + Base.DROPBEAR_BIN_SRV, path + "/" + Base.DROPBEAR_BIN_SRV);
+		Util.symlink("/system/xbin/" + Base.DROPBEAR_BIN_KEY, path + "/" + Base.DROPBEAR_BIN_KEY);
+		Util.symlink("/system/xbin/" + Base.DROPBEAR_BIN_SCP, path + "/" + Base.DROPBEAR_BIN_SCP);
+		Util.symlink("/system/xbin/" + Base.DROPBEAR_BIN_SFT, path + "/" + Base.DROPBEAR_BIN_SFT);
+
 		return true;
 	}
 
