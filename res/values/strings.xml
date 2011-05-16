@@ -3,6 +3,7 @@
     <string name="activity_initial_setup">br.com.bott.activity.InitialSetup</string>
     <string name="activity_auth_keys_management">br.com.bott.activity.AuthorizedKeysManagement</string>
     <string name="activity_file_chooser">com.h3r3t1c.filechooser.FileChooser</string>
+    <string name="activity_about">br.com.bott.activity.About</string>
     
     <string name="act_main_status">Status:</string>
     <string name="act_main_unknown">unknown</string>
@@ -18,7 +19,7 @@
     <string name="item_pubkey_dsa1024">DSA 1024-bit</string>
     <string name="main_running">SSH daemon running</string>
     <string name="main_runningasroot">Daemon running as root</string>
-    <string name="main_ipaddresses">IP address(es): </string>
+    <string name="main_ipaddresses">IP address\(es\): </string>
     <string name="antigo_updateui">Update UI</string>
     <string name="antigo_getassets">Get Assets</string>
     <string name="antigo_checkhostkeys">Check Host Keys</string>
@@ -29,6 +30,8 @@
     <string name="setup_confirmyes">Yes, let\'s do this now!</string>
     <string name="setup_cancelno">No, quit DroidSSHd.</string>
     <string name="table_runningasroot">Running as root:</string>
+    <string name="about_text">Initial version by mestre,\n\nAdapted for Motorola Defy CM7\nby Tanguy Pruvot\n\nThis version uses Cyanogen dropbear version, not included in apk.\n\nFull sources are available on github: tpruvot\'s fork\n\n</string>
+    <string name="about_ok">Ok</string>
     
     <string name="pref_dropbear_auth_password_title">Password</string>
     <string name="pref_dropbear_auth_password_key">auth_password</string>
@@ -74,7 +77,7 @@
     <string name="pref_dropbear_start_on_boot_title">Start on boot</string>
     <string name="pref_dropbear_start_on_boot_summary">Launch SSH daemon when the device (re)boots</string>
     <string name="pref_dropbear_start_on_boot_key">start_on_boot</string>
-    <string name="menu_quit_title">QUIT</string>
+    <string name="menu_quit_title">Quit</string>
     <string name="pref_debug_key">debug</string>
     <string name="pref_debug_title">Verbose debug messages</string>
     <string name="pref_debug_summary">Enable a LOT of messages on the logs</string>
@@ -82,7 +85,7 @@
     <string name="pref_dropbear_as_root_title">Run daemon as root</string>
     <string name="pref_dropbear_as_root_summary_enabled">Daemon will be launched as ROOT</string>
     <string name="pref_dropbear_as_root_summary_disabled">Daemon will be launched as USER</string>
-    <string name="pref_droidsshd_settings_title">DroidSSHd settings</string>
+    <string name="pref_droidsshd_settings_title">Settings</string>
     <string name="app_description">Dropbear SSH Server and Management Tools</string>
     <string name="app_label">DroidSSHd</string>
     <string name="app_webpage_url">http://code.google.com/p/droidsshd/</string>

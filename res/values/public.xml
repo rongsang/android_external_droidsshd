@@ -41,6 +41,7 @@
     <public type="layout" name="pref_auth_password_dialog" id="0x7f030009" />
     <public type="layout" name="setup" id="0x7f03000a" />
     <public type="layout" name="table" id="0x7f03000b" />
+    <public type="layout" name="about" id="0x7f03000c" />
     
     <public type="xml" name="preferences" id="0x7f040000" />
     
@@ -124,6 +125,7 @@
     <public type="string" name="pref_dropbear_start_on_boot_only_if_was_running_default" id="0x7f060045" />
     <public type="string" name="pref_dropbear_as_root_default" id="0x7f060046" />
     <public type="string" name="pref_dropbear_port_default" id="0x7f060047" />
+    <public type="string" name="about_text" id="0x7f060048" />
     
     <public type="menu" name="main_menu" id="0x7f070000" />
     <public type="id" name="status_title" id="0x7f080000" />
@@ -167,4 +169,5 @@
     <public type="id" name="menu_refreshui" id="0x7f080026" />
     <public type="id" name="menu_about" id="0x7f080027" />
     <public type="id" name="menu_quit" id="0x7f080028" />
+    <public type="id" name="button_about_ok" id="0x7f080029" />
 </resources>

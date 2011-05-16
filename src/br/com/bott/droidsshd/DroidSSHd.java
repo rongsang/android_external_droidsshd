@@ -318,11 +318,12 @@ public class DroidSSHd extends Activity {
 			updateStatus();
 			return true;
 		case R.id.menu_about:
-//			Intent i = new Intent();
+			Intent i = new Intent(this, br.com.bott.droidsshd.activity.About.class);
+			startActivity(i);
 //			i.setAction("android.intent.action.VIEW");
 //			i.setData("http://www.android.com");
 //			i.setType(type)
-			Util.showMsg("About");
+//			Util.showMsg("About");
 			return true;
 		default:
 			return super.onOptionsItemSelected(item);

@@ -41,4 +41,6 @@
     <item type="id" name="menu_refreshui">false</item>
     <item type="id" name="menu_about">false</item>
     <item type="id" name="menu_quit">false</item>
+    <item type="id" name="text_about">false</item>
+    <item type="id" name="button_about_ok">false</item>
 </resources>

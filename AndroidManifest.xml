@@ -34,6 +34,7 @@
         </activity>
 		<activity android:name="br.com.bott.droidsshd.activity.Preferences"/>
 		<activity android:name="br.com.bott.droidsshd.activity.InitialSetup"/>
+		<activity android:name="br.com.bott.droidsshd.activity.About"/>
 		<activity android:name="com.h3r3t1c.filechooser.FileChooser">
 			<intent-filter>
 				<action android:name="br.com.bott.droidsshd.AUTHORIZED_KEYS"/>
