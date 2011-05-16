@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TableLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:stretchColumns="*">
+        <TableRow>
+            <TextView android:typeface="monospace" android:gravity="right" android:layout_gravity="center_vertical" android:id="@id/status_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_column="0" android:text="@string/act_main_status" />
+            <EditText android:enabled="true" android:gravity="left" android:layout_gravity="center_vertical" android:id="@id/status_content" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/act_main_unknown" android:singleLine="true" android:editable="false" />
+        </TableRow>
+        <TableRow>
+            <TextView android:typeface="monospace" android:gravity="right" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_column="0" android:text="@string/act_main_ip" />
+            <EditText android:enabled="true" android:textSize="12.0sp" android:gravity="left" android:layout_gravity="center_vertical" android:id="@id/status_ip_address" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:editable="false" />
+        </TableRow>
+        <TableRow>
+            <TextView android:typeface="monospace" android:gravity="right" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_column="0" android:text="@string/act_main_username" />
+            <EditText android:enabled="true" android:textSize="12.0sp" android:gravity="left" android:layout_gravity="center_vertical" android:id="@id/status_username" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:editable="false" />
+        </TableRow>
+        <TableRow>
+            <TextView android:gravity="right" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_column="0" android:text="@string/act_main_port" />
+            <EditText android:enabled="true" android:textSize="12.0sp" android:gravity="left" android:layout_gravity="center_vertical" android:id="@id/status_tcp_port" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:editable="false" />
+        </TableRow>
+        <TableRow>
+            <TextView android:typeface="monospace" android:gravity="right" android:layout_gravity="center_vertical" android:layout_column="0" android:text="@string/table_runningasroot" />
+            <CheckBox android:enabled="true" android:gravity="left" android:layout_gravity="center_vertical" android:id="@id/status_daemon_running_as_root" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" />
+        </TableRow>
+        <TableRow>
+            <Button android:enabled="true" android:id="@id/status_button" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_span="2" android:text="@string/act_main_start" />
+        </TableRow>
+    </TableLayout>
+</ScrollView>

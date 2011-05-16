@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="7.0pt" android:gravity="top" android:id="@id/text_initial_setup" android:padding="20.0px" android:layout_width="fill_parent" android:layout_height="wrap_content" 
+              android:text="@string/setup_warningfirsttime" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <Button android:id="@id/button_initial_setup_ok" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/setup_confirmyes" />
+        <Button android:id="@id/button_initial_setup_cancel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/setup_cancelno" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:scrollbarAlwaysDrawVerticalTrack="false" android:orientation="vertical" android:id="@id/main_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout_topbar" android:background="@color/brownish" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/status_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ssh_icon" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="20.0sp" android:layout_gravity="center" android:id="@id/status_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/act_main_status" android:layout_weight="1.0" />
+            <EditText android:enabled="false" android:layout_gravity="center" android:id="@id/status_content" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/act_main_unknown" android:singleLine="true" android:editable="false" android:layout_weight="1.0" />
+        </LinearLayout>
+        <Button android:enabled="true" android:id="@id/status_button" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/act_main_start" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/status_bar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <CheckBox android:enabled="false" android:id="@id/status_daemon_running" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:text="@string/main_running" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <CheckBox android:enabled="false" android:id="@id/status_daemon_running_as_root" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:text="@string/main_runningasroot" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/main_ipaddresses" />
+            <EditText android:enabled="false" android:textSize="12.0sp" android:id="@id/status_ip_address" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:editable="false" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/act_main_port" />
+            <EditText android:enabled="false" android:textSize="12.0sp" android:id="@id/status_port" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:editable="false" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/act_main_username" />
+            <EditText android:enabled="false" android:textSize="12.0sp" android:id="@id/status_username" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:editable="false" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
