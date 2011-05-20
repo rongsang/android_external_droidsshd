@@ -3,7 +3,7 @@ TOP_LOCAL_PATH:= $(call my-dir)
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
-LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_TAGS := eng optional
 
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
 
@@ -11,7 +11,7 @@ LOCAL_SRC_FILES := $(call all-java-files-under, src)
 
 LOCAL_PACKAGE_NAME := DroidSSHd
 
-LOCAL_SDK_VERSION := current
+# LOCAL_SDK_VERSION := current
 
 ifeq ($(TARGET_ARCH),arm)
 
