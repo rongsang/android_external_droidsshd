@@ -131,16 +131,17 @@ public class DroidSSHdService extends Service{
 						} else {
 							uid = android.os.Process.myUid();
 						}
-					//orig	cmd = String.format("%s -d %s -r %s -p %d -P %s -E -C %s -R %s -A -N %s -U %s -G %s",
-					//cm7	cmd = String.format("%s -d %s -r %s -p %d -P %s -E # -C %s # -R %s -N %s -U %s -G %s
-						cmd = String.format("%s -d %s -r %s -p %d -P %s -E -Y %s # -R %s -N %s -U %s -G %s",
+
+					//cm7   cmd = String.format("%s -d %s -r %s -p %d -P %s -E # -C %s # -R %s -N %s -U %s -G %s
+
+						cmd = String.format("%s -d %s -r %s -p %d -P %s -E -C %s -R %s -A -N %s -U %s -G %s",
 								Base.getDropbearBinDirPath() + "/" + Base.DROPBEAR_BIN_SRV,
 								Base.getDropbearDssHostKeyFilePath(),
 								Base.getDropbearRsaHostKeyFilePath(),
 								Base.getDaemonPort(),
 								Base.getDropbearPidFilePath(),
-								Base.getPassword(),
 
+								Base.getPassword(),
 								Base.getDropbearAuthorizedKeysFilePath(),
 								Base.getUsername(),
 								uid,
