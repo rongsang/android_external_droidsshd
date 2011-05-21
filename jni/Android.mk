@@ -3,7 +3,7 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := libNativeTask
-LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_TAGS := optional eng
 
 #LOCAL_SHARED_LIBRARIES := libcutils
 LOCAL_LDLIBS += -llog
