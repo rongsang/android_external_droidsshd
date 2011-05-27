@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="activity_initial_setup">tk.tanguy.activity.InitialSetup</string>
+    <string name="activity_auth_keys_management">tk.tanguy.activity.AuthorizedKeysManagement</string>
+    <string name="activity_file_chooser">com.h3r3t1c.filechooser.FileChooser</string>
+    <string name="activity_about">tk.tanguy.activity.About</string>
+    
+    <string name="act_main_status">Stato:</string>
+    <string name="act_main_unknown">sconosciuto</string>
+    <string name="act_main_ip">IP:</string>
+    <string name="act_main_defip">0.0.0.0</string>
+    <string name="act_main_username">Nome utente:</string>
+    <string name="act_main_port">Porta: </string>
+    <string name="act_main_asroot">Come amministratore:</string>
+    <string name="act_main_start">Inizia</string>
+    <string name="act_main_preferences">Preferenze</string>
+    <string name="act_pubkeylist_empty">vuoto</string>
+    <string name="item_pubkey_keyexample">Chiave di esempio</string>
+    <string name="item_pubkey_dsa1024">DSA 1024-bit</string>
+    <string name="main_running">Demone SSH in esecuzione</string>
+    <string name="main_runningasroot">Demone in esecuzione come amministratore</string>
+    <string name="main_ipaddresses">Indirizzo IP\(es\): </string>
+    <string name="antigo_updateui">Aggiorna UI</string>
+    <string name="antigo_getassets">Ottieni risorsa</string>
+    <string name="antigo_checkhostkeys">Controlla le chiavi dell\'host</string>
+    <string name="password_tooshort">Password troppo corta</string>
+    <string name="password_show">Mostra password</string>
+    
+    <string name="setup_warningfirsttime">Sembra che DroidSSHd venga eseguito per la prima volta su questo dispositivo. La password di default è \"password\".\n\nProcedere con la configurazione iniziale?</string>
+    <string name="setup_confirmyes">Si, facciamolo!</string>
+    <string name="setup_cancelno">No, esci da DroidSSHd.</string>
+    <string name="table_runningasroot">In esecuzione come amministratore:</string>
+    <string name="about_text">Versione iniziale di mestre,\n\nAdattata per Motorola Defy CM7\nda Tanguy Pruvot\n\nQuesta versione usa la versione dropbear di Cyanogen, non inclusa nell\'apk.\n\nLa sorgente completa è disponibile su github: tpruvot\'s fork\n\nTranslation by Alberto Marchetti</string>
+    <string name="about_ok">Ok</string>
+    
+    <string name="pref_dropbear_auth_password_title">Password</string>
+    <string name="pref_dropbear_auth_username_title">Nome utente</string>
+    <string name="pref_category_sshd_title">Impostazioni dropbear SSHd</string>
+    <string name="pref_screen_server_settings_title">Servizo ed autenticazione</string>
+    <string name="pref_screen_server_settings_summary">Avvio/spegnimento del servizio, porte TCP, permessi, autenticazione e gestione delle chiavi.</string>
+    <string name="pref_dropbear_port_title">Porta di ascolto TCP</string>
+    <string name="pref_dropbear_port_summary">Impostato per ascoltare sulla porta</string>
+    <string name="pref_wifi_auto_enable_summary">Avvia il Wifi all\'avvio del demone se il primo è stato disabilitato</string>
+    <string name="pref_wifi_auto_enable_title">Abilita automaticamente il Wifi</string>
+    <string name="pref_wifi_lock_summary">Mantiene attiva la radio Wifi quando il demone SSH è attivo</string>
+    <string name="pref_wifi_lock_title">Blocco Wifi</string>
+    <string name="pref_category_power_category_title">Gestione risparmio energetico</string>
+    <string name="pref_prevent_device_sleep_summary">Impedisci il riposo del dispositivo (maggiore consumo della batteria)</string>
+    <string name="pref_prevent_device_sleep_title">Mantieni sveglio il dispositivo</string>
+    <string name="pref_path_to_su_summary">Percorso per l\'applicazione superuser</string>
+    <string name="pref_path_to_su_title">Percorso per SU</string>
+    <string name="pref_path_to_su_default">/system/xbin/su</string>
+    <string name="pref_path_to_sh_summary">Percorso personalizzato per applicazioni come busybox e/o toolbox</string>
+    <string name="pref_path_to_sh_title">Percorso per SH</string>
+    <string name="pref_path_to_sh_key">path_to_sh</string>
+    <string name="pref_path_to_sh_default">/system/xbin/ash</string>
+    <string name="pref_screen_system_settings_title">Impostazioni di sistema</string>
+    <string name="pref_screen_system_settings_summary">Impostazioni di sistema, gestione risparmio energetico, percorsi delle applicazioni</string>
+    <string name="pref_screen_ui_settings">Impostazioni UI</string>
+    <string name="pref_category_paths_summary" />
+    <string name="pref_category_paths_title">File e Cartelle</string>
+    <string name="pref_interface_notification_summary">Mostra le notifiche sulla barra di stato quando il demone è in esecuzione</string>
+    <string name="pref_interface_notification_label">Notifica</string>
+    <string name="pref_category_interface_title">Interfaccia utente</string>
+    <string name="pref_category_development_title">Strumenti di sviluppo</string>
+    <string name="pref_dropbear_start_on_boot_only_if_was_running_title">Solo se attivo allo spegnimento</string>
+    <string name="pref_dropbear_start_on_boot_only_if_was_running_summary">Il demone SSH verrà avviato automaticamente solo se sarà stato in esecuzione all\'ultimo spegnimento del sistema</string>
+    <string name="pref_dropbear_start_on_boot_title">Esegui all\'avvio</string>
+    <string name="pref_dropbear_start_on_boot_summary">Avvia il demone SSH quando il dispositivo si (ri)avvia</string>
+    <string name="menu_quit_title">Esci</string>
+    <string name="pref_debug_title">Modalità debug verboso</string>
+    <string name="pref_debug_summary">Abilita un sacco di messaggi nei log</string>
+    <string name="pref_dropbear_as_root_title">Esegui demone come amministratore</string>
+    <string name="pref_dropbear_as_root_summary_enabled">Il demone verrà avviato come AMMINISTRATORE</string>
+    <string name="pref_dropbear_as_root_summary_disabled">Il demone verrà avviato come UTENTE</string>
+    <string name="pref_droidsshd_settings_title">Impostazioni</string>
+    <string name="app_description">Server Dropbear SSH e Strumenti di Amministrazione</string>
+    <string name="app_label">DroidSSHd</string>
+    
+    <string name="app_webpage_url">http://github.com/tpruvot/android_external_droidsshd/</string>
+    <string name="ssh_icon_downwloaded_url">http://iconfinder.net</string>
+    <string name="ssh_icon_created_by">Tanguy Pruvot</string>
+    <string name="ssh_icon_created_by_url">http://tanguy.tk/</string>
+    <string name="app_based_on">rsyncdroid</string>
+    <string name="app_based_on_webpage_url">http://code.google.com/p/droidsshd/</string>
+    
+    <string name="pref_dropbear_auth_username_default">android</string>
+    <string name="pref_dropbear_auth_password_default">password</string>
+    <string name="pref_debug_default">true</string>
+    <string name="pref_interface_notification_default">true</string>
+    <string name="pref_dropbear_start_on_boot_default">false</string>
+    <string name="pref_dropbear_start_on_boot_only_if_was_running_default">true</string>
+    <string name="pref_dropbear_as_root_default">false</string>
+    <string name="pref_dropbear_port_default">2222</string>
+</resources>
