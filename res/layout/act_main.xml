@@ -27,7 +27,7 @@
                 <Button android:enabled="true" android:textSize="16.0sp" android:textStyle="bold" android:id="@id/status_button" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/act_main_start" />
             </LinearLayout>
             <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
-                <Button android:enabled="true" android:textSize="16.0sp" android:textStyle="bold|italic" android:id="@id/preferences_button" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/act_main_preferences" />
+                <Button android:enabled="true" android:textSize="16.0sp" android:id="@id/preferences_button" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/act_main_preferences" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
