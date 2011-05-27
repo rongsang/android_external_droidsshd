@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="activity_initial_setup">tk.tanguy.activity.InitialSetup</string>
+    <string name="activity_auth_keys_management">tk.tanguy.activity.AuthorizedKeysManagement</string>
+    <string name="activity_file_chooser">com.h3r3t1c.filechooser.FileChooser</string>
+    <string name="activity_about">tk.tanguy.activity.About</string>
+    
+    <string name="act_main_status">Status:</string>
+    <string name="act_main_unknown">onbekend</string>
+    <string name="act_main_ip">IP:</string>
+    <string name="act_main_defip">0.0.0.0</string>
+    <string name="act_main_username">Gebruikersnaam:</string>
+    <string name="act_main_port">Poort:</string>
+    <string name="act_main_asroot">Als root:</string>
+    <string name="act_main_start">Start</string>
+    <string name="act_main_preferences">Voorkeuren</string>
+    <string name="act_pubkeylist_empty">leeg</string>
+    <string name="item_pubkey_keyexample">Voorbeeld sleutel</string>
+    <string name="item_pubkey_dsa1024">DSA 1024-bit</string>
+    <string name="main_running">SSH daemon draait</string>
+    <string name="main_runningasroot">Daemon draait als root</string>
+    <string name="main_ipaddresses">IP addres(sen):</string>
+    <string name="antigo_updateui">Gebruikersinterface updaten</string>
+    <string name="antigo_getassets">Haal Assets op</string>
+    <string name="antigo_checkhostkeys">Controleer Host Sleutels</string>
+    <string name="password_tooshort">Wachtwoord te kort</string>
+    <string name="password_show">Laat wachtwoord zien</string>
+    
+    <string name="setup_warningfirsttime">Dit is de eerste keer dat DroidSSHd wordt opgestart op dit apparaat. Het standaard wachtwoord is "password".\n\nVerder gaan met initiële setup procedure</string>
+    <string name="setup_confirmyes">Ja, en wel meteen!</string>
+    <string name="setup_cancelno">Nee, DroidSSHd sluiten.</string>
+    <string name="table_runningasroot">Draaien als root:</string>
+    <string name="about_text">Eerste versie door mestre,\n\nAangepast voor Motorola Defy CM7\nby Tanguy Pruvot\n\nDeze versie gebruikt de Cyanogen dropbear versie, niet inbegrepen in deze apk.\n\nDe volledige bronnen zijn beschikbaar op github: tpruvot\'s fork\n\nTranslation by Martijn from XDA</string>
+    <string name="about_ok">Ok</string>
+    
+    <string name="pref_dropbear_auth_password_title">Wachtwoord</string>
+    <string name="pref_dropbear_auth_username_title">Gebruikersnaam</string>
+    <string name="pref_category_sshd_title">Dropbear SSHd instellingen</string>
+    <string name="pref_screen_server_settings_title">Service en Authenticitatie</string>
+    <string name="pref_screen_server_settings_summary">Service starten/stoppen, TCP poort, permissies, authenticitatie en sleutel beheer.</string>
+    <string name="pref_dropbear_port_title">TCP poort (listen)</string>
+    <string name="pref_dropbear_port_summary">Luistert momenteel naar</string>
+    <string name="pref_wifi_auto_enable_summary">Schakel Wifi aan bij daemon startup indien uitgeschakeld</string>
+    <string name="pref_wifi_auto_enable_title">Wifi automatisch starten</string>
+    <string name="pref_wifi_lock_summary">Houdt wifi radio ingeschakeld als de SSH daemon actief is</string>
+    <string name="pref_wifi_lock_title">Wifi lock</string>
+    <string name="pref_category_power_category_title">Energiebeheer</string>
+    <string name="pref_prevent_device_sleep_summary">Voorkom dat apparaat in standby gaat (hoger accu verbruik)</string>
+    <string name="pref_prevent_device_sleep_title">Vermijdt dat apparaat in Slaapstand gaat</string>
+    <string name="pref_path_to_su_summary">Pad naar superuser binary</string>
+    <string name="pref_path_to_su_title">Pad naar SU</string>
+    <string name="pref_path_to_su_default">/system/xbin/su</string>
+    <string name="pref_path_to_sh_summary">Custom paden voor binaries, zoals busybox en/of toolbox</string>
+    <string name="pref_path_to_sh_title">Pad naar SH</string>
+    <string name="pref_path_to_sh_default">/system/bin/sh</string>
+    <string name="pref_screen_system_settings_title">Systeem instellingen</string>
+    <string name="pref_screen_system_settings_summary">Systeem tweaks, energiebeheer, pad naar binaries</string>
+    <string name="pref_screen_ui_settings">UI Instellingen</string>
+    <string name="pref_category_paths_summary" />
+    <string name="pref_category_paths_title">Bestanden en Mappen</string>
+    <string name="pref_interface_notification_summary">Laat statusbalk melding zien als deamon draait</string>
+    <string name="pref_interface_notification_label">Notificatie</string>
+    <string name="pref_category_interface_title">Gebruikersinterface</string>
+    <string name="pref_category_development_title">Development tools</string>
+    <string name="pref_dropbear_start_on_boot_only_if_was_running_title">Alleen indien actief bij afsluiten</string>
+    <string name="pref_dropbear_start_on_boot_only_if_was_running_summary">SSH daemon zal alleen automatisch worden opgestart, als deze draaide toen het besturingssysteem werd afgeloten</string>
+    <string name="pref_dropbear_start_on_boot_title">Starten bij opstarten</string>
+    <string name="pref_dropbear_start_on_boot_summary">Start SSH daemon als het apparaat (her)start</string>
+    <string name="menu_quit_title">Sluiten</string>
+    <string name="pref_debug_title">Uitgebreide debug berichten</string>
+    <string name="pref_debug_summary">Creëer VEEL berichten in de log bestanden</string>
+    <string name="pref_dropbear_as_root_title">Draai daemon als root</string>
+    <string name="pref_dropbear_as_root_summary_enabled">Daemon wordt opgestart als ROOT</string>
+    <string name="pref_dropbear_as_root_summary_disabled">Daemon wordt opgestart als USER</string>
+    <string name="pref_droidsshd_settings_title">Instellingen</string>
+    <string name="app_description">Dropbear SSH Server en Management tools</string>
+    <string name="app_label">DroidSSHd</string>
+    
+    <string name="app_webpage_url">http://github.com/tpruvot/android_external_droidsshd/</string>
+    <string name="ssh_icon_downwloaded_url">http://iconfinder.net</string>
+    <string name="ssh_icon_created_by">Tanguy Pruvot</string>
+    <string name="ssh_icon_created_by_url">http://tanguy.tk/</string>
+    <string name="app_based_on">rsyncdroid</string>
+    <string name="app_based_on_webpage_url">http://code.google.com/p/droidsshd/</string>
+    
+    <string name="pref_dropbear_auth_username_default">android</string>
+    <string name="pref_dropbear_auth_password_default">wachtwoord</string>
+    <string name="pref_debug_default">true</string>
+    <string name="pref_interface_notification_default">true</string>
+    <string name="pref_dropbear_start_on_boot_default">false</string>
+    <string name="pref_dropbear_start_on_boot_only_if_was_running_default">true</string>
+    <string name="pref_dropbear_as_root_default">false</string>
+    <string name="pref_dropbear_port_default">2222</string>
+</resources>
