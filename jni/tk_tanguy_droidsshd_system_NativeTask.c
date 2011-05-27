@@ -3,10 +3,10 @@
 #include <string.h>
 #include <unistd.h>
 #include <fcntl.h>
-#include "br_com_bott_droidsshd_system_NativeTask.h"
+#include "tk_tanguy_droidsshd_system_NativeTask.h"
 /* #include <android/log.h> */
 
-JNIEXPORT jint JNICALL Java_br_com_bott_droidsshd_system_NativeTask_runCommand
+JNIEXPORT jint JNICALL Java_tk_tanguy_droidsshd_system_NativeTask_runCommand
   (JNIEnv *env, jclass class, jstring command)
 {
   const char *commandString;
@@ -16,7 +16,7 @@ JNIEXPORT jint JNICALL Java_br_com_bott_droidsshd_system_NativeTask_runCommand
   return (jint)exitcode;
 }
 
-JNIEXPORT jint JNICALL Java_br_com_bott_droidsshd_system_NativeTask_chmod
+JNIEXPORT jint JNICALL Java_tk_tanguy_droidsshd_system_NativeTask_chmod
   (JNIEnv *env, jclass class, jstring path, jint mode)
 {
   const char *pathString = (*env)->GetStringUTFChars(env, path, 0);
@@ -38,7 +38,7 @@ JNIEXPORT jint JNICALL Java_br_com_bott_droidsshd_system_NativeTask_chmod
   return (jint)exitcode;
 }
 
-JNIEXPORT jint JNICALL Java_br_com_bott_droidsshd_system_NativeTask_symlink
+JNIEXPORT jint JNICALL Java_tk_tanguy_droidsshd_system_NativeTask_symlink
   (JNIEnv *env, jclass class, jstring original, jstring destination)
 {
   const char *originalString;

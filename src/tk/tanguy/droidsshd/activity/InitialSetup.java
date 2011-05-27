@@ -7,6 +7,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.UnsatisfiedLinkError;
 
 import tk.tanguy.droidsshd.R;
 import tk.tanguy.droidsshd.system.Base;
@@ -184,23 +185,32 @@ public class InitialSetup extends Activity {
 			// files/run - pidfile
 			Util.mkdir(Base.getDropbearTmpDirPath());
 			Util.chmod(Base.getDropbearTmpDirPath(), 0775);
+		} catch (Exception e) {
+			Log.e(TAG, "Exception in Setup Directory Structure", e);
+			return false;
+		} catch (UnsatisfiedLinkError er) {
+			Log.e(TAG, "Exception in Setup Directory Structure", er);
+			return false;
+		}
+		try {
 			// files/etc - authorized pubkeys and host keys
 			Util.mkdir(Base.getDropbearEtcDirPath());
 			Util.chmod(Base.getDropbearEtcDirPath(), 0700);
 		} catch (Exception e) {
 			Log.e(TAG, "Exception in Setup Directory Structure", e);
 			return false;
+		} catch (UnsatisfiedLinkError er) {
+			Log.e(TAG, "Exception in Setup Directory Structure", er);
+			return false;
 		}
-/*
 		try {
 			// files/bin - binaries
 			Util.mkdir(Base.getDropbearBinDirPath());
-			Util.chmod(Base.getDropbearBinDirPath(), 0755);
+//			Util.chmod(Base.getDropbearBinDirPath(), 0755);
 		} catch (Exception e) {
 			Log.e(TAG, "Exception in Setup Directory Structure", e);
 			return true;
 		}
-*/
 		return true;
 	}
 
@@ -240,10 +250,15 @@ public class InitialSetup extends Activity {
 		Util.symlink(path, Base.getDropbearBinDirPath() + "/"
 				+ Base.DROPBEAR_BIN_SCP);
 */
-		Util.symlink("/system/xbin/" + Base.DROPBEAR_BIN_SRV, path + "/" + Base.DROPBEAR_BIN_SRV);
-		Util.symlink("/system/xbin/" + Base.DROPBEAR_BIN_KEY, path + "/" + Base.DROPBEAR_BIN_KEY);
-		Util.symlink("/system/xbin/" + Base.DROPBEAR_BIN_SCP, path + "/" + Base.DROPBEAR_BIN_SCP);
-		Util.symlink("/system/xbin/" + Base.DROPBEAR_BIN_SFT, path + "/" + Base.DROPBEAR_BIN_SFT);
+		try {
+			Util.symlink("/system/xbin/" + Base.DROPBEAR_BIN_SRV, path + "/" + Base.DROPBEAR_BIN_SRV);
+			Util.symlink("/system/xbin/" + Base.DROPBEAR_BIN_KEY, path + "/" + Base.DROPBEAR_BIN_KEY);
+			Util.symlink("/system/xbin/" + Base.DROPBEAR_BIN_SCP, path + "/" + Base.DROPBEAR_BIN_SCP);
+			Util.symlink("/system/xbin/" + Base.DROPBEAR_BIN_SFT, path + "/" + Base.DROPBEAR_BIN_SFT);
+		} catch (UnsatisfiedLinkError er) {
+			Log.e(TAG, "Exception in Setup simlinks", er);
+			return false;
+		}
 
 		return true;
 	}

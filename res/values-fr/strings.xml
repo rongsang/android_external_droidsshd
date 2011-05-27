@@ -26,9 +26,9 @@
     <string name="password_tooshort">Mot de passe trop court</string>
     <string name="password_show">Afficher le mot de passe</string>
     
-    <string name="setup_warningfirsttime">Il semble que DroidSSHd est lancé pour la première fois. Le mot de passe par défaut est "password".\n\nProcéder à l\'installation initiale ?</string>
-    <string name="setup_confirmyes">Oui, configurer maintenant.</string>
-    <string name="setup_cancelno">Non, fermer DroidSSHd.</string>
+    <string name="setup_warningfirsttime">DroidSSHd est lancé pour la première fois. Le mot de passe par défaut est "password".\n\nProcéder à l\'installation initiale ?</string>
+    <string name="setup_confirmyes">Oui, Configurer maintenant.</string>
+    <string name="setup_cancelno">Non, Fermer DroidSSHd.</string>
     <string name="table_runningasroot">Running as root:</string>
     <string name="about_text">Basé sur DroidSSHd by mestre,\n\nAdapté pour le Motorola Defy CM7\npar Tanguy Pruvot\n\nCette version utilise une version spécifique de dropbear et nécessite Cyanogen Mod 7.\n\nLes sources complètes sont disponibles sur github.\n\n</string>
     <string name="about_ok">Ok</string>

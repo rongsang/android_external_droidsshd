@@ -5,6 +5,7 @@ package tk.tanguy.droidsshd.system;
 
 import tk.tanguy.droidsshd.R;
 import tk.tanguy.droidsshd.tools.ShellSession;
+
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -150,9 +151,7 @@ public class DroidSSHdService extends Service{
 						if (debug) {
 							Log.v(tag, "cmd = '" + cmd + "'");
 						}
-//						TODO - currently, HOME is hard-coded on dropbearmulti
-//						cmd("export HOME=/mnt/sdcard");
-//						cmd("cd $HOME");
+						cmd("export HOME=/sdcard ; cd $HOME");
 						cmd(cmd);
 					}
 					@Override
@@ -187,6 +186,7 @@ public class DroidSSHdService extends Service{
 			@Override
 			public void onEvent(int event, String path) {
 				synchronized(sLock) {
+				try {
 					switch (event) {
 					case FileObserver.CREATE:
 						Base.setDropbearDaemonStatus(Base.DAEMON_STATUS_STARTING);
@@ -224,6 +224,10 @@ public class DroidSSHdService extends Service{
 						}
 						break;
 					}
+				} catch (Exception e) {
+					Log.e(TAG, "Exception in createPidWatchdog", e);
+					e.printStackTrace();
+				}
 				}
 			}
 		};
@@ -280,21 +284,26 @@ public class DroidSSHdService extends Service{
 	
 	protected class updateDaemonStatus implements Runnable {
 		public void run(){
-			if(Base.debug) {
-				Log.d(TAG+"-updateDaemonStatus", "started");
-			}
-			dropbearDaemonProcessId = Util.getDropbearPidFromPidFile(Base.getDropbearPidFilePath());
-			if (dropbearDaemonProcessId!=0) {
-				dropbearDaemonRunning = Util.isDropbearDaemonRunning();
-			} else {
-				dropbearDaemonRunning = false;
-			}
-			if(dropbearDaemonRunning) {
-				Base.setDropbearDaemonStatus(Base.DAEMON_STATUS_STARTED);
-				showNotification();
-			} else {
-				Base.setDropbearDaemonStatus(Base.DAEMON_STATUS_STOPPED);
-				hideNotification();
+			try {
+				if(Base.debug) {
+					Log.d(TAG+"-updateDaemonStatus", "started");
+				}
+				dropbearDaemonProcessId = Util.getDropbearPidFromPidFile(Base.getDropbearPidFilePath());
+				if (dropbearDaemonProcessId!=0) {
+					dropbearDaemonRunning = Util.isDropbearDaemonRunning();
+				} else {
+					dropbearDaemonRunning = false;
+				}
+				if(dropbearDaemonRunning) {
+					Base.setDropbearDaemonStatus(Base.DAEMON_STATUS_STARTED);
+					showNotification();
+				} else {
+					Base.setDropbearDaemonStatus(Base.DAEMON_STATUS_STOPPED);
+					hideNotification();
+				}
+			} catch (Exception e) {
+				Log.e(TAG, "Exception in updateDaemonStatus", e);
+				e.printStackTrace();
 			}
 		}
 	}
