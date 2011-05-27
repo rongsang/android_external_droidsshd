@@ -10,8 +10,8 @@ import java.util.Collections;
 import java.util.List;
 
 
-import br.com.bott.droidsshd.R;
-import br.com.bott.droidsshd.system.Base;
+import tk.tanguy.droidsshd.R;
+import tk.tanguy.droidsshd.system.Base;
 
 import android.app.ListActivity;
 import android.content.Intent;

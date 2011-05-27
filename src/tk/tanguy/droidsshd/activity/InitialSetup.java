@@ -1,17 +1,17 @@
 /**
  * 
  */
-package br.com.bott.droidsshd.activity;
+package tk.tanguy.droidsshd.activity;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-import br.com.bott.droidsshd.R;
-import br.com.bott.droidsshd.system.Base;
-import br.com.bott.droidsshd.system.Util;
-import br.com.bott.droidsshd.tools.ShellSession;
+import tk.tanguy.droidsshd.R;
+import tk.tanguy.droidsshd.system.Base;
+import tk.tanguy.droidsshd.system.Util;
+import tk.tanguy.droidsshd.tools.ShellSession;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -175,7 +175,7 @@ public class InitialSetup extends Activity {
 		// finish();
 		setResult(RESULT_OK, getIntent());
 		finishActivity(R.string.activity_initial_setup);
-		Intent p = new Intent(Base.getContext(), br.com.bott.droidsshd.activity.Preferences.class);
+		Intent p = new Intent(Base.getContext(), tk.tanguy.droidsshd.activity.Preferences.class);
 		startActivity(p);
 	}
 

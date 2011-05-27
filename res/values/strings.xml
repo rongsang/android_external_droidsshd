@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="activity_initial_setup">br.com.bott.activity.InitialSetup</string>
-    <string name="activity_auth_keys_management">br.com.bott.activity.AuthorizedKeysManagement</string>
+    <string name="activity_initial_setup">tk.tanguy.activity.InitialSetup</string>
+    <string name="activity_auth_keys_management">tk.tanguy.activity.AuthorizedKeysManagement</string>
     <string name="activity_file_chooser">com.h3r3t1c.filechooser.FileChooser</string>
-    <string name="activity_about">br.com.bott.activity.About</string>
+    <string name="activity_about">tk.tanguy.activity.About</string>
     
     <string name="act_main_status">Status:</string>
     <string name="act_main_unknown">unknown</string>

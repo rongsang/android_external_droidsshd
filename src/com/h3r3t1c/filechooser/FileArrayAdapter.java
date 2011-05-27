@@ -1,8 +1,8 @@
 package com.h3r3t1c.filechooser;
 
 
-import br.com.bott.droidsshd.R;
-//import br.com.bott.droidsshd.R.layout;
+import tk.tanguy.droidsshd.R;
+//import tk.tanguy.droidsshd.R.layout;
 
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;

@@ -17,7 +17,7 @@
 package com.quietlycoding.android.picker;
 
 
-import br.com.bott.droidsshd.R;
+import tk.tanguy.droidsshd.R;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.KeyEvent;

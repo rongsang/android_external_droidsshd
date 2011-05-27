@@ -8,7 +8,7 @@
                 <Preference android:title="Public Key" android:key="authorized_keys_key" android:summary="Click here to select a file containing your SSH public key on the SD card" />
             </PreferenceCategory>
             <PreferenceCategory android:title="@string/pref_category_sshd_title">
-                <br.com.bott.droidsshd.tools.NumberPickerPreference android:title="@string/pref_dropbear_port_title" android:key="@string/pref_dropbear_port_key" android:defaultValue="@string/pref_dropbear_port_default" />
+                <tk.tanguy.droidsshd.tools.NumberPickerPreference android:title="@string/pref_dropbear_port_title" android:key="@string/pref_dropbear_port_key" android:defaultValue="@string/pref_dropbear_port_default" />
                 <CheckBoxPreference android:title="@string/pref_dropbear_start_on_boot_title" android:key="@string/pref_dropbear_start_on_boot_key" android:summary="@string/pref_dropbear_start_on_boot_summary" android:defaultValue="false" />
                 <CheckBoxPreference android:title="@string/pref_dropbear_start_on_boot_only_if_was_running_title" android:key="@string/pref_dropbear_start_on_boot_only_if_was_running_key" android:summary="@string/pref_dropbear_start_on_boot_only_if_was_running_summary" android:dependency="@string/pref_dropbear_start_on_boot_key" android:defaultValue="@string/pref_dropbear_start_on_boot_only_if_was_running_default" />
             </PreferenceCategory>

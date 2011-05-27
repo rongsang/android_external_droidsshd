@@ -1,10 +1,10 @@
-package br.com.bott.droidsshd.tools;
+package tk.tanguy.droidsshd.tools;
 
 //import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
 
-import br.com.bott.droidsshd.system.Base;
+import tk.tanguy.droidsshd.system.Base;
 import android.content.Context;
 import android.os.Handler;
 import android.util.Log;

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package br.com.bott.droidsshd.system;
+package tk.tanguy.droidsshd.system;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -28,8 +28,8 @@ import android.os.Message;
 import android.os.PowerManager;
 import android.util.Log;
 import android.widget.Toast;
-//import br.com.bott.droidsshd.WifiLock;
-import br.com.bott.droidsshd.tools.ShellSession;
+//import tk.tanguy.droidsshd.WifiLock;
+import tk.tanguy.droidsshd.tools.ShellSession;
 
 /**
  * @author mestre

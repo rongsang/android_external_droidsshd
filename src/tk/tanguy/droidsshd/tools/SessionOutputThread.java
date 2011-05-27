@@ -1,14 +1,14 @@
 /**
  * 
  */
-package br.com.bott.droidsshd.tools;
+package tk.tanguy.droidsshd.tools;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 
-import br.com.bott.droidsshd.system.Base;
+import tk.tanguy.droidsshd.system.Base;
 
 import android.util.Log;
 

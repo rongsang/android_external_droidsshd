@@ -10,12 +10,14 @@
  *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
 
  *  @author Augusto Bott (mestre) <augusto@bott.com.br>
+ *  @author Tanguy Pruvot <tanguy.pruvot@gmail.com>
+
  */
 
-package br.com.bott.droidsshd;
+package tk.tanguy.droidsshd;
 
-import br.com.bott.droidsshd.system.*;
-import br.com.bott.droidsshd.tools.*;
+import tk.tanguy.droidsshd.system.*;
+import tk.tanguy.droidsshd.tools.*;
 
 import java.util.Iterator;
 import android.util.Log;
@@ -73,7 +75,7 @@ public class DroidSSHd extends Activity {
 
 		setUpUiListeners();
 
-		mDropbearDaemonHandlerService = new Intent(this, br.com.bott.droidsshd.system.DroidSSHdService.class);
+		mDropbearDaemonHandlerService = new Intent(this, tk.tanguy.droidsshd.system.DroidSSHdService.class);
 
 		if ((!Util.validateHostKeys() || (!Util.checkPathToBinaries()))) {
 			startInitialSetupActivity();
@@ -131,7 +133,7 @@ public class DroidSSHd extends Activity {
 
 	protected void startInitialSetupActivity() {
 		Util.showMsg("Initial/basic setup required");
-		Intent setup = new Intent(this, br.com.bott.droidsshd.activity.InitialSetup.class);
+		Intent setup = new Intent(this, tk.tanguy.droidsshd.activity.InitialSetup.class);
 		setup.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
 //		setup.addFlags(Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
 		startActivityForResult(setup, R.string.activity_initial_setup);
@@ -181,7 +183,7 @@ public class DroidSSHd extends Activity {
 		preferences_button = (Button) findViewById(R.id.preferences_button);
 		preferences_button.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				Intent p = new Intent(v.getContext(), br.com.bott.droidsshd.activity.Preferences.class);
+				Intent p = new Intent(v.getContext(), tk.tanguy.droidsshd.activity.Preferences.class);
 				startActivity(p);
 			}
 		});
@@ -301,7 +303,7 @@ public class DroidSSHd extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch(item.getItemId()) {
 		case R.id.menu_settings:
-			Intent p = new Intent(this, br.com.bott.droidsshd.activity.Preferences.class);
+			Intent p = new Intent(this, tk.tanguy.droidsshd.activity.Preferences.class);
 			startActivity(p);
 			return true;
 		case R.id.menu_quit:
@@ -318,7 +320,7 @@ public class DroidSSHd extends Activity {
 			updateStatus();
 			return true;
 		case R.id.menu_about:
-			Intent i = new Intent(this, br.com.bott.droidsshd.activity.About.class);
+			Intent i = new Intent(this, tk.tanguy.droidsshd.activity.About.class);
 			startActivity(i);
 //			i.setAction("android.intent.action.VIEW");
 //			i.setData("http://www.android.com");
@@ -383,7 +385,7 @@ public class DroidSSHd extends Activity {
 	private ServiceConnection mDaemonHandlerConnection = new ServiceConnection() {
 		@Override
 		public void onServiceConnected(ComponentName className, IBinder service) {
-			mBoundDaemonHandlerService = ((br.com.bott.droidsshd.system.DroidSSHdService.DropbearDaemonHandlerBinder)service).getService();
+			mBoundDaemonHandlerService = ((tk.tanguy.droidsshd.system.DroidSSHdService.DropbearDaemonHandlerBinder)service).getService();
 			if(Base.debug) {
 				Log.d(TAG, "onServiceConnected DroidSSHdService called");
 				if (mBoundDaemonHandlerService==null){

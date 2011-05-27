@@ -1,7 +1,7 @@
 /**
  * 
  */
-package br.com.bott.droidsshd.system;
+package tk.tanguy.droidsshd.system;
 
 import java.io.File;
 
@@ -54,7 +54,7 @@ public class BootReceiver extends BroadcastReceiver {
 				}
 				if (!startDaemonAtBootOnlyIfRunningBefore || (startDaemonAtBootOnlyIfRunningBefore && wasRunningBefore)) {
 					Log.i(TAG, "Starding Dropbear daemon");
-						context.startService(new Intent(context, br.com.bott.droidsshd.system.DroidSSHdService.class));
+						context.startService(new Intent(context, tk.tanguy.droidsshd.system.DroidSSHdService.class));
 				}
 			} else {
 				if (Base.debug) {

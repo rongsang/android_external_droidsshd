@@ -1,10 +1,10 @@
 /**
  * 
  */
-package br.com.bott.droidsshd.system;
+package tk.tanguy.droidsshd.system;
 
-import br.com.bott.droidsshd.R;
-import br.com.bott.droidsshd.tools.ShellSession;
+import tk.tanguy.droidsshd.R;
+import tk.tanguy.droidsshd.tools.ShellSession;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -250,7 +250,7 @@ public class DroidSSHdService extends Service{
 		if (Base.isDropbearDaemonNotificationEnabled()) {
 			Notification notifyDetails = new Notification(R.drawable.droidsshd_icon, getString(R.string.app_label), System.currentTimeMillis());
 			Intent intent = new Intent();
-			intent.setClass(Base.getContext(), br.com.bott.droidsshd.DroidSSHd.class);
+			intent.setClass(Base.getContext(), tk.tanguy.droidsshd.DroidSSHd.class);
 			intent.setAction(Intent.ACTION_DEFAULT);
 			intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 //			intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

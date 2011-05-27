@@ -1,4 +1,4 @@
-package br.com.bott.droidsshd.system;
+package tk.tanguy.droidsshd.system;
 
 import android.util.Log;
 

@@ -1,13 +1,13 @@
 /**
  * 
  */
-package br.com.bott.droidsshd.activity;
+package tk.tanguy.droidsshd.activity;
 
 import java.io.File;
-import br.com.bott.droidsshd.R;
-import br.com.bott.droidsshd.system.Base;
-import br.com.bott.droidsshd.system.Util;
-import br.com.bott.droidsshd.tools.NumberPickerPreference;
+import tk.tanguy.droidsshd.R;
+import tk.tanguy.droidsshd.system.Base;
+import tk.tanguy.droidsshd.system.Util;
+import tk.tanguy.droidsshd.tools.NumberPickerPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.content.Intent;
@@ -72,7 +72,7 @@ public class Preferences extends PreferenceActivity
 
 	@Override
 	public void onBackPressed() {
-		Intent i = new Intent(this, br.com.bott.droidsshd.DroidSSHd.class);
+		Intent i = new Intent(this, tk.tanguy.droidsshd.DroidSSHd.class);
 		i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		startActivity(i);
 //		super.onBackPressed();

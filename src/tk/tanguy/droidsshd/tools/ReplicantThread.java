@@ -1,7 +1,7 @@
 /**
  * 
  */
-package br.com.bott.droidsshd.tools;
+package tk.tanguy.droidsshd.tools;
 
 import android.os.Handler;
 import android.util.Log;

@@ -1,11 +1,11 @@
 /**
  * 
  */
-package br.com.bott.droidsshd.activity;
+package tk.tanguy.droidsshd.activity;
 
-import br.com.bott.droidsshd.R;
-import br.com.bott.droidsshd.system.Base;
-import br.com.bott.droidsshd.system.Util;
+import tk.tanguy.droidsshd.R;
+import tk.tanguy.droidsshd.system.Base;
+import tk.tanguy.droidsshd.system.Util;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;

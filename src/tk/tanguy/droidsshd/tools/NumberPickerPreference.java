@@ -1,7 +1,7 @@
-package br.com.bott.droidsshd.tools;
+package tk.tanguy.droidsshd.tools;
 
 import com.quietlycoding.android.picker.NumberPicker;
-import br.com.bott.droidsshd.R;
+import tk.tanguy.droidsshd.R;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.preference.DialogPreference;

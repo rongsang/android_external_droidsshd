@@ -1,10 +1,10 @@
 /**
  * 
  */
-package br.com.bott.droidsshd.system;
+package tk.tanguy.droidsshd.system;
 
 
-import br.com.bott.droidsshd.R;
+import tk.tanguy.droidsshd.R;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
@@ -22,7 +22,7 @@ public class Base {
 	
 	public static final String TAG = "DroidSSHd-Base";
 	
-	public static final String THIS_PACKAGE_NAME = "br.com.bott.droidsshd";
+	public static final String THIS_PACKAGE_NAME = "tk.tanguy.droidsshd";
 	
 //	public static final String SU_BIN = "/system/xbin/su";
 //	public static final String SH_BIN = "/system/bin/sh";
