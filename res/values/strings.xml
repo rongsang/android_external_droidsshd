@@ -60,7 +60,7 @@
     <string name="pref_path_to_sh_summary">Custom paths for binaries such as busybox and/or toolbox</string>
     <string name="pref_path_to_sh_title">Path to SH</string>
     <string name="pref_path_to_sh_key">path_to_sh</string>
-    <string name="pref_path_to_sh_default">/system/bin/sh</string>
+    <string name="pref_path_to_sh_default">/system/xbin/ash</string>
     <string name="pref_screen_system_settings_title">System settings</string>
     <string name="pref_screen_system_settings_summary">System tweaks, power management, path to binaries</string>
     <string name="pref_screen_ui_settings">UI Settings</string>
