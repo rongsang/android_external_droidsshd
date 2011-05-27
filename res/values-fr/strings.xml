@@ -49,6 +49,8 @@
     
     <string name="pref_dropbear_auth_password_title">Mot de passe</string>
     <string name="pref_dropbear_auth_username_title">Utilisateur</string>
+    <string name="pref_dropbear_auth_publickey">Clé Publique SSH</string>
+    <string name="pref_dropbear_auth_pkey_desc">Vous pouvez utiliser une clé publique présente sur la carte SD</string>
     <string name="pref_category_sshd_title">Paramètres Dropbear SSHd</string>
     <string name="pref_screen_server_settings_title">Service et Authentification</string>
     <string name="pref_screen_server_settings_summary">Service, port, permissions et authentification.</string>
@@ -61,6 +63,7 @@
     <string name="pref_category_power_category_title">Alimentation</string>
     <string name="pref_prevent_device_sleep_summary">Empêche la mise en veille du téléphone (utilise plus de batterie)</string>
     <string name="pref_prevent_device_sleep_title">Eviter la mise en veille</string>
+    <string name="pref_system_pathtobinaries">Chemins des exécutables</string>
     <string name="pref_path_to_su_summary">Location de l\'exécutable superuser</string>
     <string name="pref_path_to_su_title">Location de SU</string>
     <string name="pref_path_to_su_default">/system/xbin/su</string>
@@ -76,16 +79,17 @@
     <string name="pref_path_to_sh_title">Location de SH</string>
     <string name="pref_category_interface_title">Interface Utilisateur</string>
     <string name="pref_category_development_title">Outils de Développement</string>
-    <string name="pref_dropbear_start_on_boot_only_if_was_running_title">Uniquement si actif à l\'arrêt</string>
-    <string name="pref_dropbear_start_on_boot_only_if_was_running_summary">SSH daemon will be started automatically only if it was running when the OS was shutdown</string>
+    <string name="pref_dropbear_start_on_boot_only_if_was_running_title">Si actif à l\'arrêt</string>
+    <string name="pref_dropbear_start_on_boot_only_if_was_running_summary">Le service SSH ne sera lancé automatiquement que s\il était actif à l\'arrêt du système</string>
     <string name="pref_dropbear_start_on_boot_title">Démarrage automatique</string>
     <string name="pref_dropbear_start_on_boot_summary">Lancer le service SSH lorsque l\'appareil (re)boot</string>
     <string name="menu_quit_title">Quitter</string>
     <string name="pref_debug_title">Journal système (logcat)</string>
     <string name="pref_debug_summary">Affiche des informations détaillées dans le journal système</string>
+    <string name="pref_system">Système</string>
     <string name="pref_dropbear_as_root_title">Mode root</string>
     <string name="pref_dropbear_as_root_summary_enabled">Le shell sera lancé en mode ROOT</string>
-    <string name="pref_dropbear_as_root_summary_disabled">Le service sera lancé en mode normal</string>
+    <string name="pref_dropbear_as_root_summary_disabled">Le service sera lancé normalement</string>
     <string name="pref_droidsshd_settings_title">Paramètres</string>
     <string name="app_description">Dropbear SSH Server and Management Tools</string>
     <string name="app_label">DroidSSHd</string>

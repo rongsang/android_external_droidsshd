@@ -47,8 +47,10 @@
     <string name="about_text">Initial version by mestre,\n\nAdapted for Motorola Defy CM7\nby Tanguy Pruvot\n\nThis version uses Cyanogen dropbear version, not included in apk.\n\nFull sources are available on github: tpruvot\'s fork\n\n</string>
     <string name="about_ok">Ok</string>
     
-    <string name="pref_dropbear_auth_password_title">Password</string>
     <string name="pref_dropbear_auth_username_title">Username</string>
+    <string name="pref_dropbear_auth_password_title">Password</string>
+    <string name="pref_dropbear_auth_publickey">Public Key</string>
+    <string name="pref_dropbear_auth_pkey_desc">Click here to select a file containing your SSH public key on the SD card</string>
     <string name="pref_category_sshd_title">Dropbear SSHd settings</string>
     <string name="pref_screen_server_settings_title">Service and Authentication</string>
     <string name="pref_screen_server_settings_summary">Service startup/shutdown, TCP port, permissions, authentication and key management.</string>
@@ -61,6 +63,7 @@
     <string name="pref_category_power_category_title">Power Management</string>
     <string name="pref_prevent_device_sleep_summary">Prevent device from sleeping (uses more battery power)</string>
     <string name="pref_prevent_device_sleep_title">Keep device awake</string>
+    <string name="pref_system_pathtobinaries">Path to binaries</string>
     <string name="pref_path_to_su_summary">Path to superuser binary</string>
     <string name="pref_path_to_su_title">Path to SU</string>
     <string name="pref_path_to_su_default">/system/xbin/su</string>
@@ -83,6 +86,7 @@
     <string name="menu_quit_title">Quit</string>
     <string name="pref_debug_title">Verbose debug messages</string>
     <string name="pref_debug_summary">Enable a LOT of messages on the logs</string>
+    <string name="pref_system">System</string>
     <string name="pref_dropbear_as_root_title">Run daemon as root</string>
     <string name="pref_dropbear_as_root_summary_enabled">Daemon will be launched as ROOT</string>
     <string name="pref_dropbear_as_root_summary_disabled">Daemon will be launched as USER</string>
