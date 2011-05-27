@@ -46,10 +46,10 @@
     <string name="pref_wifi_auto_enable_summary">Activer le Wifi lors du démarrage du service s\'il est désactivé</string>
     <string name="pref_wifi_auto_enable_title">Activer le Wifi</string>
     <string name="pref_wifi_auto_enable_key">wifi_auto_enable</string>
-    <string name="pref_wifi_lock_summary">Keeps Wifi radio enabled when the SSH daemon is active</string>
+    <string name="pref_wifi_lock_summary">Empèche la désacivation automatique du Wifi lorsque le service SSH est actif</string>
     <string name="pref_wifi_lock_title">Conserver le Wifi actif</string>
     <string name="pref_wifi_lock_key">wifi_lock</string>
-    <string name="pref_category_power_category_title">Power Management</string>
+    <string name="pref_category_power_category_title">Alimentation</string>
     <string name="pref_prevent_device_sleep_summary">Empéche la mise en veille du téléphone (utilisee plus de batterie)</string>
     <string name="pref_prevent_device_sleep_title">Eviter la mise en veille</string>
     <string name="pref_prevent_device_sleep_key">prevent_device_sleep</string>
@@ -57,7 +57,7 @@
     <string name="pref_path_to_su_title">Location de SU</string>
     <string name="pref_path_to_su_key">path_to_su</string>
     <string name="pref_path_to_su_default">/system/xbin/su</string>
-    <string name="pref_path_to_sh_summary">Chemin du shell personnalisé (busybox ash ou toolbox)</string>
+    <string name="pref_path_to_sh_summary">Chemin du shell personnalisé comme ash, bash ou toolbox</string>
     <string name="pref_path_to_sh_title">Location de SH</string>
     <string name="pref_path_to_sh_key">path_to_sh</string>
     <string name="pref_path_to_sh_default">/system/bin/sh</string>
@@ -66,7 +66,7 @@
     <string name="pref_screen_ui_settings">Préférences Interface</string>
     <string name="pref_category_paths_summary" />
     <string name="pref_category_paths_title">Fichiers et Répertoires</string>
-    <string name="pref_interface_notification_summary">Show notification on status bar whenever the daemon is running</string>
+    <string name="pref_interface_notification_summary">Affiche l\icone de notification lorsque le service est actif</string>
     <string name="pref_interface_notification_label">Notification</string>
     <string name="pref_interface_notification_key">notification</string>
     <string name="pref_category_interface_title">Interface Utilisateur</string>
@@ -80,11 +80,11 @@
     <string name="menu_quit_title">Quitter</string>
     <string name="pref_debug_key">debug</string>
     <string name="pref_debug_title">Journal système (logcat)</string>
-    <string name="pref_debug_summary">Enable a LOT of messages on the logs</string>
+    <string name="pref_debug_summary">Affiche des informations détaillées dans le journal système</string>
     <string name="pref_dropbear_as_root_key">dropbear_runs_as_root</string>
     <string name="pref_dropbear_as_root_title">Mode root</string>
     <string name="pref_dropbear_as_root_summary_enabled">Le shell sera lancé en mode ROOT</string>
-    <string name="pref_dropbear_as_root_summary_disabled">Daemon will be launched as USER</string>
+    <string name="pref_dropbear_as_root_summary_disabled">Le service sera lancé en mode Super-Utilisateur</string>
     <string name="pref_droidsshd_settings_title">Paramètres</string>
     <string name="app_description">Dropbear SSH Server and Management Tools</string>
     <string name="app_label">DroidSSHd</string>
