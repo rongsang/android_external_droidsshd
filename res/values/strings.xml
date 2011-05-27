@@ -88,12 +88,14 @@
     <string name="pref_droidsshd_settings_title">Settings</string>
     <string name="app_description">Dropbear SSH Server and Management Tools</string>
     <string name="app_label">DroidSSHd</string>
-    <string name="app_webpage_url">http://code.google.com/p/droidsshd/</string>
-    <string name="ssh_icon_downwloaded_url">http://www.iconarchive.com/category/funny/gartoon-icons-by-zeusbox.html</string>
-    <string name="ssh_icon_created_by">Zeusbox Studio</string>
-    <string name="ssh_icon_created_by_url">http://www.zeusboxstudio.com/</string>
+    
+    <string name="app_webpage_url">http://github.com/tpruvot/android_external_droidsshd/</string>
+    <string name="ssh_icon_downwloaded_url">http://iconfinder.net</string>
+    <string name="ssh_icon_created_by">Tanguy Pruvot</string>
+    <string name="ssh_icon_created_by_url">http://tanguy.tk/</string>
     <string name="app_based_on">rsyncdroid</string>
-    <string name="app_based_on_webpage_url">http://code.google.com/p/rsyncdroid/</string>
+    <string name="app_based_on_webpage_url">http://code.google.com/p/droidsshd/</string>
+    
     <string name="pref_dropbear_auth_username_default">android</string>
     <string name="pref_dropbear_auth_password_default">password</string>
     <string name="pref_debug_default">true</string>
