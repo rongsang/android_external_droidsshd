@@ -180,15 +180,27 @@ public class InitialSetup extends Activity {
 	}
 
 	protected boolean setupDirectoryStructure() {
-		// files/bin - binaries
-		Util.mkdir(Base.getDropbearBinDirPath());
-		Util.chmod(Base.getDropbearBinDirPath(), 0755);
-		// files/run - pidfile
-		Util.mkdir(Base.getDropbearTmpDirPath());
-		Util.chmod(Base.getDropbearTmpDirPath(), 0775);
-		// files/etc - authorized pubkeys and host keys
-		Util.mkdir(Base.getDropbearEtcDirPath());
-		Util.chmod(Base.getDropbearEtcDirPath(), 0700);
+		try {
+			// files/run - pidfile
+			Util.mkdir(Base.getDropbearTmpDirPath());
+			Util.chmod(Base.getDropbearTmpDirPath(), 0775);
+			// files/etc - authorized pubkeys and host keys
+			Util.mkdir(Base.getDropbearEtcDirPath());
+			Util.chmod(Base.getDropbearEtcDirPath(), 0700);
+		} catch (Exception e) {
+			Log.e(TAG, "Exception in Setup Directory Structure", e);
+			return false;
+		}
+/*
+		try {
+			// files/bin - binaries
+			Util.mkdir(Base.getDropbearBinDirPath());
+			Util.chmod(Base.getDropbearBinDirPath(), 0755);
+		} catch (Exception e) {
+			Log.e(TAG, "Exception in Setup Directory Structure", e);
+			return true;
+		}
+*/
 		return true;
 	}
 
