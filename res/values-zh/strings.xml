@@ -44,7 +44,7 @@
     <string name="setup_confirmyes">是, 开始吧!</string>
     <string name="setup_cancelno">否, 退出DroidSSHd.</string>
     <string name="table_runningasroot">正在以root权限运行:</string>
-    <string name="about_text">初始版本by mestre,\n\n为Motorola Defy CM7改写\nby Tanguy Pruvot\n\n这个版本使用Cyanogen dropbear version, 不包含在apk中.\n\n全部源码在github上可见: tpruvot\'s fork\n\n</string>
+    <string name="about_text">初始版本by mestre,\n\n为Motorola Defy CM7改写\nby Tanguy Pruvot\n\n这个版本使用Cyanogen dropbear version, 不包含在apk中.\n\n全部源码在github上可见: tpruvot\'s fork\n\nTranslation by sunoldman from XDA</string>
     <string name="about_ok">确定</string>
     
     <string name="pref_dropbear_auth_username_title">用户名</string>
