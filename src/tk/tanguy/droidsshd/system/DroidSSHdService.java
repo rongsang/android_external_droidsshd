@@ -61,6 +61,8 @@ public class DroidSSHdService extends Service{
 		}
 	}
 
+	// This is the old onStart method that will be called on the pre-2.0 platforms
+	//#ifdef BEFORE_DONUT
 	@Override
 	public void onStart(Intent intent, int startId) {
 		if (Base.debug) {
@@ -68,7 +70,9 @@ public class DroidSSHdService extends Service{
 		}
 		handleStart(intent, 0, startId);
 	}
+	//#endif
 
+	// This is the new onStart method
 	@Override
 	public int onStartCommand(Intent intent, int flags, int startId) {
 		if (Base.debug) {
