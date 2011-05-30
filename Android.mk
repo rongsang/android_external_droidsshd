@@ -16,7 +16,7 @@ LOCAL_JAVACFLAGS += -Xlint:unchecked
 
 ifeq ($(TARGET_ARCH),arm)
 
-	LOCAL_JNI_SHARED_LIBRARIES := libNativeTask
+	# LOCAL_JNI_SHARED_LIBRARIES := libNativeTask
 	LOCAL_REQUIRED_MODULES := libNativeTask
 
 endif
