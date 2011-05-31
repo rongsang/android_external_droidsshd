@@ -131,13 +131,16 @@ public class DroidSSHdService extends Service{
 							Log.v(tag, "onSessionReady called");
 						}
 						int uid;
+						String authPublicKey=Base.getDropbearAuthorizedKeysFilePath();
 						if (Base.runDaemonAsRoot()) {
 							uid = 0;
+							authPublicKey = Base.dropbearDataDir + "/" + Base.DROPBEAR_AUTHORIZED_KEYS;
+							Util.copyFile(Base.getDropbearAuthorizedKeysFilePath(),authPublicKey);
 						} else {
 							uid = android.os.Process.myUid();
 						}
 
-					//cm7   cmd = String.format("%s -d %s -r %s -p %d -P %s -E # -C %s # -R %s -N %s -U %s -G %s
+						//cm7   cmd = String.format("%s -d %s -r %s -p %d -P %s -E # -C %s # -R %s -N %s -U %s -G %s
 
 						cmd = String.format("%s -d %s -r %s -p %d -P %s -E -C %s -R %s -A -N %s -U %s -G %s",
 								Base.getDropbearBinDirPath() + "/" + Base.DROPBEAR_BIN_SRV,
@@ -147,7 +150,7 @@ public class DroidSSHdService extends Service{
 								Base.getDropbearPidFilePath(),
 
 								Base.getPassword(),
-								Base.getDropbearAuthorizedKeysFilePath(),
+								authPublicKey,
 								Base.getUsername(),
 								uid,
 								uid

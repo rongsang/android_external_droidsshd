@@ -63,19 +63,18 @@ public class DroidSSHd extends Activity {
 	private DroidSSHdService mBoundDaemonHandlerService;
 	private boolean mDaemonHandlerIsBound;
 
-	private long mUpdateUIdelay = 500L;
+	private long mUpdateUIdelay = 200L;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		Base.initialize(getBaseContext());
-		setContentView(R.layout.act_main);
-
-		Base.setDropbearDaemonStatus(Base.DAEMON_STATUS_STOPPED);
-
-		setUpUiListeners();
+		Base.setDropbearDaemonStatus(Base.DAEMON_STATUS_UNKNOWN);
 
 		mDropbearDaemonHandlerService = new Intent(this, tk.tanguy.droidsshd.system.DroidSSHdService.class);
+
+		setContentView(R.layout.act_main);
+		setUpUiListeners();
 
 		if ((!Util.validateHostKeys() || (!Util.checkPathToBinaries()))) {
 			startInitialSetupActivity();

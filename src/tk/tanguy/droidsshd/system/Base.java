@@ -78,6 +78,7 @@ public class Base {
 	protected static String dropbearTmpDir;
 	protected static String dropbearBinDir;
 	protected static String dropbearPidFile;
+	protected static String dropbearDataDir;
 	
 	protected static String pathToSuBinary;
 	protected static String pathToShBinary;
@@ -111,10 +112,6 @@ public class Base {
 	
 	public static void setDropbearDaemonStatus(int s){
 		dropbearDaemonStatus=s;
-//		this should be on a service...
-//		if (s==Base.DAEMON_STATUS_STOPPED) {
-//			stopSelf();
-//		}
 	}
 	
 	public static String getPathToSuBinary() {
@@ -260,16 +257,15 @@ public class Base {
 		if (Base.context != null) {
 			SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(Base.getContext());
 			debug = sp.getBoolean(context.getString(R.string.pref_debug_key), false);
-//			daemonPort = Integer.parseInt(sp.getString(context.getString(R.string.pref_dropbear_port_key), "50022"));
 			daemonPort = sp.getInt(context.getString(R.string.pref_dropbear_port_key), 2222);
 			startAtBoot = sp.getBoolean(context.getString(R.string.pref_dropbear_start_on_boot_key), false);
 			startAtBootOnlyIfRunningBefore = sp.getBoolean(context.getString(R.string.pref_dropbear_start_on_boot_only_if_was_running_key), true);
 			notificationsEnabled = sp.getBoolean(context.getString(R.string.pref_interface_notification_key), true);
 			password = sp.getString(context.getString(R.string.pref_dropbear_auth_password_key), "password");
 			runDaemonAsRoot = sp.getBoolean(context.getString(R.string.pref_dropbear_as_root_key),false);
-//			username = sp.getString(context.getString(R.string.pref_dropbear_auth_username_key), "android");
 			pathToSuBinary = sp.getString(context.getString(R.string.pref_path_to_su_key), "/system/xbin/su");
 			pathToShBinary = sp.getString(context.getString(R.string.pref_path_to_sh_key), "/system/bin/sh");
+//			username = sp.getString(context.getString(R.string.pref_dropbear_auth_username_key), "android");
 			if(runDaemonAsRoot) {
 				username="root";
 			} else {
@@ -288,6 +284,8 @@ public class Base {
 			setDropbearTmpDirPath(Base.filesDirPath +  "/" + Base.DROPBEAR_DIR_TMP);
 			setDropbearBinDirPath(Base.filesDirPath +  "/" + Base.DROPBEAR_DIR_BIN);
 			setDropbearPidFilePath(Base.dropbearTmpDir + "/" + Base.DROPBEAR_PIDFILE);
+
+			dropbearDataDir="/data/dropbear";
 		}
 		refresh();
 	}
