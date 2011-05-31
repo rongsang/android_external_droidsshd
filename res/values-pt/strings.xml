@@ -26,7 +26,7 @@
     <string name="password_tooshort">Senha muito curta</string>
     <string name="password_show">Mostrar senha</string>
     
-    <string name="setup_warningfirsttime">Aparentemente esta é a primeira vez que o DroidSSHd está sendo executado neste dispositivo. A senha padrão é "passwork".\n\nContinuar com a configuração inicial?</string>
+    <string name="setup_warningfirsttime">Aparentemente esta é a primeira vez que o DroidSSHd está sendo executado neste dispositivo. A senha padrão é "password".\n\nContinuar com a configuração inicial?</string>
     <string name="setup_confirmyes">Sim, faça isso agora!</string>
     <string name="setup_cancelno">Não, sair do DroidSSHd.</string>
     <string name="table_runningasroot">Executando como root:</string>
@@ -36,7 +36,7 @@
     <string name="pref_dropbear_auth_password_title">Senha</string>
     <string name="pref_dropbear_auth_username_title">Usuário</string>
     <string name="pref_category_sshd_title">Configurações do Dropbear SSHd</string>
-    <string name="pref_screen_server_settings_title">Service and Authentication</string>
+    <string name="pref_screen_server_settings_title">Autenticação e Serviços</string>
     <string name="pref_screen_server_settings_summary">Gerenciamento da inicialização/finalização do serviço, porta TCP, permissões, autenticação e gerenciamento de chaves.</string>
     <string name="pref_dropbear_port_title">Porta TCP</string>
     <string name="pref_dropbear_port_summary">Porta atualmente configurada</string>
