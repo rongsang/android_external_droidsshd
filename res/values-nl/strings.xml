@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <string name="activity_initial_setup">tk.tanguy.activity.InitialSetup</string>
     <string name="activity_auth_keys_management">tk.tanguy.activity.AuthorizedKeysManagement</string>
     <string name="activity_file_chooser">com.h3r3t1c.filechooser.FileChooser</string>
     <string name="activity_about">tk.tanguy.activity.About</string>
-    
     <string name="act_main_status">Status:</string>
     <string name="act_main_unknown">onbekend</string>
-    <string name="act_main_ip">IP:</string>
+    <string name="act_main_ip">IP addres(sen):</string>
     <string name="act_main_defip">0.0.0.0</string>
     <string name="act_main_username">Gebruikersnaam:</string>
     <string name="act_main_port">Poort:</string>
@@ -25,14 +24,12 @@
     <string name="antigo_checkhostkeys">Controleer Host Sleutels</string>
     <string name="password_tooshort">Wachtwoord te kort</string>
     <string name="password_show">Laat wachtwoord zien</string>
-    
     <string name="setup_warningfirsttime">Dit is de eerste keer dat DroidSSHd wordt opgestart op dit apparaat. Het standaard wachtwoord is "password".\n\nVerder gaan met initiële setup procedure</string>
     <string name="setup_confirmyes">Ja, en wel meteen!</string>
     <string name="setup_cancelno">Nee, DroidSSHd sluiten.</string>
     <string name="table_runningasroot">Draaien als root:</string>
     <string name="about_text">Eerste versie door mestre,\n\nAangepast voor Motorola Defy CM7\nby Tanguy Pruvot\n\nDeze versie gebruikt de Cyanogen dropbear versie, niet inbegrepen in deze apk.\n\nDe volledige bronnen zijn beschikbaar op github: tpruvot\'s fork\n\nTranslation by Martijn from XDA</string>
     <string name="about_ok">Ok</string>
-    
     <string name="pref_dropbear_auth_password_title">Wachtwoord</string>
     <string name="pref_dropbear_auth_username_title">Gebruikersnaam</string>
     <string name="pref_category_sshd_title">Dropbear SSHd instellingen</string>
@@ -56,7 +53,7 @@
     <string name="pref_screen_system_settings_title">Systeem instellingen</string>
     <string name="pref_screen_system_settings_summary">Systeem tweaks, energiebeheer, pad naar binaries</string>
     <string name="pref_screen_ui_settings">UI Instellingen</string>
-    <string name="pref_category_paths_summary" />
+    <string name="pref_category_paths_summary"/>
     <string name="pref_category_paths_title">Bestanden en Mappen</string>
     <string name="pref_interface_notification_summary">Laat statusbalk melding zien als deamon draait</string>
     <string name="pref_interface_notification_label">Notificatie</string>
@@ -75,14 +72,12 @@
     <string name="pref_droidsshd_settings_title">Instellingen</string>
     <string name="app_description">Dropbear SSH Server en Management tools</string>
     <string name="app_label">DroidSSHd</string>
-    
     <string name="app_webpage_url">http://github.com/tpruvot/android_external_droidsshd/</string>
     <string name="ssh_icon_downwloaded_url">http://iconfinder.net</string>
     <string name="ssh_icon_created_by">Tanguy Pruvot</string>
     <string name="ssh_icon_created_by_url">http://tanguy.tk/</string>
     <string name="app_based_on">rsyncdroid</string>
     <string name="app_based_on_webpage_url">http://code.google.com/p/droidsshd/</string>
-    
     <string name="pref_dropbear_auth_username_default">android</string>
     <string name="pref_dropbear_auth_password_default">wachtwoord</string>
     <string name="pref_debug_default">true</string>

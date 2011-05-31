@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <string name="activity_initial_setup">tk.tanguy.activity.InitialSetup</string>
     <string name="activity_auth_keys_management">tk.tanguy.activity.AuthorizedKeysManagement</string>
     <string name="activity_file_chooser">com.h3r3t1c.filechooser.FileChooser</string>
     <string name="activity_about">tk.tanguy.activity.About</string>
-    
     <string name="pref_dropbear_auth_username_key">auth_username</string>
     <string name="pref_dropbear_auth_password_key">auth_password</string>
     <string name="pref_wifi_auto_enable_key">wifi_auto_enable</string>
@@ -18,10 +17,9 @@
     <string name="pref_dropbear_start_on_boot_key">start_on_boot</string>
     <string name="pref_debug_key">debug</string>
     <string name="pref_dropbear_as_root_key">dropbear_runs_as_root</string>
-    
     <string name="act_main_status">Etat:</string>
     <string name="act_main_unknown">inconnu</string>
-    <string name="act_main_ip">IP:</string>
+    <string name="act_main_ip">Address\(es\) IP: </string>
     <string name="act_main_defip">0.0.0.0</string>
     <string name="act_main_username">Compte:</string>
     <string name="act_main_port">Port: </string>
@@ -39,14 +37,12 @@
     <string name="antigo_checkhostkeys">Vérifier clés Host</string>
     <string name="password_tooshort">Mot de passe trop court</string>
     <string name="password_show">Afficher le mot de passe</string>
-    
     <string name="setup_warningfirsttime">DroidSSHd est lancé pour la première fois. Le mot de passe par défaut est \"password\".\n\nProcéder à l\'installation initiale ?</string>
     <string name="setup_confirmyes">Oui, Configurer maintenant.</string>
     <string name="setup_cancelno">Non, Fermer DroidSSHd.</string>
     <string name="table_runningasroot">Running as root:</string>
     <string name="about_text">Basé sur DroidSSHd conçu par mestre,\n\nAdapté pour le Motorola Defy CM7\npar Tanguy Pruvot\n\nCette version utilise une version spécifique de dropbear et nécessite Cyanogen Mod 7.\n\nLes sources complètes sont disponibles sur github contrairement à la version d\'origine.\n\n</string>
     <string name="about_ok">Ok</string>
-    
     <string name="pref_dropbear_auth_password_title">Mot de passe</string>
     <string name="pref_dropbear_auth_username_title">Utilisateur</string>
     <string name="pref_dropbear_auth_publickey">Clé Publique SSH</string>
@@ -72,7 +68,7 @@
     <string name="pref_screen_system_settings_title">Paramètres Système</string>
     <string name="pref_screen_system_settings_summary">Wifi, root, chemins des exécutables</string>
     <string name="pref_screen_ui_settings">Préférences Interface</string>
-    <string name="pref_category_paths_summary" />
+    <string name="pref_category_paths_summary"/>
     <string name="pref_category_paths_title">Fichiers et Répertoires</string>
     <string name="pref_interface_notification_summary">Affiche l\icone de notification lorsque le service est actif</string>
     <string name="pref_interface_notification_label">Notification</string>

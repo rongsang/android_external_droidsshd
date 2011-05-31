@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <string name="activity_initial_setup">tk.tanguy.activity.InitialSetup</string>
     <string name="activity_auth_keys_management">tk.tanguy.activity.AuthorizedKeysManagement</string>
     <string name="activity_file_chooser">com.h3r3t1c.filechooser.FileChooser</string>
     <string name="activity_about">tk.tanguy.activity.About</string>
-    
     <string name="pref_dropbear_auth_password_key">auth_password</string>
     <string name="pref_dropbear_auth_username_key">auth_username</string>
     <string name="pref_dropbear_port_key">dropbear_port</string>
@@ -18,10 +17,9 @@
     <string name="pref_dropbear_start_on_boot_key">start_on_boot</string>
     <string name="pref_debug_key">debug</string>
     <string name="pref_dropbear_as_root_key">dropbear_runs_as_root</string>
-    
     <string name="act_main_status">Status:</string>
     <string name="act_main_unknown">unknown</string>
-    <string name="act_main_ip">IP:</string>
+    <string name="act_main_ip">IP address\(es\): </string>
     <string name="act_main_defip">0.0.0.0</string>
     <string name="act_main_username">Username:</string>
     <string name="act_main_port">Port: </string>
@@ -39,14 +37,12 @@
     <string name="antigo_checkhostkeys">Check Host Keys</string>
     <string name="password_tooshort">Password too short</string>
     <string name="password_show">Show password</string>
-    
     <string name="setup_warningfirsttime">It looks like DroidSSHd is running for the first time on this device. Default password is "password".\n\nProceed with initial setup?</string>
     <string name="setup_confirmyes">Yes, let\'s do this now!</string>
     <string name="setup_cancelno">No, quit DroidSSHd.</string>
     <string name="table_runningasroot">Running as root:</string>
     <string name="about_text">Initial version by mestre,\n\nAdapted for Motorola Defy CM7\nby Tanguy Pruvot\n\nThis version uses Cyanogen dropbear version, not included in apk.\n\nFull sources are available on github: tpruvot\'s fork\n\n</string>
     <string name="about_ok">Ok</string>
-    
     <string name="pref_dropbear_auth_username_title">Username</string>
     <string name="pref_dropbear_auth_password_title">Password</string>
     <string name="pref_dropbear_auth_publickey">Public Key</string>
@@ -73,7 +69,7 @@
     <string name="pref_screen_system_settings_title">System settings</string>
     <string name="pref_screen_system_settings_summary">System tweaks, power management, path to binaries</string>
     <string name="pref_screen_ui_settings">UI Settings</string>
-    <string name="pref_category_paths_summary" />
+    <string name="pref_category_paths_summary"/>
     <string name="pref_category_paths_title">Files and Directories</string>
     <string name="pref_interface_notification_summary">Show notification on status bar whenever the daemon is running</string>
     <string name="pref_interface_notification_label">Notification</string>
@@ -94,14 +90,12 @@
     <string name="pref_droidsshd_settings_title">Settings</string>
     <string name="app_description">Dropbear SSH Server and Management Tools</string>
     <string name="app_label">DroidSSHd</string>
-    
     <string name="app_webpage_url">http://github.com/tpruvot/android_external_droidsshd/</string>
     <string name="ssh_icon_downwloaded_url">http://iconfinder.net</string>
     <string name="ssh_icon_created_by">Tanguy Pruvot</string>
     <string name="ssh_icon_created_by_url">http://tanguy.tk/</string>
     <string name="app_based_on">rsyncdroid</string>
     <string name="app_based_on_webpage_url">http://code.google.com/p/droidsshd/</string>
-    
     <string name="pref_dropbear_auth_username_default">android</string>
     <string name="pref_dropbear_auth_password_default">password</string>
     <string name="pref_debug_default">true</string>

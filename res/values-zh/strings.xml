@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <string name="activity_initial_setup">tk.tanguy.activity.InitialSetup</string>
     <string name="activity_auth_keys_management">tk.tanguy.activity.AuthorizedKeysManagement</string>
     <string name="activity_file_chooser">com.h3r3t1c.filechooser.FileChooser</string>
     <string name="activity_about">tk.tanguy.activity.About</string>
-    
     <string name="pref_dropbear_auth_password_key">auth_password</string>
     <string name="pref_dropbear_auth_username_key">auth_username</string>
     <string name="pref_dropbear_port_key">dropbear_port</string>
@@ -18,10 +17,9 @@
     <string name="pref_dropbear_start_on_boot_key">start_on_boot</string>
     <string name="pref_debug_key">debug</string>
     <string name="pref_dropbear_as_root_key">dropbear_runs_as_root</string>
-    
     <string name="act_main_status">状态:</string>
     <string name="act_main_unknown">未知</string>
-    <string name="act_main_ip">IP:</string>
+    <string name="act_main_ip">IP地址\(es\): </string>
     <string name="act_main_defip">0.0.0.0</string>
     <string name="act_main_username">用户名:</string>
     <string name="act_main_port">端口: </string>
@@ -39,14 +37,12 @@
     <string name="antigo_checkhostkeys">检查主机密钥</string>
     <string name="password_tooshort">密码太短</string>
     <string name="password_show">显示密码</string>
-    
     <string name="setup_warningfirsttime">似乎这是DroidSSHd首次在本机上运行. 默认密码是"password".\n\n要进行初始化设置吗?</string>
     <string name="setup_confirmyes">是, 开始吧!</string>
     <string name="setup_cancelno">否, 退出DroidSSHd.</string>
     <string name="table_runningasroot">正在以root权限运行:</string>
     <string name="about_text">初始版本by mestre,\n\n为Motorola Defy CM7改写\nby Tanguy Pruvot\n\n这个版本使用Cyanogen dropbear version, 不包含在apk中.\n\n全部源码在github上可见: tpruvot\'s fork\n\nTranslation by sunoldman from XDA</string>
     <string name="about_ok">确定</string>
-    
     <string name="pref_dropbear_auth_username_title">用户名</string>
     <string name="pref_dropbear_auth_password_title">密码</string>
     <string name="pref_dropbear_auth_publickey">公钥</string>
@@ -73,7 +69,7 @@
     <string name="pref_screen_system_settings_title">系统设置</string>
     <string name="pref_screen_system_settings_summary">系统调整, 电源管理, 可执行文件路径</string>
     <string name="pref_screen_ui_settings">界面设置</string>
-    <string name="pref_category_paths_summary" />
+    <string name="pref_category_paths_summary"/>
     <string name="pref_category_paths_title">文件与目录</string>
     <string name="pref_interface_notification_summary">当服务运行时在状态栏显示通知</string>
     <string name="pref_interface_notification_label">通知</string>
@@ -93,14 +89,12 @@
     <string name="pref_droidsshd_settings_title">设置</string>
     <string name="app_description">Dropbear SSH服务端与管理工具</string>
     <string name="app_label">DroidSSHd</string>
-    
     <string name="app_webpage_url">http://github.com/tpruvot/android_external_droidsshd/</string>
     <string name="ssh_icon_downwloaded_url">http://iconfinder.net</string>
     <string name="ssh_icon_created_by">Tanguy Pruvot</string>
     <string name="ssh_icon_created_by_url">http://tanguy.tk/</string>
     <string name="app_based_on">rsyncdroid</string>
     <string name="app_based_on_webpage_url">http://code.google.com/p/droidsshd/</string>
-    
     <string name="pref_dropbear_auth_username_default">android</string>
     <string name="pref_dropbear_auth_password_default">password</string>
     <string name="pref_debug_default">true</string>
