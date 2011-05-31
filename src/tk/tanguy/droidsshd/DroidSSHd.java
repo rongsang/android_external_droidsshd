@@ -71,14 +71,13 @@ public class DroidSSHd extends Activity {
 		Base.initialize(getBaseContext());
 		Base.setDropbearDaemonStatus(Base.DAEMON_STATUS_UNKNOWN);
 
-		mDropbearDaemonHandlerService = new Intent(this, tk.tanguy.droidsshd.system.DroidSSHdService.class);
-
 		setContentView(R.layout.act_main);
 		setUpUiListeners();
 
 		if ((!Util.validateHostKeys() || (!Util.checkPathToBinaries()))) {
 			startInitialSetupActivity();
 		}
+		mDropbearDaemonHandlerService = new Intent(this, tk.tanguy.droidsshd.system.DroidSSHdService.class);
 	}
 
 	@Override
