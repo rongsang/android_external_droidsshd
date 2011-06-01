@@ -19,9 +19,6 @@
     <string name="main_running">Serviço SSH executando</string>
     <string name="main_runningasroot">Serviço executando como root</string>
     <string name="main_ipaddresses">Endereço\(os\) IP: </string>
-    <string name="antigo_updateui">Atualizar Interface</string>
-    <string name="antigo_getassets">Get Assets</string>
-    <string name="antigo_checkhostkeys">Verificar Chaves do Host</string>
     <string name="password_tooshort">Senha muito curta</string>
     <string name="password_show">Mostrar senha</string>
     <string name="setup_warningfirsttime">Aparentemente esta é a primeira vez que o DroidSSHd está sendo executado neste dispositivo. A senha padrão é "password".\n\nContinuar com a configuração inicial?</string>
@@ -49,11 +46,10 @@
     <string name="pref_path_to_su_default">/system/xbin/su</string>
     <string name="pref_path_to_sh_summary">Localizações personalizadas para binários como busybox e/ou toolbox</string>
     <string name="pref_path_to_sh_title">Localização do SH</string>
-    <string name="pref_path_to_sh_default">/system/bin/sh</string>
+    <string name="pref_path_to_sh_default">/system/xbin/ash</string>
     <string name="pref_screen_system_settings_title">Configuraçõs de sistema</string>
     <string name="pref_screen_system_settings_summary">Ajustes de sistema, gerenciamento de energia, caminho dos binários</string>
     <string name="pref_screen_ui_settings">Configurações da Interface</string>
-    <string name="pref_category_paths_summary"/>
     <string name="pref_category_paths_title">Arquivos e Diretórios</string>
     <string name="pref_interface_notification_summary">Mostrar notificação na barra de status quando o serviço estiver executando</string>
     <string name="pref_interface_notification_label">Notificação</string>
@@ -86,4 +82,10 @@
     <string name="pref_dropbear_start_on_boot_only_if_was_running_default">true</string>
     <string name="pref_dropbear_as_root_default">false</string>
     <string name="pref_dropbear_port_default">2222</string>
+    <string name="act_main_busy">...</string>
+    <string name="act_main_stopped">Stopped</string>
+    <string name="act_main_stopping">Stopping...</string>
+    <string name="act_main_starting">Starting...</string>
+    <string name="act_main_stop">Stop</string>
+    <string name="act_main_running">Running</string>
 </resources>

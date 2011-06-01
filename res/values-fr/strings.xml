@@ -4,24 +4,11 @@
     <string name="activity_auth_keys_management">tk.tanguy.activity.AuthorizedKeysManagement</string>
     <string name="activity_file_chooser">com.h3r3t1c.filechooser.FileChooser</string>
     <string name="activity_about">tk.tanguy.activity.About</string>
-    <string name="pref_dropbear_auth_username_key">auth_username</string>
-    <string name="pref_dropbear_auth_password_key">auth_password</string>
-    <string name="pref_wifi_auto_enable_key">wifi_auto_enable</string>
-    <string name="pref_wifi_lock_key">wifi_lock</string>
-    <string name="pref_prevent_device_sleep_key">prevent_device_sleep</string>
-    <string name="pref_dropbear_port_key">dropbear_port</string>
-    <string name="pref_path_to_su_key">path_to_su</string>
-    <string name="pref_path_to_sh_key">path_to_sh</string>
-    <string name="pref_dropbear_start_on_boot_only_if_was_running_key">only_if_was_running</string>
-    <string name="pref_interface_notification_key">notification</string>
-    <string name="pref_dropbear_start_on_boot_key">start_on_boot</string>
-    <string name="pref_debug_key">debug</string>
-    <string name="pref_dropbear_as_root_key">dropbear_runs_as_root</string>
-    <string name="act_main_status">Etat:</string>
+    <string name="act_main_status">Etat du service:</string>
     <string name="act_main_unknown">inconnu</string>
-    <string name="act_main_ip">Addresse(s) IP: </string>
+    <string name="act_main_ip">Adresse(s) IP: </string>
     <string name="act_main_defip">0.0.0.0</string>
-    <string name="act_main_username">Compte:</string>
+    <string name="act_main_username">Login:</string>
     <string name="act_main_port">Port: </string>
     <string name="act_main_asroot">Root:</string>
     <string name="act_main_start">Démarrer</string>
@@ -31,10 +18,7 @@
     <string name="item_pubkey_dsa1024">DSA 1024-bit</string>
     <string name="main_running">Service SSH démarré</string>
     <string name="main_runningasroot">Démarré en mode root</string>
-    <string name="main_ipaddresses">Address\(es\) IP: </string>
-    <string name="antigo_updateui">Rafraîchir</string>
-    <string name="antigo_getassets">Get Assets</string>
-    <string name="antigo_checkhostkeys">Vérifier clés Host</string>
+    <string name="main_ipaddresses">Adresse\(s\) IP: </string>
     <string name="password_tooshort">Mot de passe trop court</string>
     <string name="password_show">Afficher le mot de passe</string>
     <string name="setup_warningfirsttime">DroidSSHd est lancé pour la première fois. Le mot de passe par défaut est \"password\".\n\nProcéder à l\'installation initiale ?</string>
@@ -68,7 +52,6 @@
     <string name="pref_screen_system_settings_title">Paramètres Système</string>
     <string name="pref_screen_system_settings_summary">Wifi, root, chemins des exécutables</string>
     <string name="pref_screen_ui_settings">Préférences Interface</string>
-    <string name="pref_category_paths_summary"/>
     <string name="pref_category_paths_title">Fichiers et Répertoires</string>
     <string name="pref_interface_notification_summary">Affiche l\icone de notification lorsque le service est actif</string>
     <string name="pref_interface_notification_label">Notification</string>
@@ -76,9 +59,9 @@
     <string name="pref_category_interface_title">Interface Utilisateur</string>
     <string name="pref_category_development_title">Outils de Développement</string>
     <string name="pref_dropbear_start_on_boot_only_if_was_running_title">Si actif à l\'arrêt</string>
-    <string name="pref_dropbear_start_on_boot_only_if_was_running_summary">Le service SSH ne sera lancé automatiquement que si il était actif à l\'arrêt du système</string>
+    <string name="pref_dropbear_start_on_boot_only_if_was_running_summary">Le service SSH ne sera démarré automatiquement que s\'il était actif à l\'arrêt du système</string>
     <string name="pref_dropbear_start_on_boot_title">Démarrage automatique</string>
-    <string name="pref_dropbear_start_on_boot_summary">Lancer le service SSH lorsque l\'appareil (re)boot</string>
+    <string name="pref_dropbear_start_on_boot_summary">Activer le service SSH lorsque l\'appareil (re)boot</string>
     <string name="menu_about">A Propos</string>
     <string name="menu_quit_title">Quitter</string>
     <string name="pref_debug_title">Journal système (logcat)</string>
@@ -96,8 +79,6 @@
     <string name="ssh_icon_created_by_url">http://tanguy.tk/</string>
     <string name="app_based_on">rsyncdroid</string>
     <string name="app_based_on_webpage_url">http://code.google.com/p/droidsshd/</string>
-    <string name="pref_dropbear_auth_username_default">android</string>
-    <string name="pref_dropbear_auth_password_default">password</string>
     <string name="pref_debug_default">true</string>
     <string name="pref_interface_notification_default">true</string>
     <string name="pref_dropbear_start_on_boot_default">false</string>
@@ -108,6 +89,6 @@
     <string name="act_main_starting">Démarrage...</string>
     <string name="act_main_stop">Arrêter</string>
     <string name="act_main_running">Actif</string>
-    <string name="act_main_busy">...</string>
     <string name="act_main_stopped">Inactif</string>
+    <string name="act_main_busy">...</string>
 </resources>

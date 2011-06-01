@@ -19,9 +19,6 @@
     <string name="main_running">SSH daemon funcionando</string>
     <string name="main_runningasroot">Daemon funcionando como root</string>
     <string name="main_ipaddresses">Dirección IP \(es\): </string>
-    <string name="antigo_updateui">Actualizar UI</string>
-    <string name="antigo_getassets">Obtener activación </string>
-    <string name="antigo_checkhostkeys">Comprobar clave HOST</string>
     <string name="password_tooshort">Contraseña muy corta</string>
     <string name="password_show">Mostrar contraseña</string>
     <string name="setup_warningfirsttime">Parece que DroidSSHd esta funcionando por primera vez en este dispositivo. La contraseña por defecto es "password".\n\nContinuar con la instalación?</string>
@@ -49,11 +46,10 @@
     <string name="pref_path_to_su_default">/system/xbin/su</string>
     <string name="pref_path_to_sh_summary">Rutas personalizadas para los binarios como busybox y/o toolbox</string>
     <string name="pref_path_to_sh_title">Ruta de SH</string>
-    <string name="pref_path_to_sh_default">/system/bin/sh</string>
+    <string name="pref_path_to_sh_default">/system/xbin/ash</string>
     <string name="pref_screen_system_settings_title">Opciones de sistema</string>
     <string name="pref_screen_system_settings_summary">Ajustes de sistema, administración de energía, ruta de los binarios</string>
     <string name="pref_screen_ui_settings">Ajustes de UI</string>
-    <string name="pref_category_paths_summary"/>
     <string name="pref_category_paths_title">Archivos y Directorios</string>
     <string name="pref_interface_notification_summary">Mostrar notificaciones en la barra de estado siempre que daemon este activo</string>
     <string name="pref_interface_notification_label">Notificación </string>
@@ -86,4 +82,10 @@
     <string name="pref_dropbear_start_on_boot_only_if_was_running_default">true</string>
     <string name="pref_dropbear_as_root_default">false</string>
     <string name="pref_dropbear_port_default">2222</string>
+    <string name="act_main_busy">...</string>
+    <string name="act_main_stopped">Stopped</string>
+    <string name="act_main_stopping">Stopping...</string>
+    <string name="act_main_starting">Starting...</string>
+    <string name="act_main_stop">Stop</string>
+    <string name="act_main_running">Running</string>
 </resources>

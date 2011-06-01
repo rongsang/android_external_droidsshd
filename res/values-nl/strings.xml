@@ -19,9 +19,6 @@
     <string name="main_running">SSH daemon draait</string>
     <string name="main_runningasroot">Daemon draait als root</string>
     <string name="main_ipaddresses">IP addres(sen):</string>
-    <string name="antigo_updateui">Gebruikersinterface updaten</string>
-    <string name="antigo_getassets">Haal Assets op</string>
-    <string name="antigo_checkhostkeys">Controleer Host Sleutels</string>
     <string name="password_tooshort">Wachtwoord te kort</string>
     <string name="password_show">Laat wachtwoord zien</string>
     <string name="setup_warningfirsttime">Dit is de eerste keer dat DroidSSHd wordt opgestart op dit apparaat. Het standaard wachtwoord is "password".\n\nVerder gaan met initiële setup procedure</string>
@@ -49,11 +46,10 @@
     <string name="pref_path_to_su_default">/system/xbin/su</string>
     <string name="pref_path_to_sh_summary">Custom paden voor binaries, zoals busybox en/of toolbox</string>
     <string name="pref_path_to_sh_title">Pad naar SH</string>
-    <string name="pref_path_to_sh_default">/system/bin/sh</string>
+    <string name="pref_path_to_sh_default">/system/xbin/ash</string>
     <string name="pref_screen_system_settings_title">Systeem instellingen</string>
     <string name="pref_screen_system_settings_summary">Systeem tweaks, energiebeheer, pad naar binaries</string>
     <string name="pref_screen_ui_settings">UI Instellingen</string>
-    <string name="pref_category_paths_summary"/>
     <string name="pref_category_paths_title">Bestanden en Mappen</string>
     <string name="pref_interface_notification_summary">Laat statusbalk melding zien als deamon draait</string>
     <string name="pref_interface_notification_label">Notificatie</string>
@@ -86,4 +82,10 @@
     <string name="pref_dropbear_start_on_boot_only_if_was_running_default">true</string>
     <string name="pref_dropbear_as_root_default">false</string>
     <string name="pref_dropbear_port_default">2222</string>
+    <string name="act_main_busy">...</string>
+    <string name="act_main_stopped">Stopped</string>
+    <string name="act_main_stopping">Stopping...</string>
+    <string name="act_main_starting">Starting...</string>
+    <string name="act_main_stop">Stop</string>
+    <string name="act_main_running">Running</string>
 </resources>

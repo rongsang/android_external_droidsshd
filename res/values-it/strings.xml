@@ -19,9 +19,6 @@
     <string name="main_running">Demone SSH in esecuzione</string>
     <string name="main_runningasroot">Demone in esecuzione come amministratore</string>
     <string name="main_ipaddresses">Indirizzo IP\(es\): </string>
-    <string name="antigo_updateui">Aggiorna UI</string>
-    <string name="antigo_getassets">Ottieni risorsa</string>
-    <string name="antigo_checkhostkeys">Controlla le chiavi dell\'host</string>
     <string name="password_tooshort">Password troppo corta</string>
     <string name="password_show">Mostra password</string>
     <string name="setup_warningfirsttime">Sembra che DroidSSHd venga eseguito per la prima volta su questo dispositivo. La password di default è \"password\".\n\nProcedere con la configurazione iniziale?</string>
@@ -54,7 +51,6 @@
     <string name="pref_screen_system_settings_title">Impostazioni di sistema</string>
     <string name="pref_screen_system_settings_summary">Impostazioni di sistema, gestione risparmio energetico, percorsi delle applicazioni</string>
     <string name="pref_screen_ui_settings">Impostazioni UI</string>
-    <string name="pref_category_paths_summary"/>
     <string name="pref_category_paths_title">File e Cartelle</string>
     <string name="pref_interface_notification_summary">Mostra le notifiche sulla barra di stato quando il demone è in esecuzione</string>
     <string name="pref_interface_notification_label">Notifica</string>
@@ -87,4 +83,10 @@
     <string name="pref_dropbear_start_on_boot_only_if_was_running_default">true</string>
     <string name="pref_dropbear_as_root_default">false</string>
     <string name="pref_dropbear_port_default">2222</string>
+    <string name="act_main_busy">...</string>
+    <string name="act_main_stopped">Stopped</string>
+    <string name="act_main_stopping">Stopping...</string>
+    <string name="act_main_starting">Starting...</string>
+    <string name="act_main_stop">Stop</string>
+    <string name="act_main_running">Running</string>
 </resources>

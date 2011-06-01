@@ -5,27 +5,22 @@ package tk.tanguy.droidsshd.activity;
 
 import tk.tanguy.droidsshd.R;
 import tk.tanguy.droidsshd.system.Base;
-import tk.tanguy.droidsshd.system.Util;
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.TextView;
+//import android.widget.TextView;
 
 /**
  * @author tpruvot
  * 
  */
 public class About extends Activity {
-
-	private static final String TAG = "DroidSSHd-About";
+	//private static final String TAG = "DroidSSHd-About";
 
 	private Button buttonOk;
-	private TextView textAbout;
+	//private TextView textAbout;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -38,7 +33,7 @@ public class About extends Activity {
 		// requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.about);
 		
-		textAbout = (TextView) findViewById(R.id.text_about);
+		//textAbout = (TextView) findViewById(R.id.text_about);
 		
 		buttonOk = (Button) findViewById(R.id.button_about_ok);
 		buttonOk.setOnClickListener(new OnClickListener() {

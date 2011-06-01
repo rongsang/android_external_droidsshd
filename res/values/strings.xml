@@ -21,7 +21,7 @@
     <string name="act_main_unknown">unknown</string>
     <string name="act_main_ip">IP address(es): </string>
     <string name="act_main_defip">0.0.0.0</string>
-    <string name="act_main_username">Username:</string>
+    <string name="act_main_username">Login:</string>
     <string name="act_main_port">Port: </string>
     <string name="act_main_asroot">As root:</string>
     <string name="act_main_start">Start</string>
@@ -32,9 +32,6 @@
     <string name="main_running">SSH daemon running</string>
     <string name="main_runningasroot">Daemon running as root</string>
     <string name="main_ipaddresses">IP address\(es\): </string>
-    <string name="antigo_updateui">Update UI</string>
-    <string name="antigo_getassets">Get Assets</string>
-    <string name="antigo_checkhostkeys">Check Host Keys</string>
     <string name="password_tooshort">Password too short</string>
     <string name="password_show">Show password</string>
     <string name="setup_warningfirsttime">It looks like DroidSSHd is running for the first time on this device. Default password is "password".\n\nProceed with initial setup?</string>
@@ -69,7 +66,6 @@
     <string name="pref_screen_system_settings_title">System settings</string>
     <string name="pref_screen_system_settings_summary">System tweaks, power management, path to binaries</string>
     <string name="pref_screen_ui_settings">UI Settings</string>
-    <string name="pref_category_paths_summary"/>
     <string name="pref_category_paths_title">Files and Directories</string>
     <string name="pref_interface_notification_summary">Show notification on status bar whenever the daemon is running</string>
     <string name="pref_interface_notification_label">Notification</string>

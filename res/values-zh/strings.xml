@@ -32,9 +32,6 @@
     <string name="main_running">SSH服务正在运行</string>
     <string name="main_runningasroot">正在以root权限运行服务</string>
     <string name="main_ipaddresses">IP地址\(es\): </string>
-    <string name="antigo_updateui">刷新界面</string>
-    <string name="antigo_getassets">Get Assets</string>
-    <string name="antigo_checkhostkeys">检查主机密钥</string>
     <string name="password_tooshort">密码太短</string>
     <string name="password_show">显示密码</string>
     <string name="setup_warningfirsttime">似乎这是DroidSSHd首次在本机上运行. 默认密码是"password".\n\n要进行初始化设置吗?</string>
@@ -69,7 +66,6 @@
     <string name="pref_screen_system_settings_title">系统设置</string>
     <string name="pref_screen_system_settings_summary">系统调整, 电源管理, 可执行文件路径</string>
     <string name="pref_screen_ui_settings">界面设置</string>
-    <string name="pref_category_paths_summary"/>
     <string name="pref_category_paths_title">文件与目录</string>
     <string name="pref_interface_notification_summary">当服务运行时在状态栏显示通知</string>
     <string name="pref_interface_notification_label">通知</string>
@@ -103,4 +99,10 @@
     <string name="pref_dropbear_start_on_boot_only_if_was_running_default">true</string>
     <string name="pref_dropbear_as_root_default">false</string>
     <string name="pref_dropbear_port_default">2222</string>
+    <string name="act_main_busy">...</string>
+    <string name="act_main_stopping">Stopping...</string>
+    <string name="act_main_starting">Starting...</string>
+    <string name="act_main_stopped">Stopped</string>
+    <string name="act_main_stop">Stop</string>
+    <string name="act_main_running">Running</string>
 </resources>

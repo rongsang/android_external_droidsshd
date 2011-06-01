@@ -15,9 +15,6 @@
     <string name="main_running">SSH daemon im Gange</string>
     <string name="main_runningasroot">Daemon als Root ausführen</string>
     <string name="main_ipaddresses">IP addresse\(es\): </string>
-    <string name="antigo_updateui">Ui updaten</string>
-    <string name="antigo_getassets">Rechte holen</string>
-    <string name="antigo_checkhostkeys">Check Host-Schlüssel</string>
     <string name="password_tooshort">Zu kurze Passwort</string>
     <string name="password_show">Zeige Passwort</string>
     <string name="setup_warningfirsttime">Sieht aus, als würde DroidSSH zum ersten mal auf diesem Defy laufen. Das voreingestelle Passwort is \"password\".\n\nMit erster Installation fortfahren?</string>
@@ -45,11 +42,10 @@
     <string name="pref_path_to_su_default">/system/xbin/su</string>
     <string name="pref_path_to_sh_summary">Individuelle Wege für Binärdateien wie busybox und / oder Toolbox</string>
     <string name="pref_path_to_sh_title">Pfad zu SH</string>
-    <string name="pref_path_to_sh_default">/system/bin/sh</string>
+    <string name="pref_path_to_sh_default">/system/xbin/ash</string>
     <string name="pref_screen_system_settings_title">System Einstellungen</string>
     <string name="pref_screen_system_settings_summary">System Tweaks, Power Management, Pfad zu den Binaries</string>
     <string name="pref_screen_ui_settings">UI Einstellungen</string>
-    <string name="pref_category_paths_summary"/>
     <string name="pref_category_paths_title">Dateien und Verzeichnisse</string>
     <string name="pref_interface_notification_summary">Zeige Meldung in der Statuszeile, wenn der Daemon läuft</string>
     <string name="pref_interface_notification_label">Benachrichtigung</string>
@@ -74,12 +70,15 @@
     <string name="ssh_icon_created_by_url">http://tanguy.tk/</string>
     <string name="app_based_on">rsyncdroid</string>
     <string name="app_based_on_webpage_url">http://code.google.com/p/droidsshd/</string>
-    <string name="pref_dropbear_auth_username_default">android</string>
-    <string name="pref_dropbear_auth_password_default">password</string>
-    <string name="pref_debug_default">true</string>
     <string name="pref_interface_notification_default">true</string>
-    <string name="pref_dropbear_start_on_boot_default">falsch</string>
+    <string name="pref_dropbear_start_on_boot_default">false</string>
     <string name="pref_dropbear_start_on_boot_only_if_was_running_default">true</string>
-    <string name="pref_dropbear_as_root_default">falsch</string>
+    <string name="pref_dropbear_as_root_default">false</string>
     <string name="pref_dropbear_port_default">2222</string>
+    <string name="act_main_busy">...</string>
+    <string name="act_main_stopped">Stopped</string>
+    <string name="act_main_stopping">Stopping...</string>
+    <string name="act_main_starting">Starting...</string>
+    <string name="act_main_stop">Stop</string>
+    <string name="act_main_running">Running</string>
 </resources>
