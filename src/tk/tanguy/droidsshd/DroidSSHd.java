@@ -63,7 +63,7 @@ public class DroidSSHd extends Activity {
 	private DroidSSHdService mBoundDaemonHandlerService;
 	private boolean mDaemonHandlerIsBound;
 
-	private long mUpdateUIdelay = 200L;
+	private long mUpdateUIdelay = 250L;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -78,6 +78,7 @@ public class DroidSSHd extends Activity {
 			startInitialSetupActivity();
 		}
 		mDropbearDaemonHandlerService = new Intent(this, tk.tanguy.droidsshd.system.DroidSSHdService.class);
+		mHandler.postDelayed(mUpdateUI, mUpdateUIdelay);
 	}
 
 	@Override
@@ -257,7 +258,7 @@ public class DroidSSHd extends Activity {
 			Util.showMsg("Host keys not found");
 			return;
 		}
-		if(Base.getDropbearDaemonStatus() == Base.DAEMON_STATUS_STOPPED) {
+		if(Base.getDropbearDaemonStatus() <= Base.DAEMON_STATUS_STOPPED) {
 			Base.setDropbearDaemonStatus(Base.DAEMON_STATUS_STARTING);
 			if (Base.debug) {
 				Log.d(TAG, "Status was STOPPED, now it's STARTING");
