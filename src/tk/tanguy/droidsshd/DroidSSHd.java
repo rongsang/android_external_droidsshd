@@ -63,7 +63,7 @@ public class DroidSSHd extends Activity {
 	private DroidSSHdService mBoundDaemonHandlerService;
 	private boolean mDaemonHandlerIsBound;
 
-	private long mUpdateUIdelay = 250L;
+	private long mUpdateUIdelay = 150L;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -79,6 +79,7 @@ public class DroidSSHd extends Activity {
 		}
 		mDropbearDaemonHandlerService = new Intent(this, tk.tanguy.droidsshd.system.DroidSSHdService.class);
 		mHandler.postDelayed(mUpdateUI, mUpdateUIdelay);
+		mUpdateUIdelay = 500L;
 	}
 
 	@Override
@@ -150,7 +151,7 @@ public class DroidSSHd extends Activity {
 			public void onClick(View v) {
 				btnStartStop.setEnabled(false);
 				btnStartStop.setFocusable(false);
-				btnStartStop.setText("Working");
+				btnStartStop.setText(R.string.act_main_busy);
 				if (Util.isDropbearDaemonRunning()) {
 						if(Base.debug) {
 							Log.v(TAG, "btnStartStop pressed: stopping");
@@ -209,31 +210,37 @@ public class DroidSSHd extends Activity {
 		case Base.DAEMON_STATUS_STOPPING:
 			btnStartStop.setEnabled(false);
 			btnStartStop.setFocusable(false);
-			btnStartStop.setText("Stopping");
-			status_content.setText("Working");
+			btnStartStop.setText(R.string.act_main_stopping);
+			status_content.setText(R.string.act_main_busy);
 			break;
 
 		case Base.DAEMON_STATUS_STARTING:
 			btnStartStop.setEnabled(false);
 			btnStartStop.setFocusable(false);
-			btnStartStop.setText("Starting");
-			status_content.setText("Working");
+			btnStartStop.setText(R.string.act_main_starting);
+			status_content.setText(R.string.act_main_busy);
 			break;
 
 		case Base.DAEMON_STATUS_STARTED:
 			btnStartStop.setEnabled(true);
 			btnStartStop.setFocusable(true);
-			btnStartStop.setText("Stop");
-			status_content.setText("Running");
+			btnStartStop.setText(R.string.act_main_stop);
+			status_content.setText(R.string.act_main_running);
 			break;
 
 		case Base.DAEMON_STATUS_STOPPED:
 			btnStartStop.setEnabled(true);
 			btnStartStop.setFocusable(true);
-			btnStartStop.setText("Start");
-			status_content.setText("Stopped");
+			btnStartStop.setText(R.string.act_main_start);
+			status_content.setText(R.string.act_main_stopped);
 			break;
 
+		case Base.DAEMON_STATUS_UNKNOWN:
+			btnStartStop.setEnabled(true);
+			btnStartStop.setFocusable(true);
+			btnStartStop.setText(R.string.act_main_start);
+			status_content.setText(R.string.act_main_unknown);
+			break;
 		default:
 			break;
 		}

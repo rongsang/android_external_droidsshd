@@ -19,7 +19,7 @@
     <string name="pref_dropbear_as_root_key">dropbear_runs_as_root</string>
     <string name="act_main_status">Etat:</string>
     <string name="act_main_unknown">inconnu</string>
-    <string name="act_main_ip">Address\(es\) IP: </string>
+    <string name="act_main_ip">Addresse(s) IP: </string>
     <string name="act_main_defip">0.0.0.0</string>
     <string name="act_main_username">Compte:</string>
     <string name="act_main_port">Port: </string>
@@ -104,4 +104,10 @@
     <string name="pref_dropbear_start_on_boot_only_if_was_running_default">true</string>
     <string name="pref_dropbear_as_root_default">false</string>
     <string name="pref_dropbear_port_default">2222</string>
+    <string name="act_main_stopping">Arrêt en cours...</string>
+    <string name="act_main_starting">Démarrage...</string>
+    <string name="act_main_stop">Arrêter</string>
+    <string name="act_main_running">Actif</string>
+    <string name="act_main_busy">...</string>
+    <string name="act_main_stopped">Inactif</string>
 </resources>

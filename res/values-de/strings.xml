@@ -2,7 +2,7 @@
 <resources>
     <string name="act_main_status">Status:</string>
     <string name="act_main_unknown">Unbekannt</string>
-    <string name="act_main_ip">IP addresse\(es\): </string>
+    <string name="act_main_ip">IP addresse(s): </string>
     <string name="act_main_defip">0.0.0.0</string>
     <string name="act_main_username">Benutzername:</string>
     <string name="act_main_port">Port: </string>

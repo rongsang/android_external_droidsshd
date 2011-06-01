@@ -19,7 +19,7 @@
     <string name="pref_dropbear_as_root_key">dropbear_runs_as_root</string>
     <string name="act_main_status">状态:</string>
     <string name="act_main_unknown">未知</string>
-    <string name="act_main_ip">IP地址\(es\): </string>
+    <string name="act_main_ip">IP地址: </string>
     <string name="act_main_defip">0.0.0.0</string>
     <string name="act_main_username">用户名:</string>
     <string name="act_main_port">端口: </string>

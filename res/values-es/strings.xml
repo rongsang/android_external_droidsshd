@@ -6,7 +6,7 @@
     <string name="activity_about">tk.tanguy.activity.About</string>
     <string name="act_main_status">Estado:</string>
     <string name="act_main_unknown">Desconocido</string>
-    <string name="act_main_ip">Dirección IP \(es\): </string>
+    <string name="act_main_ip">Dirección IP: </string>
     <string name="act_main_defip">0.0.0.0</string>
     <string name="act_main_username">Usuario:</string>
     <string name="act_main_port">Puerto: </string>
