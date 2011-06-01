@@ -135,12 +135,14 @@ public class DroidSSHdService extends Service{
 						if (Base.runDaemonAsRoot()) {
 							uid = 0;
 							authPublicKey = Base.dropbearDataDir + "/" + Base.DROPBEAR_AUTHORIZED_KEYS;
-							Util.copyFile(Base.getDropbearAuthorizedKeysFilePath(),authPublicKey);
+							//Util.copyFile(Base.getDropbearAuthorizedKeysFilePath(),authPublicKey);
+							cmd("cp '"+Base.getDropbearAuthorizedKeysFilePath()+"' '"+authPublicKey+"'");
 						} else {
 							uid = android.os.Process.myUid();
 						}
 
-						//cm7   cmd = String.format("%s -d %s -r %s -p %d -P %s -E # -C %s # -R %s -N %s -U %s -G %s
+						//cm7 (original v0.52)
+						//cmd = String.format("%s -d %s -r %s -p %d -P %s -E # -C %s # -R %s -N %s -U %s -G %s
 
 						cmd = String.format("%s -d %s -r %s -p %d -P %s -E -C %s -R %s -A -N %s -U %s -G %s",
 								Base.getDropbearBinDirPath() + "/" + Base.DROPBEAR_BIN_SRV,
@@ -158,7 +160,7 @@ public class DroidSSHdService extends Service{
 						if (debug) {
 							Log.v(tag, "cmd = '" + cmd + "'");
 						}
-						cmd("export HOME=/sdcard ; cd $HOME");
+						//cmd("export HOME=/sdcard ; cd $HOME");
 						cmd(cmd);
 					}
 					@Override
