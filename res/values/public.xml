@@ -1,160 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <public name="directory_icon" id="0x7f020000" type="drawable"/>
-    <public type="drawable" name="file_icon" id="0x7f020001" />
-    <public type="drawable" name="folder" id="0x7f020002" />
-    <public id="0x7f020003" name="pubkey_icon" type="drawable"/>
-    <public type="drawable" id="0x7f020005" name="timepicker_down_btn"/>
-    <public type="drawable" name="timepicker_down_disabled" id="0x7f020006"/>
-    <public type="drawable" name="timepicker_down_disabled_focused" id="0x7f020007" />
-    <public type="drawable" name="timepicker_down_normal" id="0x7f020008" />
-    <public type="drawable" name="timepicker_down_pressed" id="0x7f020009" />
-    <public type="drawable" id="0x7f02000a" name="timepicker_down_selected"/>
-    <public type="drawable" name="timepicker_input" id="0x7f02000b" />
-    <public type="drawable" name="timepicker_input_disabled" id="0x7f02000c" />
-    <public type="drawable" name="timepicker_input_normal" id="0x7f02000d" />
-    <public type="drawable" name="timepicker_input_pressed" id="0x7f02000e" />
-    <public type="drawable" name="timepicker_input_selected" id="0x7f02000f" />
-    <public type="drawable" name="timepicker_up_btn" id="0x7f020010" />
-    <public type="drawable" name="timepicker_up_disabled" id="0x7f020011" />
-    <public type="drawable" name="timepicker_up_disabled_focused" id="0x7f020012" />
-    <public type="drawable" name="timepicker_up_normal" id="0x7f020013" />
-    <public type="drawable" name="timepicker_up_pressed" id="0x7f020014" />
-    <public type="drawable" name="timepicker_up_selected" id="0x7f020015" />
+    <public id="0x7f020000" type="drawable" name="directory_icon"/>
+    <public id="0x7f020001" type="drawable" name="file_icon"/>
+    <public id="0x7f020002" type="drawable" name="timepicker_down_btn"/>
+    <public id="0x7f020003" type="drawable" name="timepicker_down_disabled"/>
+    <public id="0x7f020004" type="drawable" name="timepicker_down_disabled_focused"/>
+    <public id="0x7f020005" type="drawable" name="timepicker_down_normal"/>
+    <public id="0x7f020006" type="drawable" name="timepicker_down_pressed"/>
+    <public id="0x7f020007" type="drawable" name="timepicker_down_selected"/>
+    <public id="0x7f020008" type="drawable" name="timepicker_input"/>
+    <public id="0x7f020009" type="drawable" name="timepicker_input_disabled"/>
+    <public id="0x7f02000a" type="drawable" name="timepicker_input_normal"/>
+    <public id="0x7f02000b" type="drawable" name="timepicker_input_pressed"/>
+    <public id="0x7f02000c" type="drawable" name="timepicker_input_selected"/>
+    <public id="0x7f02000d" type="drawable" name="timepicker_up_btn"/>
+    <public id="0x7f02000e" type="drawable" name="timepicker_up_disabled"/>
+    <public id="0x7f02000f" type="drawable" name="timepicker_up_disabled_focused"/>
+    <public id="0x7f020010" type="drawable" name="timepicker_up_normal"/>
+    <public id="0x7f020011" type="drawable" name="timepicker_up_pressed"/>
+    <public id="0x7f020012" type="drawable" name="timepicker_up_selected"/>
 
-    
-    <public type="layout" name="act_main" id="0x7f030000" />
-    <public type="layout" name="act_pubkeylist" id="0x7f030001" />
-    <public type="layout" name="file_view" id="0x7f030002" />
-    <public type="layout" name="item_pubkey" id="0x7f030003" />
-    <public type="layout" name="logview" id="0x7f030004" />
-    <public type="layout" name="about" id="0x7f030005" />
-    <public type="layout" name="number_picker" id="0x7f030007" />
-    <public type="layout" name="number_picker_pref" id="0x7f030008" />
-    <public type="layout" name="pref_auth_password_dialog" id="0x7f030009" />
-    
-    <public type="xml" name="preferences" id="0x7f040000" />
-    
-    <public type="color" name="solid_red" id="0x7f050000" />
-    <public type="color" name="solid_green" id="0x7f050001" />
-    <public type="color" name="solid_blue" id="0x7f050002" />
-    <public type="color" name="solid_white" id="0x7f050003" />
-    <public type="color" name="solid_black" id="0x7f050004" />
-    <public type="color" name="solid_yellow" id="0x7f050005" />
-    <public type="color" name="brownish" id="0x7f050006" />
-    
-    <public type="string" name="activity_initial_setup" id="0x7f060000" />
-    <public type="string" name="activity_auth_keys_management" id="0x7f060001" />
-    <public type="string" name="activity_file_chooser" id="0x7f060002" />
-    <public type="string" name="pref_dropbear_auth_password_title" id="0x7f060003" />
-    <public type="string" name="pref_dropbear_auth_password_key" id="0x7f060004" />
-    <public type="string" name="pref_dropbear_auth_username_title" id="0x7f060005" />
+    <public id="0x7f030000" name="act_main" type="layout"/>
+    <public id="0x7f030001" type="layout" name="act_pubkeylist"/>
+    <public id="0x7f030002" type="layout" name="file_view"/>
+    <public id="0x7f030003" type="layout" name="item_pubkey"/>
+    <public id="0x7f030004" name="logview" type="layout"/>
+    <public id="0x7f030005" type="layout" name="about"/>
+    <public id="0x7f030007" type="layout" name="number_picker"/>
+    <public id="0x7f030008" type="layout" name="number_picker_pref"/>
+    <public id="0x7f030009" type="layout" name="pref_auth_password_dialog"/>
+
+    <public type="xml" name="preferences" id="0x7f040000"/>
+
+    <public type="color" name="solid_red" id="0x7f050000"/>
+    <public name="solid_green" type="color" id="0x7f050001"/>
+    <public type="color" name="solid_blue" id="0x7f050002"/>
+    <public type="color" name="solid_white" id="0x7f050003"/>
+    <public type="color" name="solid_black" id="0x7f050004"/>
+    <public type="color" name="solid_yellow" id="0x7f050005"/>
+    <public type="color" name="brownish" id="0x7f050006"/>
+
+    <public type="string" name="activity_initial_setup" id="0x7f060000"/>
+    <public type="string" name="activity_auth_keys_management" id="0x7f060001"/>
+    <public type="string" name="activity_file_chooser" id="0x7f060002"/>
+    <public type="string" name="pref_dropbear_auth_password_title" id="0x7f060003"/>
+    <public type="string" name="pref_dropbear_auth_password_key" id="0x7f060004"/>
+    <public type="string" name="pref_dropbear_auth_username_title" id="0x7f060005"/>
     <public type="string" name="pref_dropbear_auth_username_key" id="0x7f060006"/>
     <public type="string" name="pref_screen_server_settings_title" id="0x7f060008"/>
-    <public type="string" name="pref_screen_server_settings_summary" id="0x7f060009" />
-    <public type="string" name="pref_dropbear_port_key" id="0x7f06000a" />
-    <public type="string" name="pref_dropbear_port_title" id="0x7f06000b" />
-    <public type="string" name="pref_dropbear_port_summary" id="0x7f06000c" />
-    <public type="string" name="pref_wifi_auto_enable_summary" id="0x7f06000d" />
-    <public type="string" name="pref_wifi_auto_enable_title" id="0x7f06000e" />
-    <public type="string" name="pref_wifi_auto_enable_key" id="0x7f06000f" />
-    <public type="string" name="pref_wifi_lock_summary" id="0x7f060010" />
-    <public type="string" name="pref_wifi_lock_title" id="0x7f060011" />
-    <public type="string" name="pref_wifi_lock_key" id="0x7f060012" />
-    <public type="string" name="pref_category_power_category_title" id="0x7f060013" />
-    <public type="string" name="pref_prevent_device_sleep_summary" id="0x7f060014" />
-    <public type="string" name="pref_prevent_device_sleep_title" id="0x7f060015" />
-    <public type="string" name="pref_prevent_device_sleep_key" id="0x7f060016" />
-    <public type="string" name="pref_path_to_su_summary" id="0x7f060017" />
-    <public type="string" name="pref_path_to_su_title" id="0x7f060018" />
-    <public type="string" name="pref_path_to_su_key" id="0x7f060019" />
-    <public type="string" name="pref_path_to_su_default" id="0x7f06001a" />
-    <public type="string" name="pref_path_to_sh_summary" id="0x7f06001b" />
-    <public type="string" name="pref_path_to_sh_title" id="0x7f06001c" />
-    <public type="string" name="pref_path_to_sh_key" id="0x7f06001d" />
-    <public type="string" name="pref_path_to_sh_default" id="0x7f06001e" />
-    <public type="string" name="pref_screen_system_settings_title" id="0x7f06001f" />
-    <public type="string" name="pref_screen_system_settings_summary" id="0x7f060020" />
-    <public type="string" name="pref_screen_ui_settings" id="0x7f060021" /> 
-    <public type="string" name="pref_category_paths_title" id="0x7f060023" />
-    <public type="string" name="pref_interface_notification_summary" id="0x7f060024" />
-    <public type="string" name="pref_interface_notification_label" id="0x7f060025" />
-    <public type="string" name="pref_interface_notification_key" id="0x7f060026" />
-    <public type="string" name="pref_category_interface_title" id="0x7f060027" />
-    <public type="string" name="pref_category_development_title" id="0x7f060028" />
-    <public type="string" name="pref_dropbear_start_on_boot_only_if_was_running_title" id="0x7f060029" />
-    <public type="string" name="pref_dropbear_start_on_boot_only_if_was_running_summary" id="0x7f06002a" />
-    <public type="string" name="pref_dropbear_start_on_boot_only_if_was_running_key" id="0x7f06002b" />
-    <public type="string" name="pref_dropbear_start_on_boot_title" id="0x7f06002c" />
-    <public type="string" name="pref_dropbear_start_on_boot_summary" id="0x7f06002d" />
-    <public type="string" name="pref_dropbear_start_on_boot_key" id="0x7f06002e" />
-    <public type="string" name="menu_quit_title" id="0x7f06002f" />
-    <public type="string" name="pref_debug_key" id="0x7f060030" />
-    <public type="string" name="pref_debug_title" id="0x7f060031" />
-    <public type="string" name="pref_debug_summary" id="0x7f060032" />
-    <public type="string" name="pref_dropbear_as_root_key" id="0x7f060033" />
-    <public type="string" name="pref_dropbear_as_root_title" id="0x7f060034" />
-    <public type="string" name="pref_dropbear_as_root_summary_enabled" id="0x7f060035" />
-    <public type="string" name="pref_dropbear_as_root_summary_disabled" id="0x7f060036" />
-    <public type="string" name="pref_droidsshd_settings_title" id="0x7f060037" />
-    <public type="string" name="app_description" id="0x7f060038" />
-    <public type="string" name="app_label" id="0x7f060039" />
-    <public type="string" name="app_webpage_url" id="0x7f06003a" />
-    <public type="string" name="ssh_icon_downwloaded_url" id="0x7f06003b" />
-    <public type="string" name="ssh_icon_created_by" id="0x7f06003c" />
-    <public type="string" name="ssh_icon_created_by_url" id="0x7f06003d" />
-    <public type="string" name="app_based_on" id="0x7f06003e" />
-    <public type="string" name="app_based_on_webpage_url" id="0x7f06003f" />
-    <public type="string" name="pref_dropbear_auth_username_default" id="0x7f060040" />
-    <public type="string" name="pref_dropbear_auth_password_default" id="0x7f060041" />
-    <public type="string" name="pref_debug_default" id="0x7f060042" />
-    <public type="string" name="pref_interface_notification_default" id="0x7f060043" />
-    <public type="string" name="pref_dropbear_start_on_boot_default" id="0x7f060044" />
-    <public type="string" name="pref_dropbear_start_on_boot_only_if_was_running_default" id="0x7f060045" />
-    <public type="string" name="pref_dropbear_as_root_default" id="0x7f060046" />
-    <public type="string" name="pref_dropbear_port_default" id="0x7f060047" />
-    <public type="string" name="about_text" id="0x7f060048" />
-    
-    <public type="menu" name="main_menu" id="0x7f070000" />
-    <public type="id" name="status_title" id="0x7f080000" />
-    <public type="id" name="status_content" id="0x7f080001" />
-    <public type="id" name="status_ip_address" id="0x7f080002" />
-    <public type="id" name="status_username" id="0x7f080003" />
-    <public type="id" name="status_tcp_port" id="0x7f080004" />
-    <public type="id" name="status_daemon_running_as_root" id="0x7f080005" />
-    <public type="id" name="status_button" id="0x7f080006" />
-    <public type="id" name="preferences_button" id="0x7f080007" />
-    <public type="id" name="file_chooser_icon" id="0x7f080008" />
-    <public type="id" name="file_chooser_upper" id="0x7f080009" />
-    <public type="id" name="file_chooser_lower" id="0x7f08000a" />
-    <public type="id" name="logview_scrollview" id="0x7f08000b" />
-    <public type="id" name="logview_stdout" id="0x7f08000c" />
-    <public type="id" name="main_layout" id="0x7f08000d" />
-    <public type="id" name="layout_topbar" id="0x7f08000e" />
-    <public type="id" name="status_icon" id="0x7f08000f" />
-    <public type="id" name="status_bar" id="0x7f080010" />
-    <public type="id" name="status_daemon_running" id="0x7f080011" />
-    <public type="id" name="status_port" id="0x7f080012" />
-    <public type="id" name="ButtonPreferences" id="0x7f080013" />
-    <public type="id" name="ButtonUpdateUi" id="0x7f080014" />
-    <public name="ButtonGetAssets" id="0x7f080015" type="id"/>
+    <public type="string" name="pref_screen_server_settings_summary" id="0x7f060009"/>
+    <public type="string" name="pref_dropbear_port_key" id="0x7f06000a"/>
+    <public type="string" name="pref_dropbear_port_title" id="0x7f06000b"/>
+    <public type="string" name="pref_dropbear_port_summary" id="0x7f06000c"/>
+    <public type="string" name="pref_wifi_auto_enable_summary" id="0x7f06000d"/>
+    <public type="string" name="pref_wifi_auto_enable_title" id="0x7f06000e"/>
+    <public type="string" name="pref_wifi_auto_enable_key" id="0x7f06000f"/>
+    <public type="string" name="pref_wifi_lock_summary" id="0x7f060010"/>
+    <public type="string" name="pref_wifi_lock_title" id="0x7f060011"/>
+    <public type="string" name="pref_wifi_lock_key" id="0x7f060012"/>
+    <public type="string" name="pref_category_power_category_title" id="0x7f060013"/>
+    <public type="string" name="pref_prevent_device_sleep_summary" id="0x7f060014"/>
+    <public type="string" name="pref_prevent_device_sleep_title" id="0x7f060015"/>
+    <public type="string" name="pref_prevent_device_sleep_key" id="0x7f060016"/>
+    <public type="string" name="pref_path_to_su_summary" id="0x7f060017"/>
+    <public type="string" name="pref_path_to_su_title" id="0x7f060018"/>
+    <public type="string" name="pref_path_to_su_key" id="0x7f060019"/>
+    <public type="string" name="pref_path_to_su_default" id="0x7f06001a"/>
+    <public type="string" name="pref_path_to_sh_summary" id="0x7f06001b"/>
+    <public type="string" name="pref_path_to_sh_title" id="0x7f06001c"/>
+    <public type="string" name="pref_path_to_sh_key" id="0x7f06001d"/>
+    <public type="string" name="pref_path_to_sh_default" id="0x7f06001e"/>
+    <public type="string" name="pref_screen_system_settings_title" id="0x7f06001f"/>
+    <public type="string" name="pref_screen_system_settings_summary" id="0x7f060020"/>
+    <public type="string" name="pref_screen_ui_settings" id="0x7f060021"/>
+    <public type="string" name="pref_category_paths_title" id="0x7f060023"/>
+    <public type="string" name="pref_interface_notification_summary" id="0x7f060024"/>
+    <public type="string" name="pref_interface_notification_label" id="0x7f060025"/>
+    <public type="string" name="pref_interface_notification_key" id="0x7f060026"/>
+    <public type="string" name="pref_category_interface_title" id="0x7f060027"/>
+    <public type="string" name="pref_category_development_title" id="0x7f060028"/>
+    <public type="string" name="pref_dropbear_start_on_boot_only_if_was_running_title" id="0x7f060029"/>
+    <public type="string" name="pref_dropbear_start_on_boot_only_if_was_running_summary" id="0x7f06002a"/>
+    <public type="string" name="pref_dropbear_start_on_boot_only_if_was_running_key" id="0x7f06002b"/>
+    <public type="string" name="pref_dropbear_start_on_boot_title" id="0x7f06002c"/>
+    <public type="string" name="pref_dropbear_start_on_boot_summary" id="0x7f06002d"/>
+    <public type="string" name="pref_dropbear_start_on_boot_key" id="0x7f06002e"/>
+    <public type="string" name="menu_quit_title" id="0x7f06002f"/>
+    <public type="string" name="pref_debug_key" id="0x7f060030"/>
+    <public type="string" name="pref_debug_title" id="0x7f060031"/>
+    <public type="string" name="pref_debug_summary" id="0x7f060032"/>
+    <public type="string" name="pref_dropbear_as_root_key" id="0x7f060033"/>
+    <public type="string" name="pref_dropbear_as_root_title" id="0x7f060034"/>
+    <public type="string" name="pref_dropbear_as_root_summary_enabled" id="0x7f060035"/>
+    <public type="string" name="pref_dropbear_as_root_summary_disabled" id="0x7f060036"/>
+    <public type="string" name="pref_droidsshd_settings_title" id="0x7f060037"/>
+    <public type="string" name="app_description" id="0x7f060038"/>
+    <public type="string" name="app_label" id="0x7f060039"/>
+    <public type="string" name="app_webpage_url" id="0x7f06003a"/>
+    <public type="string" name="ssh_icon_downwloaded_url" id="0x7f06003b"/>
+    <public type="string" name="ssh_icon_created_by" id="0x7f06003c"/>
+    <public type="string" name="ssh_icon_created_by_url" id="0x7f06003d"/>
+    <public type="string" name="app_based_on" id="0x7f06003e"/>
+    <public type="string" name="app_based_on_webpage_url" id="0x7f06003f"/>
+    <public type="string" name="pref_dropbear_auth_username_default" id="0x7f060040"/>
+    <public type="string" name="pref_dropbear_auth_password_default" id="0x7f060041"/>
+    <public type="string" name="pref_debug_default" id="0x7f060042"/>
+    <public type="string" name="pref_interface_notification_default" id="0x7f060043"/>
+    <public type="string" name="pref_dropbear_start_on_boot_default" id="0x7f060044"/>
+    <public type="string" name="pref_dropbear_start_on_boot_only_if_was_running_default" id="0x7f060045"/>
+    <public type="string" name="pref_dropbear_as_root_default" id="0x7f060046"/>
+    <public type="string" name="pref_dropbear_port_default" id="0x7f060047"/>
+    <public type="string" name="about_text" id="0x7f060048"/>
+
+    <public type="menu" name="main_menu" id="0x7f070000"/>
+
+    <public type="id" name="status_title" id="0x7f080000"/>
+    <public type="id" name="status_content" id="0x7f080001"/>
+    <public type="id" name="status_ip_address" id="0x7f080002"/>
+    <public type="id" name="status_username" id="0x7f080003"/>
+    <public type="id" name="status_tcp_port" id="0x7f080004"/>
+    <public type="id" name="status_daemon_running_as_root" id="0x7f080005"/>
+    <public type="id" name="status_button" id="0x7f080006"/>
+    <public type="id" name="preferences_button" id="0x7f080007"/>
+    <public type="id" name="file_chooser_icon" id="0x7f080008"/>
+    <public type="id" name="file_chooser_upper" id="0x7f080009"/>
+    <public type="id" name="file_chooser_lower" id="0x7f08000a"/>
+    <public type="id" name="logview_scrollview" id="0x7f08000b"/>
+    <public type="id" name="logview_stdout" id="0x7f08000c"/>
+    <public type="id" name="main_layout" id="0x7f08000d"/>
+    <public type="id" name="layout_topbar" id="0x7f08000e"/>
+    <public type="id" name="status_icon" id="0x7f08000f"/>
+    <public type="id" name="status_bar" id="0x7f080010"/>
+    <public type="id" name="status_daemon_running" id="0x7f080011"/>
+    <public type="id" name="status_port" id="0x7f080012"/>
+    <public type="id" name="ButtonPreferences" id="0x7f080013"/>
+    <public type="id" name="ButtonUpdateUi" id="0x7f080014"/>
+    <public type="id" name="ButtonGetAssets" id="0x7f080015"/>
     <public type="id" name="ButtonGenKeys" id="0x7f080016"/>
-    <public type="id" name="stdout_scrollview" id="0x7f080017" />
-    <public type="id" name="stdout" id="0x7f080018" />
-    <public type="id" name="increment" id="0x7f080019" />
-    <public type="id" name="timepicker_input" id="0x7f08001a" />
-    <public type="id" name="decrement" id="0x7f08001b" />
-    <public type="id" name="pref_num_picker" id="0x7f08001c" />
-    <public type="id" name="info" id="0x7f08001d" />
-    <public type="id" name="fields" id="0x7f08001e" />
-    <public type="id" name="password" id="0x7f08001f" />
+    <public type="id" name="stdout_scrollview" id="0x7f080017"/>
+    <public type="id" name="stdout" id="0x7f080018"/>
+    <public type="id" name="increment" id="0x7f080019"/>
+    <public type="id" name="timepicker_input" id="0x7f08001a"/>
+    <public type="id" name="decrement" id="0x7f08001b"/>
+    <public type="id" name="pref_num_picker" id="0x7f08001c"/>
+    <public type="id" name="info" id="0x7f08001d"/>
+    <public type="id" name="fields" id="0x7f08001e"/>
+    <public type="id" name="password" id="0x7f08001f"/>
     <public type="id" name="hint" id="0x7f080020"/>
-    <public type="id" name="show_password" id="0x7f080021" />
-    <public name="text_initial_setup" id="0x7f080022" type="id"/>
-    <public name="button_initial_setup_ok" type="id" id="0x7f080023"/>
-    <public name="button_initial_setup_cancel" id="0x7f080024" type="id"/>
-    <public name="menu_settings" id="0x7f080025" type="id"/>
-    
-    <public type="id" id="0x7f080027" name="menu_about" /><public id="0x7f080028" name="menu_quit" type="id"/>
-    <public name="button_about_ok" id="0x7f080029" type="id"/>
+    <public type="id" name="show_password" id="0x7f080021"/>
+    <public type="id" name="text_initial_setup" id="0x7f080022"/>
+    <public type="id" name="button_initial_setup_ok" id="0x7f080023"/>
+    <public type="id" name="button_initial_setup_cancel" id="0x7f080024"/>
+
+    <public type="id" id="0x7f080025" name="menu_quit"/>
+    <public type="id" id="0x7f080026" name="menu_settings"/>
+    <public type="id" id="0x7f080027" name="menu_about"/>
+    <public type="id" id="0x7f080028" name="button_about_ok"/>
 </resources>

@@ -58,11 +58,11 @@ public class FileArrayAdapter extends ArrayAdapter<Option>{
 					i.setImageResource(R.drawable.directory_icon);
 //					i.setVisibility(View.VISIBLE);
 				} else {
-					if(o.getName().endsWith(".pub")){
-						i.setImageResource(R.drawable.pubkey_icon);
-					} else {
+					//if(o.getName().endsWith(".pub")){
+					//	i.setImageResource(R.drawable.pubkey_icon);
+					//} else {
 						i.setImageResource(R.drawable.file_icon);
-					}
+					//}
 				}
 			}
 		}
