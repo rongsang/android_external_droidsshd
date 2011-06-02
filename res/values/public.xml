@@ -1,33 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <public type="drawable" name="folder" id="0x7f020002" />
-    <public type="drawable" name="ic_menu_refresh" id="0x7f020006" />
-    <public type="drawable" name="terminal" id="0x7f02000a" />
-    <public type="drawable" name="timepicker_down_btn" id="0x7f02000b" />
-    <public type="drawable" name="timepicker_down_disabled" id="0x7f02000c" />
-    <public type="drawable" name="timepicker_down_disabled_focused" id="0x7f02000d" />
-    <public type="drawable" name="timepicker_down_normal" id="0x7f02000e" />
-    <public type="drawable" name="timepicker_down_pressed" id="0x7f02000f" />
-    <public type="drawable" name="timepicker_down_selected" id="0x7f020010" />
-    <public type="drawable" name="timepicker_input" id="0x7f020011" />
-    <public type="drawable" name="timepicker_input_disabled" id="0x7f020012" />
-    <public type="drawable" name="timepicker_input_normal" id="0x7f020013" />
-    <public type="drawable" name="timepicker_input_pressed" id="0x7f020014" />
-    <public type="drawable" name="timepicker_input_selected" id="0x7f020015" />
-    <public type="drawable" name="timepicker_up_btn" id="0x7f020016" />
-    <public type="drawable" name="timepicker_up_disabled" id="0x7f020017" />
-    <public type="drawable" name="timepicker_up_disabled_focused" id="0x7f020018" />
-    <public type="drawable" name="timepicker_up_normal" id="0x7f020019" />
-    <public type="drawable" name="timepicker_up_pressed" id="0x7f02001a" />
-    <public type="drawable" name="timepicker_up_selected" id="0x7f02001b" />
     <public type="drawable" name="directory_icon" id="0x7f020000" />
     <public type="drawable" name="file_icon" id="0x7f020001" />
-    <public type="drawable" name="pubkey_icon" id="0x7f020007" />
-    <public type="drawable" name="regular_icon" id="0x7f020008" />
-    <public type="drawable" name="ssh_icon" id="0x7f020009" />
-    <public type="drawable" name="ic_menu_close_clear_cancel" id="0x7f020003" />
-    <public type="drawable" name="ic_menu_info_details" id="0x7f020004" />
-    <public type="drawable" name="ic_menu_preferences" id="0x7f020005" />
+    <public type="drawable" name="folder" id="0x7f020002" />
+    <public type="drawable" name="pubkey_icon" id="0x7f020003" />
+    <public type="drawable" name="regular_icon" id="0x7f020004" />
+    <public type="drawable" name="timepicker_down_btn" id="0x7f020005" />
+    <public type="drawable" name="timepicker_down_disabled" id="0x7f020006" />
+    <public type="drawable" name="timepicker_down_disabled_focused" id="0x7f020007" />
+    <public type="drawable" name="timepicker_down_normal" id="0x7f020008" />
+    <public type="drawable" name="timepicker_down_pressed" id="0x7f020009" />
+    <public type="drawable" id="0x7f02000a" name="timepicker_down_selected"/>
+    <public type="drawable" name="timepicker_input" id="0x7f02000b" />
+    <public type="drawable" name="timepicker_input_disabled" id="0x7f02000c" />
+    <public type="drawable" name="timepicker_input_normal" id="0x7f02000d" />
+    <public type="drawable" name="timepicker_input_pressed" id="0x7f02000e" />
+    <public type="drawable" name="timepicker_input_selected" id="0x7f02000f" />
+    <public type="drawable" name="timepicker_up_btn" id="0x7f020010" />
+    <public type="drawable" name="timepicker_up_disabled" id="0x7f020011" />
+    <public type="drawable" name="timepicker_up_disabled_focused" id="0x7f020012" />
+    <public type="drawable" name="timepicker_up_normal" id="0x7f020013" />
+    <public type="drawable" name="timepicker_up_pressed" id="0x7f020014" />
+    <public type="drawable" name="timepicker_up_selected" id="0x7f020015" />
+
     
     <public type="layout" name="act_main" id="0x7f030000" />
     <public type="layout" name="act_pubkeylist" id="0x7f030001" />
@@ -55,9 +50,9 @@
     <public type="string" name="pref_dropbear_auth_password_title" id="0x7f060003" />
     <public type="string" name="pref_dropbear_auth_password_key" id="0x7f060004" />
     <public type="string" name="pref_dropbear_auth_username_title" id="0x7f060005" />
-    <public name="pref_dropbear_auth_username_key" type="string" id="0x7f060006"/>
+    <public type="string" name="pref_dropbear_auth_username_key" id="0x7f060006"/>
     <public type="string" name="pref_screen_server_settings_title" id="0x7f060008"/>
-    <public name="pref_screen_server_settings_summary" id="0x7f060009" type="string"/>
+    <public type="string" name="pref_screen_server_settings_summary" id="0x7f060009" />
     <public type="string" name="pref_dropbear_port_key" id="0x7f06000a" />
     <public type="string" name="pref_dropbear_port_title" id="0x7f06000b" />
     <public type="string" name="pref_dropbear_port_summary" id="0x7f06000c" />
@@ -143,8 +138,8 @@
     <public type="id" name="status_port" id="0x7f080012" />
     <public type="id" name="ButtonPreferences" id="0x7f080013" />
     <public type="id" name="ButtonUpdateUi" id="0x7f080014" />
-    <public type="id" name="ButtonGetAssets" id="0x7f080015" />
-    <public type="id" name="ButtonGenKeys" id="0x7f080016" />
+    <public name="ButtonGetAssets" id="0x7f080015" type="id"/>
+    <public type="id" name="ButtonGenKeys" id="0x7f080016"/>
     <public type="id" name="stdout_scrollview" id="0x7f080017" />
     <public type="id" name="stdout" id="0x7f080018" />
     <public type="id" name="increment" id="0x7f080019" />
@@ -154,14 +149,13 @@
     <public type="id" name="info" id="0x7f08001d" />
     <public type="id" name="fields" id="0x7f08001e" />
     <public type="id" name="password" id="0x7f08001f" />
-    <public type="id" name="hint" id="0x7f080020" />
+    <public type="id" name="hint" id="0x7f080020"/>
     <public type="id" name="show_password" id="0x7f080021" />
-    <public type="id" name="text_initial_setup" id="0x7f080022" />
-    <public type="id" name="button_initial_setup_ok" id="0x7f080023" />
-    <public type="id" name="button_initial_setup_cancel" id="0x7f080024" />
-    <public type="id" name="menu_settings" id="0x7f080025" />
-    <public type="id" name="menu_refreshui" id="0x7f080026" />
-    <public type="id" name="menu_about" id="0x7f080027" />
-    <public type="id" name="menu_quit" id="0x7f080028" />
-    <public type="id" name="button_about_ok" id="0x7f080029" />
+    <public name="text_initial_setup" id="0x7f080022" type="id"/>
+    <public name="button_initial_setup_ok" type="id" id="0x7f080023"/>
+    <public name="button_initial_setup_cancel" id="0x7f080024" type="id"/>
+    <public name="menu_settings" id="0x7f080025" type="id"/>
+    
+    <public type="id" id="0x7f080027" name="menu_about" /><public id="0x7f080028" name="menu_quit" type="id"/>
+    <public name="button_about_ok" id="0x7f080029" type="id"/>
 </resources>
