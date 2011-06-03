@@ -23,7 +23,8 @@ import android.util.Log;
 public class BootReceiver extends BroadcastReceiver {
 
 	private static final String TAG = "DroidSSHdBootReceiver";
-
+	private BootReceiver inst = this;
+	
 	@Override
 	public void onReceive(Context context, Intent intent) {
 		Base.initialize(context);
@@ -60,6 +61,13 @@ public class BootReceiver extends BroadcastReceiver {
 				if (Base.debug) {
 					Log.d(TAG, "dropbear daemon configured to NOT start on boot");
 				}
+				Util.doRun("killall tk.tanguy.droidsshd", true, null);
+			}
+			
+			try {
+				context.unregisterReceiver(inst);
+			} catch (Exception e) {
+				Log.w(TAG, "unable to unregister BOOT_COMPLETED broadcast receiver");
 			}
 		}
 	}
