@@ -68,6 +68,10 @@ public class DroidSSHdService extends Service{
 		if (Base.debug) {
 			Log.d(TAG, "onStart(" + intent.toString() + ", " + startId + ") called");
 		}
+		if (!Base.startDaemonAtBoot() && !Base.manualServiceStart()) {
+			stopSelf();
+			return;
+		}
 		handleStart(intent, 0, startId);
 	}
 	//#endif
@@ -77,6 +81,11 @@ public class DroidSSHdService extends Service{
 	public int onStartCommand(Intent intent, int flags, int startId) {
 		if (Base.debug) {
 			Log.d(TAG, "onStart(" + intent.toString() + ", " + flags + ", " + startId + ") called");
+		}
+		super.onStartCommand(intent, flags, startId);
+		if (!Base.startDaemonAtBoot() && !Base.manualServiceStart()) {
+			stopSelf();
+			return Service.START_NOT_STICKY;
 		}
 		handleStart(intent, flags, startId);
 		return Service.START_STICKY;
@@ -134,9 +143,15 @@ public class DroidSSHdService extends Service{
 						String authPublicKey=Base.getDropbearAuthorizedKeysFilePath();
 						if (Base.runDaemonAsRoot()) {
 							uid = 0;
-							authPublicKey = Base.dropbearDataDir + "/" + Base.DROPBEAR_AUTHORIZED_KEYS;
+							authPublicKey = Base.dropbearDataDir + "/.ssh/" + Base.DROPBEAR_AUTHORIZED_KEYS;
 							//Util.copyFile(Base.getDropbearAuthorizedKeysFilePath(),authPublicKey);
-							cmd("cp '"+Base.getDropbearAuthorizedKeysFilePath()+"' '"+authPublicKey+"'");
+							try {
+								cmd("mkdir '"+Base.dropbearDataDir + "/.ssh'");
+							} catch (Exception e) {
+								//maybe already exists
+							} finally {
+								cmd("cp '"+Base.getDropbearAuthorizedKeysFilePath()+"' '"+authPublicKey+"'");
+							}
 						} else {
 							uid = android.os.Process.myUid();
 						}

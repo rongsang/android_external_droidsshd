@@ -59,6 +59,7 @@ public class Base {
 
 	public static boolean debug;
 	protected static int daemonPort;
+	protected static boolean manualServiceStart;
 	protected static boolean runDaemonAsRoot;
 	protected static boolean startedAsRoot;
 	protected static boolean startAtBoot;
@@ -92,6 +93,14 @@ public class Base {
 
 	public static boolean startDaemonAtBootOnlyIfRunningBefore() {
 		return startAtBootOnlyIfRunningBefore; 
+	}
+
+	public static boolean manualServiceStart() {
+		return manualServiceStart;
+	}
+
+	public static void setManualServiceStart(boolean b) {
+		manualServiceStart = b;
 	}
 
 	public static boolean runDaemonAsRoot() {
@@ -278,6 +287,7 @@ public class Base {
 			
 	public static void initialize(Context context) {
 		if (context != null) {
+			manualServiceStart = false;
 			Base.context = context;
 			Base.filesDirPath = Base.context.getFilesDir().getAbsolutePath();
 			setDropbearEtcDirPath(Base.filesDirPath +  "/" + Base.DROPBEAR_DIR_KEY);

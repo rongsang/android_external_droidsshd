@@ -77,6 +77,11 @@ public class DroidSSHd extends Activity {
 		if ((!Util.validateHostKeys() || (!Util.checkPathToBinaries()))) {
 			startInitialSetupActivity();
 		}
+
+		if (!Base.startDaemonAtBoot()) {
+			Base.setManualServiceStart(true);
+		}
+
 		mDropbearDaemonHandlerService = new Intent(this, tk.tanguy.droidsshd.system.DroidSSHdService.class);
 		mHandler.postDelayed(mUpdateUI, mUpdateUIdelay);
 		mUpdateUIdelay = 500L;
@@ -210,15 +215,15 @@ public class DroidSSHd extends Activity {
 		case Base.DAEMON_STATUS_STOPPING:
 			btnStartStop.setEnabled(false);
 			btnStartStop.setFocusable(false);
-			btnStartStop.setText(R.string.act_main_stopping);
-			status_content.setText(R.string.act_main_busy);
+			btnStartStop.setText(R.string.act_main_busy);
+			status_content.setText(R.string.act_main_stopping);
 			break;
 
 		case Base.DAEMON_STATUS_STARTING:
 			btnStartStop.setEnabled(false);
 			btnStartStop.setFocusable(false);
-			btnStartStop.setText(R.string.act_main_starting);
-			status_content.setText(R.string.act_main_busy);
+			btnStartStop.setText(R.string.act_main_busy);
+			status_content.setText(R.string.act_main_starting);
 			break;
 
 		case Base.DAEMON_STATUS_STARTED:
@@ -302,7 +307,6 @@ public class DroidSSHd extends Activity {
 		MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.main_menu, menu);
 		return true;
-//		return super.onCreateOptionsMenu(menu);
 	}
 
 	@Override 
