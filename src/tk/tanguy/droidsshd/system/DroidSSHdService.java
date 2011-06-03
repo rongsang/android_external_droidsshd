@@ -43,6 +43,8 @@ public class DroidSSHdService extends Service{
 	
 	// lock to handle (synchronized) FileObserver calls
 	private static Object sLock = new Object();
+	
+	private static boolean serviceManualStartup = false;
 
 	public boolean isDaemonRunning() {
 		return dropbearDaemonRunning;
@@ -55,14 +57,17 @@ public class DroidSSHdService extends Service{
 		// TODO - i.e. this SVC was started on boot and DroidSSHd activity hasn't run just yet
 		// TODO - (is it the same ctx? is it null? etc...) 
 		Base.initialize(getBaseContext());
+		serviceManualStartup = Base.manualServiceStart();
 		mNotificationManager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
 		if (Base.debug) {
-			Log.d(TAG, "onCreate called");
+			Log.v(TAG, "onCreate called");
+			if (serviceManualStartup) Log.d(TAG, "ManualServiceStart");
 		}
 	}
 
 	// This is the old onStart method that will be called on the pre-2.0 platforms
 	//#ifdef BEFORE_DONUT
+	/*
 	@Override
 	public void onStart(Intent intent, int startId) {
 		if (Base.debug) {
@@ -74,21 +79,23 @@ public class DroidSSHdService extends Service{
 		}
 		handleStart(intent, 0, startId);
 	}
+	*/
 	//#endif
 
 	// This is the new onStart method
 	@Override
 	public int onStartCommand(Intent intent, int flags, int startId) {
-		if (Base.debug) {
-			Log.d(TAG, "onStart(" + intent.toString() + ", " + flags + ", " + startId + ") called");
-		}
 		super.onStartCommand(intent, flags, startId);
-		if (!Base.startDaemonAtBoot() && !Base.manualServiceStart()) {
-			stopSelf();
-			return Service.START_NOT_STICKY;
+		int sticky=Service.START_STICKY;
+		serviceManualStartup = Base.manualServiceStart();
+		if (!Base.startDaemonAtBoot() && !serviceManualStartup) {
+			sticky=Service.START_NOT_STICKY;
+		}
+		if (Base.debug) {
+			Log.d(TAG, "onStart(" + intent.toString() + ", " + flags + ", " + startId + ") called :" + sticky);
 		}
 		handleStart(intent, flags, startId);
-		return Service.START_STICKY;
+		return sticky;
 	}
 	
 	private void handleStart(Intent intent, int flags, int startId) {
@@ -137,21 +144,20 @@ public class DroidSSHdService extends Service{
 					@Override 
 					protected void onSessionReady() {
 						if (debug) {
-							Log.v(tag, "onSessionReady called");
+							Log.d(tag, "onSessionReady called");
 						}
 						int uid;
 						String authPublicKey=Base.getDropbearAuthorizedKeysFilePath();
 						if (Base.runDaemonAsRoot()) {
 							uid = 0;
-							authPublicKey = Base.dropbearDataDir + "/.ssh/" + Base.DROPBEAR_AUTHORIZED_KEYS;
-							//Util.copyFile(Base.getDropbearAuthorizedKeysFilePath(),authPublicKey);
+							authPublicKey = Base.getDropbearDataDirPath() + "/.ssh/" + Base.DROPBEAR_AUTHORIZED_KEYS;
 							try {
-								cmd("mkdir '"+Base.dropbearDataDir + "/.ssh'");
-							} catch (Exception e) {
-								//maybe already exists
-							} finally {
+								cmd("mkdir -m 0754 '"+Base.getDropbearDataDirPath() + "/.ssh'");
+							} finally {}
+							try {
+								//Util.copyFile(Base.getDropbearAuthorizedKeysFilePath(),authPublicKey);
 								cmd("cp '"+Base.getDropbearAuthorizedKeysFilePath()+"' '"+authPublicKey+"'");
-							}
+							} finally {}
 						} else {
 							uid = android.os.Process.myUid();
 						}
@@ -172,12 +178,16 @@ public class DroidSSHdService extends Service{
 								uid,
 								uid
 								);
+
+						cmd = cmd + " -F >/tmp/dropbear.log 2>&1 &";
+
 						if (debug) {
-							Log.v(tag, "cmd = '" + cmd + "'");
+							Log.v(tag, "cmd = " + cmd);
 						}
 						//cmd("export HOME=/sdcard ; cd $HOME");
 						cmd(cmd);
 					}
+
 					@Override
 					protected void onStdOut(String line) {
 						if(debug) {
@@ -270,7 +280,7 @@ public class DroidSSHdService extends Service{
 		}
 		if (Base.debug) {
 			Log.d(TAG, "PIDObserver.toString() = " + mPidWatchdog.toString());
-			Log.d(TAG, "Watching " + path + " mask " + mask);
+			Log.v(TAG, "Watching " + path + " mask " + mask);
 		}
 	}
 
@@ -308,10 +318,10 @@ public class DroidSSHdService extends Service{
 	
 	protected class updateDaemonStatus implements Runnable {
 		public void run(){
+			if(Base.debug) {
+				Log.d(TAG+"-updateDaemonStatus", "started");
+			}
 			try {
-				if(Base.debug) {
-					Log.d(TAG+"-updateDaemonStatus", "started");
-				}
 				dropbearDaemonProcessId = Util.getDropbearPidFromPidFile(Base.getDropbearPidFilePath());
 				if (dropbearDaemonProcessId!=0) {
 					dropbearDaemonRunning = Util.isDropbearDaemonRunning();
@@ -328,6 +338,7 @@ public class DroidSSHdService extends Service{
 			} catch (Exception e) {
 				Log.e(TAG, "Exception in updateDaemonStatus", e);
 				e.printStackTrace();
+				Base.setDropbearDaemonStatus(Base.DAEMON_STATUS_UNKNOWN);
 			}
 		}
 	}

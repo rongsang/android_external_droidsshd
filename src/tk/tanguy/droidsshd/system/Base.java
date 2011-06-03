@@ -59,7 +59,7 @@ public class Base {
 
 	public static boolean debug;
 	protected static int daemonPort;
-	protected static boolean manualServiceStart;
+	protected static boolean manualServiceStart = false;
 	protected static boolean runDaemonAsRoot;
 	protected static boolean startedAsRoot;
 	protected static boolean startAtBoot;
@@ -101,6 +101,12 @@ public class Base {
 
 	public static void setManualServiceStart(boolean b) {
 		manualServiceStart = b;
+		if (debug) {
+			if (b)
+				Log.d(TAG, "setManualServiceStart = 1");
+			else
+				Log.d(TAG, "setManualServiceStart = 0");
+		}
 	}
 
 	public static boolean runDaemonAsRoot() {
@@ -174,6 +180,10 @@ public class Base {
 
 	public static String getDropbearEtcDirPath() {
 		return dropbearEtcDir;
+	}
+
+	public static String getDropbearDataDirPath() {
+		return dropbearDataDir;
 	}
 
 	public static void setDropbearTmpDirPath(String path) {
@@ -284,10 +294,9 @@ public class Base {
 			wifiLock = sp.getBoolean(context.getString(R.string.pref_wifi_lock_key), false);
 		}
 	}
-			
+
 	public static void initialize(Context context) {
 		if (context != null) {
-			manualServiceStart = false;
 			Base.context = context;
 			Base.filesDirPath = Base.context.getFilesDir().getAbsolutePath();
 			setDropbearEtcDirPath(Base.filesDirPath +  "/" + Base.DROPBEAR_DIR_KEY);

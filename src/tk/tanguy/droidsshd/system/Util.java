@@ -364,17 +364,23 @@ public class Util {
 				NetworkInterface intf = en.nextElement();
 				for (Enumeration<InetAddress> enumIpAddr = intf.getInetAddresses(); enumIpAddr.hasMoreElements();) {
 					InetAddress inetAddress = enumIpAddr.nextElement();
-					if (!inetAddress.isLoopbackAddress()) {
-						if (Base.debug) {
-							Log.v(TAG, "Interface " + intf.getDisplayName() + ", IPaddress " + inetAddress.getHostAddress().toString() );
+					try {
+						if (!inetAddress.isLoopbackAddress()) {
+							if (Base.debug) {
+								Log.v(TAG, "Interface " + intf.getDisplayName() + ", IPaddress " + inetAddress.getHostAddress().toString() );
+							}
+							ipAddr.add(inetAddress.getHostAddress().toString());
 						}
-						ipAddr.add(inetAddress.getHostAddress().toString());
+					} catch (Exception e) {
+						Log.e(TAG, e.toString());
+						return null;
 					}
 				}
 			}
 		} catch (SocketException ex) {
 			Log.e(TAG, ex.toString());
-			return null;
+			ex.printStackTrace();
+			return ipAddr.iterator();
 		}
 		return ipAddr.iterator();
 	}

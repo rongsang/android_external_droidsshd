@@ -63,7 +63,7 @@ public class DroidSSHd extends Activity {
 	private DroidSSHdService mBoundDaemonHandlerService;
 	private boolean mDaemonHandlerIsBound;
 
-	private long mUpdateUIdelay = 150L;
+	private long mUpdateUIdelay = 500;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -78,13 +78,10 @@ public class DroidSSHd extends Activity {
 			startInitialSetupActivity();
 		}
 
-		if (!Base.startDaemonAtBoot()) {
-			Base.setManualServiceStart(true);
-		}
+		Base.setManualServiceStart(true);
 
 		mDropbearDaemonHandlerService = new Intent(this, tk.tanguy.droidsshd.system.DroidSSHdService.class);
-		mHandler.postDelayed(mUpdateUI, mUpdateUIdelay);
-		mUpdateUIdelay = 500L;
+		mHandler.postDelayed(mUpdateUI, 150);
 	}
 
 	@Override
@@ -98,7 +95,6 @@ public class DroidSSHd extends Activity {
 		super.onResume();
 		Base.refresh();
 		mHandler.postDelayed(mUpdateUI, mUpdateUIdelay);
-//		updateStatus();
 		if(Base.debug) {
 			Log.d(TAG, "onResume() called");
 		}
@@ -124,16 +120,6 @@ public class DroidSSHd extends Activity {
 			Util.showMsg("DroidSSHd setup canceled");
 			this.finish();
 		}
-/*		if (requestCode==R.string.activity_file_chooser) {
-			if(Base.debug) {
-				Log.v(TAG, "FileChooser is done");
-			}
-			if(resultCode==RESULT_OK){
-				if(Base.debug){
-					Log.v(TAG,"path = " + data.getStringExtra("path"));
-				}
-			}
-		}*/
 	}
 
 	protected void startInitialSetupActivity() {
@@ -153,23 +139,25 @@ public class DroidSSHd extends Activity {
 		
 		btnStartStop = (Button) findViewById(R.id.status_button);
 		btnStartStop.setOnClickListener(new OnClickListener() {
+
 			public void onClick(View v) {
 				btnStartStop.setEnabled(false);
 				btnStartStop.setFocusable(false);
-				btnStartStop.setText(R.string.act_main_busy);
+				//btnStartStop.setText(R.string.act_main_busy);
 				if (Util.isDropbearDaemonRunning()) {
 						if(Base.debug) {
 							Log.v(TAG, "btnStartStop pressed: stopping");
 						}
 						stopDropbear();
-					} else {
+				} else {
 						if(Base.debug) {
 							Log.v(TAG, "btnStartStop pressed: starting");
 						}
 						startDropbear();
-					}
-//				setResult(android.app.Activity.RESULT_OK);
+				}
+				mHandler.postDelayed(mUpdateUI, 1000);
 			}
+
 		});
 
 		
@@ -197,11 +185,15 @@ public class DroidSSHd extends Activity {
 	public void updateStatus() {
 		String tmp = "";
 		Iterator<String> ipAddr = Util.getLocalIpAddress();
-		while(ipAddr.hasNext()) {
-			tmp = tmp + ipAddr.next() + " ";
-			if (ipAddr.hasNext()) {
-				tmp = tmp + ", ";
+		try {
+			while(ipAddr.hasNext()) {
+				tmp = tmp + ipAddr.next() + " ";
+				if (ipAddr.hasNext()) {
+					tmp = tmp + ", ";
+				}
 			}
+		} catch (Exception e) {
+			Log.w(TAG, "updateStatus() exception in IpAddress Iterator");
 		}
 		status_ip_address.setText(tmp);
 		status_username.setText(Base.getUsername());
@@ -252,6 +244,8 @@ public class DroidSSHd extends Activity {
 	}
 
 	public void startDropbear() {
+
+		doBindDaemonHandlerService(mDropbearDaemonHandlerService);
 		if (!Util.checkPathToBinaries()) {
 			if(Base.debug) {
 				Log.v(TAG, "startDropbear bailing out: status was " + Base.getDropbearDaemonStatus() + ", changed to STOPPED(" + ")" );
@@ -317,9 +311,14 @@ public class DroidSSHd extends Activity {
 			startActivity(p);
 			return true;
 		case R.id.menu_quit:
-			Util.showMsg("QUIT");
+			Util.showMsg("Good bye...");
 			this.finish();
 			return true;
+		case R.id.menu_about:
+			Intent i = new Intent(this, tk.tanguy.droidsshd.activity.About.class);
+			startActivity(i);
+			return true;
+		/*
 		case R.id.menu_refreshui:
 			if(Base.getDropbearDaemonStatus()==Base.DAEMON_STATUS_STARTING) { 
 				Base.setDropbearDaemonStatus(Base.DAEMON_STATUS_STARTED);
@@ -329,14 +328,7 @@ public class DroidSSHd extends Activity {
 			}
 			updateStatus();
 			return true;
-		case R.id.menu_about:
-			Intent i = new Intent(this, tk.tanguy.droidsshd.activity.About.class);
-			startActivity(i);
-//			i.setAction("android.intent.action.VIEW");
-//			i.setData("http://www.android.com");
-//			i.setType(type)
-//			Util.showMsg("About");
-			return true;
+		*/
 		default:
 			return super.onOptionsItemSelected(item);
 		}
@@ -415,6 +407,7 @@ public class DroidSSHd extends Activity {
 	};
 
 	private void doBindDaemonHandlerService(Intent intent) {
+		Base.setManualServiceStart(true);
 		mDaemonHandlerIsBound = bindService(intent, mDaemonHandlerConnection, Context.BIND_AUTO_CREATE);
 	}
 
