@@ -61,7 +61,7 @@ public class BootReceiver extends BroadcastReceiver {
 				if (Base.debug) {
 					Log.d(TAG, "dropbear daemon configured to NOT start on boot");
 				}
-				Util.doRun("killall tk.tanguy.droidsshd", true, null);
+				//Util.doRun("killall tk.tanguy.droidsshd", true, null);
 			}
 			
 			try {
