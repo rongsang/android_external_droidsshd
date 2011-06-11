@@ -102,8 +102,8 @@ public class DroidSSHd extends Activity {
 
 	@Override
 	protected void onDestroy() {
-		super.onDestroy();
 		doUnbindDaemonHandlerService(mDropbearDaemonHandlerService);
+		super.onDestroy();
 	}
 
 	@Override

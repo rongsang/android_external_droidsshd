@@ -8,7 +8,6 @@
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.WAKE_LOCK" />
 	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-<!--<uses-permission android:name="android.permission.PERSISTENT_ACTIVITY" />-->
 	<uses-sdk android:targetSdkVersion="10"></uses-sdk>
 
 	<application android:icon="@drawable/droidsshd_icon"
