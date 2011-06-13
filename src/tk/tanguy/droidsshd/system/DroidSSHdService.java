@@ -162,29 +162,31 @@ public class DroidSSHdService extends Service{
 							uid = android.os.Process.myUid();
 						}
 
-						//cm7 (original v0.52)
-						//cmd = String.format("%s -d %s -r %s -p %d -P %s -E # -C %s # -R %s -N %s -U %s -G %s
+						//cm7.0 (dropbear v0.52)
+						//cmd = String.format("%s -E -p %d -P %s -d %s -r %s  # -C %s -A -U %s -G %s -N %s -R %s",
 
-						cmd = String.format("%s -d %s -r %s -p %d -P %s -E -C %s -R %s -A -N %s -U %s -G %s",
+						//cm7.1 (0.53 + master pw merged)
+						//cmd = String.format("%s -E -p %d -P %s -d %s -r %s -C %s  # -A -U %s -G %s -N %s -R %s",
+
+						//tpruvot dropbear : accept some unused parameters (from forks : -N,U,G,A,R)
+						cmd = String.format("%s -E -p %d -P %s -d %s -r %s -C %s -U %s -G %s -N %s  # -A -R %s",
 								Base.getDropbearBinDirPath() + "/" + Base.DROPBEAR_BIN_SRV,
-								Base.getDropbearDssHostKeyFilePath(),
-								Base.getDropbearRsaHostKeyFilePath(),
 								Base.getDaemonPort(),
 								Base.getDropbearPidFilePath(),
-
+								Base.getDropbearDssHostKeyFilePath(),
+								Base.getDropbearRsaHostKeyFilePath(),
 								Base.getPassword(),
-								authPublicKey,
-								Base.getUsername(),
+
 								uid,
-								uid
+								uid,
+								Base.getUsername(),
+								authPublicKey // dropbear 0.53 use DROPBEAR_HOME /.ssh/authorized_keys
 								);
 
-						cmd = cmd + " -F >/tmp/dropbear.log 2>&1 &";
-
 						if (debug) {
+							cmd = cmd + " -F >/tmp/dropbear.log 2>&1 &";
 							Log.v(tag, "cmd = " + cmd);
 						}
-						//cmd("export HOME=/sdcard ; cd $HOME");
 						cmd(cmd);
 					}
 
