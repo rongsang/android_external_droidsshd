@@ -143,7 +143,7 @@ public class DroidSSHdService extends Service{
 				ShellSession mDaemonSession = new ShellSession(TAG+"-daemon", Base.runDaemonAsRoot(), Base.debug, null) {
 					@Override 
 					protected void onSessionReady() {
-						if (debug) {
+						if (Base.debug) {
 							Log.d(tag, "onSessionReady called");
 						}
 						int uid;
@@ -163,13 +163,13 @@ public class DroidSSHdService extends Service{
 						}
 
 						//cm7.0 (dropbear v0.52)
-						//cmd = String.format("%s -E -p %d -P %s -d %s -r %s  # -C %s -A -U %s -G %s -N %s -R %s",
+						//cmd = String.format("%s -E -p %d -P %s -d %s -r %s  # -Y %s -A -U %s -G %s -N %s -R %s",
 
 						//cm7.1 (0.53 + master pw merged)
-						//cmd = String.format("%s -E -p %d -P %s -d %s -r %s -C %s  # -A -U %s -G %s -N %s -R %s",
+						//cmd = String.format("%s -E -p %d -P %s -d %s -r %s -Y %s  # -A -U %s -G %s -N %s -R %s",
 
 						//tpruvot dropbear : accept some unused parameters (from forks : -N,U,G,A,R)
-						cmd = String.format("%s -E -p %d -P %s -d %s -r %s -C %s -U %s -G %s -N %s  # -A -R %s",
+						cmd = String.format("%s -E -p %d -P %s -d %s -r %s -Y %s # -U %s -G %s -N %s -A -R %s",
 								Base.getDropbearBinDirPath() + "/" + Base.DROPBEAR_BIN_SRV,
 								Base.getDaemonPort(),
 								Base.getDropbearPidFilePath(),
@@ -180,10 +180,10 @@ public class DroidSSHdService extends Service{
 								uid,
 								uid,
 								Base.getUsername(),
-								authPublicKey // dropbear 0.53 use DROPBEAR_HOME /.ssh/authorized_keys
+								authPublicKey // dropbear 0.53 uses DROPBEAR_HOME /.ssh/authorized_keys
 								);
 
-						if (debug) {
+						if (Base.debug) {
 							cmd = cmd + " -F >/tmp/dropbear.log 2>&1 &";
 							Log.v(tag, "cmd = " + cmd);
 						}

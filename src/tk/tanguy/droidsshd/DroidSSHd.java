@@ -36,7 +36,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
 //import android.widget.ScrollView;
 
@@ -52,7 +51,6 @@ public class DroidSSHd extends Activity {
 	private EditText status_ip_address;
 	private EditText status_username;
 	private EditText status_tcp_port;
-	private CheckBox status_daemon_running_as_root;
 	
 	private Button preferences_button;
 
@@ -135,7 +133,6 @@ public class DroidSSHd extends Activity {
 		status_ip_address = (EditText) findViewById(R.id.status_ip_address); 
 		status_username = (EditText) findViewById(R.id.status_username);
 		status_tcp_port = (EditText) findViewById(R.id.status_tcp_port);
-		status_daemon_running_as_root  = (CheckBox) findViewById(R.id.status_daemon_running_as_root);
 		
 		btnStartStop = (Button) findViewById(R.id.status_button);
 		btnStartStop.setOnClickListener(new OnClickListener() {
@@ -198,7 +195,6 @@ public class DroidSSHd extends Activity {
 		status_ip_address.setText(tmp);
 		status_username.setText(Base.getUsername());
 		status_tcp_port.setText(String.valueOf(Base.getDaemonPort()));
-		status_daemon_running_as_root.setChecked(Base.runDaemonAsRoot());
 		
 		if (Util.isDropbearDaemonRunning()) {
 			Base.setDropbearDaemonStatus(Base.DAEMON_STATUS_STARTED);

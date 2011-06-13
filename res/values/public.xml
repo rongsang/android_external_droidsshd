@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <public id="0x7f020000" type="drawable" name="directory_icon"/>
-    <public id="0x7f020001" type="drawable" name="file_icon"/>
+    <public type="drawable" id="0x7f020001" name="file_icon"/>
     <public id="0x7f020002" type="drawable" name="timepicker_down_btn"/>
     <public id="0x7f020003" type="drawable" name="timepicker_down_disabled"/>
     <public id="0x7f020004" type="drawable" name="timepicker_down_disabled_focused"/>
@@ -119,7 +119,6 @@
     <public type="id" name="status_ip_address" id="0x7f080002"/>
     <public type="id" name="status_username" id="0x7f080003"/>
     <public type="id" name="status_tcp_port" id="0x7f080004"/>
-    <public type="id" name="status_daemon_running_as_root" id="0x7f080005"/>
     <public type="id" name="status_button" id="0x7f080006"/>
     <public type="id" name="preferences_button" id="0x7f080007"/>
     <public type="id" name="file_chooser_icon" id="0x7f080008"/>

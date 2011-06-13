@@ -5,7 +5,6 @@
     <item type="id" name="status_ip_address">false</item>
     <item type="id" name="status_username">false</item>
     <item type="id" name="status_tcp_port">false</item>
-    <item type="id" name="status_daemon_running_as_root">false</item>
     <item type="id" name="status_button">false</item>
     <item type="id" name="preferences_button">false</item>
     <item type="id" name="file_chooser_icon">false</item>
