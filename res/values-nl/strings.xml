@@ -5,12 +5,10 @@
     <string name="activity_file_chooser">com.h3r3t1c.filechooser.FileChooser</string>
     <string name="activity_about">tk.tanguy.activity.About</string>
     <string name="act_main_status">Status:</string>
-    <string name="act_main_unknown">onbekend</string>
     <string name="act_main_ip">IP addres(sen):</string>
     <string name="act_main_defip">0.0.0.0</string>
     <string name="act_main_username">Gebruikersnaam:</string>
     <string name="act_main_port">Poort:</string>
-    <string name="act_main_asroot">Als root:</string>
     <string name="act_main_start">Start</string>
     <string name="act_main_preferences">Voorkeuren</string>
     <string name="act_pubkeylist_empty">leeg</string>

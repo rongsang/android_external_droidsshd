@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
     <string name="act_main_status">Status:</string>
-    <string name="act_main_unknown">Unbekannt</string>
     <string name="act_main_ip">IP addresse(s): </string>
     <string name="act_main_defip">0.0.0.0</string>
     <string name="act_main_username">Benutzername:</string>
     <string name="act_main_port">Port: </string>
-    <string name="act_main_asroot">Als root:</string>
     <string name="act_main_start">Start</string>
     <string name="act_main_preferences">Voreinstellungen</string>
     <string name="act_pubkeylist_empty">leer</string>

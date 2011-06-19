@@ -18,12 +18,11 @@
     <string name="pref_debug_key">debug</string>
     <string name="pref_dropbear_as_root_key">dropbear_runs_as_root</string>
     <string name="act_main_status">Status:</string>
-    <string name="act_main_unknown">unknown</string>
+    <string name="act_main_unknown"> </string>
     <string name="act_main_ip">IP address(es): </string>
     <string name="act_main_defip">0.0.0.0</string>
     <string name="act_main_username">Login:</string>
     <string name="act_main_port">Port: </string>
-    <string name="act_main_asroot">As root:</string>
     <string name="act_main_start">Start</string>
     <string name="act_main_preferences">Preferences</string>
     <string name="act_pubkeylist_empty">empty</string>

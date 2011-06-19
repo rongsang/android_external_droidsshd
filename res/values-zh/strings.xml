@@ -18,12 +18,10 @@
     <string name="pref_debug_key">debug</string>
     <string name="pref_dropbear_as_root_key">dropbear_runs_as_root</string>
     <string name="act_main_status">状态:</string>
-    <string name="act_main_unknown">未知</string>
     <string name="act_main_ip">IP地址: </string>
     <string name="act_main_defip">0.0.0.0</string>
     <string name="act_main_username">用户名:</string>
     <string name="act_main_port">端口: </string>
-    <string name="act_main_asroot">As root:</string>
     <string name="act_main_start">开始</string>
     <string name="act_main_preferences">首选项</string>
     <string name="act_pubkeylist_empty">空</string>
