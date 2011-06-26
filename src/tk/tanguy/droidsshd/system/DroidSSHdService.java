@@ -139,7 +139,7 @@ public class DroidSSHdService extends Service{
 				Log.d(TAG+"-startDropbear", "starting");
 			}
 			if (!dropbearDaemonRunning) {
-	//			ShellSession mDaemonSession = new ShellSession(TAG+"-daemon", Base.runDaemonAsRoot(), Base.debug, mLogviewHandler) {
+				//ShellSession mDaemonSession = new ShellSession(TAG+"-daemon", Base.runDaemonAsRoot(), Base.debug, mLogviewHandler) {
 				ShellSession mDaemonSession = new ShellSession(TAG+"-daemon", Base.runDaemonAsRoot(), Base.debug, null) {
 					@Override 
 					protected void onSessionReady() {
@@ -152,10 +152,9 @@ public class DroidSSHdService extends Service{
 							uid = 0;
 							authPublicKey = Base.getDropbearDataDirPath() + "/.ssh/" + Base.DROPBEAR_AUTHORIZED_KEYS;
 							try {
-								cmd("mkdir -m 0754 '"+Base.getDropbearDataDirPath() + "/.ssh'");
+								cmd("[ -d '"+ Base.getDropbearDataDirPath() +"'] || mkdir -m 0754 '"+Base.getDropbearDataDirPath() + "/.ssh'");
 							} finally {}
 							try {
-								//Util.copyFile(Base.getDropbearAuthorizedKeysFilePath(),authPublicKey);
 								cmd("cp '"+Base.getDropbearAuthorizedKeysFilePath()+"' '"+authPublicKey+"'");
 							} finally {}
 						} else {
@@ -168,20 +167,24 @@ public class DroidSSHdService extends Service{
 						//cm7.1 (0.53 + master pw merged)
 						//cmd = String.format("%s -E -p %d -P %s -d %s -r %s -Y %s  # -A -U %s -G %s -N %s -R %s",
 
-						//tpruvot dropbear : accept some unused parameters (from forks : -N,U,G,A,R)
-						cmd = String.format("%s -E -p %d -P %s -d %s -r %s -Y %s # -U %s -G %s -N %s -A -R %s",
-								Base.getDropbearBinDirPath() + "/" + Base.DROPBEAR_BIN_SRV,
-								Base.getDaemonPort(),
-								Base.getDropbearPidFilePath(),
-								Base.getDropbearDssHostKeyFilePath(),
-								Base.getDropbearRsaHostKeyFilePath(),
-								Base.getPassword(),
+						//tpruvot's dropbear handle some unused parameters (from forks : -N,U,G,A,R)
 
-								uid,
-								uid,
-								Base.getUsername(),
-								authPublicKey // dropbear 0.53 uses DROPBEAR_HOME /.ssh/authorized_keys
-								);
+						cmd = String.format("%s -E -p %d -P %s -d %s -r %s -Y %s",
+
+							Base.getDropbearBinDirPath() + "/" + Base.DROPBEAR_BIN_SRV,
+							Base.getDaemonPort(),
+							Base.getDropbearPidFilePath(),
+							Base.getDropbearDssHostKeyFilePath(),
+							Base.getDropbearRsaHostKeyFilePath(),
+							Base.getPassword()
+						);
+
+						/* used in some dropbear forks
+							uid,
+							uid,
+							Base.getUsername(),
+							authPublicKey // dropbear 0.53 uses DROPBEAR_HOME /.ssh/authorized_keys
+						*/
 
 						if (Base.debug) {
 							cmd = cmd + " -F >/tmp/dropbear.log 2>&1 &";
