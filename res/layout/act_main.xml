@@ -19,7 +19,7 @@
                 <TextView android:textSize="16.0sp" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_height="wrap_content" android:text="@string/act_main_port" android:layout_weight="5.0" android:layout_width="120dip"/>
                 <EditText android:enabled="true" android:textSize="16.0sp" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/status_tcp_port" android:focusable="false" android:clickable="false" android:layout_height="wrap_content" android:singleLine="true" android:maxLength="5" android:editable="false" android:layout_weight="2.0" android:layout_width="160dip"/>
             </LinearLayout>
-            <TableRow android:id="@+id/tableRow1" android:layout_width="match_parent" android:layout_height="8dip"></TableRow>
+            <TableRow android:id="@+id/tableRow1" android:layout_width="match_parent" android:layout_height="6dip"></TableRow>
             <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
                 <Button android:enabled="true" android:textSize="16.0sp" android:textStyle="bold" android:id="@id/status_button" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/act_main_start"/>
             </LinearLayout>

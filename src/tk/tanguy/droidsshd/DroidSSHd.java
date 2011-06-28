@@ -75,7 +75,8 @@ public class DroidSSHd extends Activity {
 		if ((!Util.validateHostKeys() || (!Util.checkPathToBinaries()))) {
 			startInitialSetupActivity();
 		}
-
+		
+		Base.setDropbearDaemonStatus(Base.DAEMON_STATUS_STOPPED);
 		Base.setManualServiceStart(true);
 
 		mDropbearDaemonHandlerService = new Intent(this, tk.tanguy.droidsshd.system.DroidSSHdService.class);
