@@ -59,7 +59,7 @@ public class Base {
 
 	public static boolean debug;
 	protected static int daemonPort;
-	protected static boolean manualServiceStart = false;
+	protected static boolean manualServiceStart = true;
 	protected static boolean runDaemonAsRoot;
 	protected static boolean startedAsRoot;
 	protected static boolean startAtBoot;
@@ -88,11 +88,11 @@ public class Base {
 
 
 	public static boolean startDaemonAtBoot() {
-		return startAtBoot; 
+		return startAtBoot;
 	}
 
 	public static boolean startDaemonAtBootOnlyIfRunningBefore() {
-		return startAtBootOnlyIfRunningBefore; 
+		return startAtBootOnlyIfRunningBefore;
 	}
 
 	public static boolean manualServiceStart() {
@@ -221,8 +221,7 @@ public class Base {
 	}
 
 /*	public static File getHomeDir() {
-	// TODO - move it out of dropbearmulti 
-	// TODO - (currently, it's statically compiled to be /mnt/sdcard)
+	// TODO - (currently, it's statically compiled to be /data/dropbear)
 		return homeDir;
 	}
 */
@@ -277,8 +276,8 @@ public class Base {
 			SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(Base.getContext());
 			debug = sp.getBoolean(context.getString(R.string.pref_debug_key), false);
 			daemonPort = sp.getInt(context.getString(R.string.pref_dropbear_port_key), 2222);
-			startAtBoot = sp.getBoolean(context.getString(R.string.pref_dropbear_start_on_boot_key), false);
-			startAtBootOnlyIfRunningBefore = sp.getBoolean(context.getString(R.string.pref_dropbear_start_on_boot_only_if_was_running_key), true);
+			startAtBoot = false; //sp.getBoolean(context.getString(R.string.pref_dropbear_start_on_boot_key), false);
+			startAtBootOnlyIfRunningBefore = true; //sp.getBoolean(context.getString(R.string.pref_dropbear_start_on_boot_only_if_was_running_key), true);
 			notificationsEnabled = sp.getBoolean(context.getString(R.string.pref_interface_notification_key), true);
 			password = sp.getString(context.getString(R.string.pref_dropbear_auth_password_key), "password");
 			runDaemonAsRoot = sp.getBoolean(context.getString(R.string.pref_dropbear_as_root_key),false);

@@ -147,13 +147,14 @@ public class DroidSSHd extends Activity {
 							Log.v(TAG, "btnStartStop pressed: stopping");
 						}
 						stopDropbear();
+						mHandler.postDelayed(mUpdateUI, 2000);
 				} else {
 						if(Base.debug) {
 							Log.v(TAG, "btnStartStop pressed: starting");
 						}
 						startDropbear();
+						mHandler.postDelayed(mUpdateUI, 1000);
 				}
-				mHandler.postDelayed(mUpdateUI, 1000);
 			}
 
 		});

@@ -45,7 +45,7 @@ public class BootReceiver extends BroadcastReceiver {
 				if (Base.debug) {
 					Log.d(TAG, "Removing stale PID file");
 				}
-//				remove our stale PID file as root (just in case), no output handler (null)
+				// remove our stale PID file as root (just in case), no output handler (null)
 				Util.doRun("rm " + Base.getDropbearPidFilePath(), true, null);
 			}
 

@@ -1,28 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	package="tk.tanguy.droidsshd"
-	android:installLocation="internalOnly" android:versionName="1.0">
+	android:installLocation="internalOnly" android:versionName="1.1">
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.WAKE_LOCK" />
-	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-	<uses-sdk android:targetSdkVersion="10"></uses-sdk>
 
 	<application android:icon="@drawable/droidsshd_icon"
 		android:label="@string/app_label"
-		android:persistent="true" android:debuggable="true" android:description="@string/app_description">
+		android:debuggable="true"
+		android:process="tk.tanguy.droidsshd"
+		android:description="@string/app_description"
+	>
 		<service 
-			android:name="tk.tanguy.droidsshd.system.DroidSSHdService">
+			android:name=".system.DroidSSHdService"
+			android:exported="true"
+			android:enabled="true"
+		>
 			<intent-filter>
-				<action
-					android:name="tk.tanguy.droidsshd.system.DroidSSHdService">
-				</action>
+				<action android:name=".system.DroidSSHdService" />
+				<category android:name="android.intent.category.DEFAULT" />
 			</intent-filter>
 		</service>
 		<activity 
-			android:name="tk.tanguy.droidsshd.DroidSSHd">
+			android:name=".DroidSSHd">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 				<category android:name="android.intent.category.DEFAULT" />
@@ -38,12 +41,5 @@
 				<category android:name="android.intent.category.DEFAULT" />
 			</intent-filter>
 		</activity>
-	<receiver android:name="tk.tanguy.droidsshd.system.BootReceiver">
-		<intent-filter>
-			<action android:name="android.intent.action.BOOT_COMPLETED" />
-			<category android:name="android.intent.category.HOME" />
-		</intent-filter>
-	</receiver>
-
 	</application>
 </manifest>

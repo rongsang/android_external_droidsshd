@@ -44,7 +44,7 @@ public class DroidSSHdService extends Service{
 	// lock to handle (synchronized) FileObserver calls
 	private static Object sLock = new Object();
 	
-	private static boolean serviceManualStartup = false;
+	private static boolean serviceManualStartup = true;
 
 	public boolean isDaemonRunning() {
 		return dropbearDaemonRunning;
@@ -161,13 +161,8 @@ public class DroidSSHdService extends Service{
 							uid = android.os.Process.myUid();
 						}
 
-						//cm7.0 (dropbear v0.52)
-						//cmd = String.format("%s -E -p %d -P %s -d %s -r %s  # -Y %s -A -U %s -G %s -N %s -R %s",
-
 						//cm7.1 (0.53 + master pw merged)
 						//cmd = String.format("%s -E -p %d -P %s -d %s -r %s -Y %s  # -A -U %s -G %s -N %s -R %s",
-
-						//tpruvot's dropbear handle some unused parameters (from forks : -N,U,G,A,R)
 
 						cmd = String.format("%s -E -p %d -P %s -d %s -r %s -Y %s",
 
@@ -235,14 +230,7 @@ public class DroidSSHdService extends Service{
 						}
 						break;
 					case FileObserver.DELETE:
-//						if ((Base.getDropbearDaemonStatus()==Base.DAEMON_STATUS_STARTED) 
-//								|| (Base.getDropbearDaemonStatus()==Base.DAEMON_STATUS_STARTING)
-//								|| (Base.getDropbearDaemonStatus()==Base.DAEMON_STATUS_STOPPING)) {
-							Base.setDropbearDaemonStatus(Base.DAEMON_STATUS_STOPPED);
-//							mPidWatchdog.stopWatching();
-//							mPidWatchdog = null;
-//							stopSelf();
-//						}
+						Base.setDropbearDaemonStatus(Base.DAEMON_STATUS_STOPPED);
 						hideNotification();
 						if (Base.debug){
 							Log.v(TAG, "File " + path + " deleted");
