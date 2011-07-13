@@ -91,9 +91,6 @@ public class DroidSSHdService extends Service{
 		if (!Base.startDaemonAtBoot() && !serviceManualStartup) {
 			sticky=Service.START_NOT_STICKY;
 		}
-		if (Base.debug) {
-			Log.d(TAG, "onStart(" + intent.toString() + ", " + flags + ", " + startId + ") called :" + sticky);
-		}
 		handleStart(intent, flags, startId);
 		return sticky;
 	}
