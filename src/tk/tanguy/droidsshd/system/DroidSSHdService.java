@@ -148,19 +148,17 @@ public class DroidSSHdService extends Service{
 						if (Base.runDaemonAsRoot()) {
 							uid = 0;
 							authPublicKey = Base.getDropbearDataDirPath() + "/.ssh/" + Base.DROPBEAR_AUTHORIZED_KEYS;
-							try {
-								cmd("[ -d '"+ Base.getDropbearDataDirPath() +"'] || mkdir -m 0754 '"+Base.getDropbearDataDirPath() + "/.ssh'");
-							} finally {}
-							try {
-								cmd("cp '"+Base.getDropbearAuthorizedKeysFilePath()+"' '"+authPublicKey+"'");
-							} finally {}
+							try {   cmd("mkdir -p -m 0754 '"+Base.getDropbearDataDirPath() + "'");
+							} catch (Exception ignore) {}
+							try {   cmd("mkdir -p -m 0754 '"+Base.getDropbearDataDirPath() + "/.ssh'");
+							} catch (Exception ignore) {}
+							try {   cmd("cp '"+Base.getDropbearAuthorizedKeysFilePath()+"' '"+authPublicKey+"'");
+							} catch (Exception ignore) {}
 						} else {
 							uid = android.os.Process.myUid();
 						}
 
-						//cm7.1 (0.53 + master pw merged)
-						//cmd = String.format("%s -E -p %d -P %s -d %s -r %s -Y %s  # -A -U %s -G %s -N %s -R %s",
-
+						//cm7.1 (0.53 + master pw -Y merged)
 						cmd = String.format("%s -E -p %d -P %s -d %s -r %s -Y %s",
 
 							Base.getDropbearBinDirPath() + "/" + Base.DROPBEAR_BIN_SRV,
