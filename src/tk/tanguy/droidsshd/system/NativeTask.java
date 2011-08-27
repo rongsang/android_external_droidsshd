@@ -7,10 +7,10 @@ public class NativeTask {
 
 	static {
 		try {
-			Log.i(TAG, "Trying to load libNativeTask.so");
-			System.loadLibrary("NativeTask");
+			Log.i(TAG, "Trying to load libNativeSSHd.so");
+			System.loadLibrary("NativeSSHd");
 		} catch (UnsatisfiedLinkError ule) {
-			Log.e(TAG, "Could not load libNativeTask.so");
+			Log.e(TAG, "Could not load libNativeSSHd.so");
 		}
 	}
 	public static native int runCommand(String command);

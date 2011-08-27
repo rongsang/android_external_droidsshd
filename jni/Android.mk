@@ -1,14 +1,14 @@
 LOCAL_PATH := $(call my-dir)
-
+ifeq ($(LOCAL_JNI_SHARED_LIBRARIES),libNativeSSHd)
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := libNativeTask
-LOCAL_MODULE_TAGS := optional eng
+LOCAL_MODULE := libNativeSSHd
+LOCAL_MODULE_TAGS := eng
 
 LOCAL_SHARED_LIBRARIES := libc
 #LOCAL_SHARED_LIBRARIES += libcutils
 
-LOCAL_LDLIBS += -llog
+#LOCAL_LDLIBS += -llog
 
 # No static libraries.
 LOCAL_STATIC_LIBRARIES :=
@@ -18,7 +18,7 @@ LOCAL_C_INCLUDES += $(JNI_H_INCLUDE)
 
 LOCAL_C_INCLUDES += $(ANDROID_BUILD_TOP)/system/core/include
 
-LOCAL_SRC_FILES := tk_tanguy_droidsshd_system_NativeTask.c
+LOCAL_SRC_FILES := libNativeSSHd.c
 
 # Don't prelink this library.  For more efficient code, you may want
 # to add this library to the prelink map and set this to true. However,
@@ -28,4 +28,4 @@ LOCAL_SRC_FILES := tk_tanguy_droidsshd_system_NativeTask.c
 LOCAL_PRELINK_MODULE := false
 
 include $(BUILD_SHARED_LIBRARY)
-
+endif
