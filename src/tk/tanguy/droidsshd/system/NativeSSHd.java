@@ -2,8 +2,8 @@ package tk.tanguy.droidsshd.system;
 
 import android.util.Log;
 
-public class NativeTask {
-	public static final String TAG = "DroidSSHd NativeTask";
+public class NativeSSHd {
+	public static final String TAG = "libNativeSSHd";
 
 	static {
 		try {

@@ -1,35 +1,38 @@
 #include <jni.h>
 
-#ifndef _Included_libNativeSSHd
-#define _Included_libNativeSSHd
+#ifndef _Included_NativeSSHd
+#define _Included_NativeSSHd
+
 #ifdef __cplusplus
 extern "C" {
 #endif
+
 /*
- * Class:     libNativeSSHd
+ * Class:     NativeSSHd
  * Method:    runCommand
  * Signature: (Ljava/lang/String;)I
  */
-JNIEXPORT jint JNICALL Java_libNativeSSHd_runCommand
+JNIEXPORT jint JNICALL Java_tk_tanguy_droidsshd_system_NativeSSHd_runCommand
   (JNIEnv *, jclass, jstring);
 
 /*
- * Class:     libNativeSSHd
+ * Class:     NativeSSHd
  * Method:    chmod
  * Signature: (Ljava/lang/String;I)I
  */
-JNIEXPORT jint JNICALL Java_libNativeSSHd_chmod
+JNIEXPORT jint JNICALL Java_tk_tanguy_droidsshd_system_NativeSSHd_chmod
   (JNIEnv *, jclass, jstring, jint);
 
 /*
- * Class:     libNativeSSHd
+ * Class:     NativeSSHd
  * Method:    symlink
  * Signature: (Ljava/lang/String;Ljava/lang/String;)I
  */
-JNIEXPORT jint JNICALL Java_libNativeSSHd_symlink
+JNIEXPORT jint JNICALL Java_tk_tanguy_droidsshd_system_NativeSSHd_symlink
   (JNIEnv *, jclass, jstring, jstring);
 
 #ifdef __cplusplus
 }
 #endif
+
 #endif

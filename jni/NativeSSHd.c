@@ -3,22 +3,35 @@
 #include <string.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include <sys/stat.h>
 
-#include "libNativeSSHd.h"
+#include "NativeSSHd.h"
 
-//#include <android/log.h>
+#define TAG "DroidSSHd-NT"
 
-JNIEXPORT jint JNICALL Java_libNativeSSHd_runCommand
+#include <android/log.h>
+#define LOGD(fmt, param) __android_log_print(ANDROID_LOG_DEBUG, TAG, fmt, param)
+
+/**
+ * Class:     NativeSSHd
+ * Method:    runCommand
+ */
+JNIEXPORT jint JNICALL Java_tk_tanguy_droidsshd_system_NativeSSHd_runCommand
   (JNIEnv *env, jclass class, jstring command)
 {
   const char *commandString;
   commandString = (*env)->GetStringUTFChars(env, command, 0);
   int exitcode = system(commandString); 
   (*env)->ReleaseStringUTFChars(env, command, commandString);  
+
   return (jint)exitcode;
 }
 
-JNIEXPORT jint JNICALL Java_libNativeSSHd_chmod
+/**
+ * Class:     NativeSSHd
+ * Method:    chmod
+ */
+JNIEXPORT jint JNICALL Java_tk_tanguy_droidsshd_system_NativeSSHd_chmod
   (JNIEnv *env, jclass class, jstring path, jint mode)
 {
   const char *pathString = (*env)->GetStringUTFChars(env, path, 0);
@@ -33,14 +46,19 @@ JNIEXPORT jint JNICALL Java_libNativeSSHd_chmod
     exitcode = fchmod(fd, mode);
     close(fd);
   }
-//  __android_log_print(ANDROID_LOG_DEBUG, "DroidSSHdNT", "PATH: [%s]", pathString);
-//  __android_log_print(ANDROID_LOG_DEBUG, "DroidSSHdNT", "MODE DEC: [%d]", mode);
-//  __android_log_print(ANDROID_LOG_DEBUG, "DroidSSHdNT", "MODE OCT: [%o]", mode);
+  LOGD("PATH: [%s]", pathString);
+  LOGD("MODE DEC: [%d]", mode);
+  LOGD("MODE OCT: [%o]", mode);
   (*env)->ReleaseStringUTFChars(env, path, pathString);
+
   return (jint)exitcode;
 }
 
-JNIEXPORT jint JNICALL Java_libNativeSSHd_symlink
+/**
+ * Class:     NativeSSHd
+ * Method:    symlink
+ */
+JNIEXPORT jint JNICALL Java_tk_tanguy_droidsshd_system_NativeSSHd_symlink
   (JNIEnv *env, jclass class, jstring original, jstring destination)
 {
   const char *originalString;
@@ -50,6 +68,7 @@ JNIEXPORT jint JNICALL Java_libNativeSSHd_symlink
   int exitcode = symlink(originalString, destinationString);
   (*env)->ReleaseStringUTFChars(env, original, originalString);
   (*env)->ReleaseStringUTFChars(env, destination, destinationString);
+
   return (jint)exitcode;
 }
 

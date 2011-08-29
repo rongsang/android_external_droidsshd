@@ -6,19 +6,19 @@ LOCAL_MODULE := libNativeSSHd
 LOCAL_MODULE_TAGS := eng
 
 LOCAL_SHARED_LIBRARIES := libc
-#LOCAL_SHARED_LIBRARIES += libcutils
+LOCAL_SHARED_LIBRARIES += libcutils
 
 #LOCAL_LDLIBS += -llog
 
 # No static libraries.
 LOCAL_STATIC_LIBRARIES :=
 
+LOCAL_C_INCLUDES := $(ANDROID_BUILD_TOP)/system/core/include
+
 # Also need the JNI headers.
 LOCAL_C_INCLUDES += $(JNI_H_INCLUDE)
 
-LOCAL_C_INCLUDES += $(ANDROID_BUILD_TOP)/system/core/include
-
-LOCAL_SRC_FILES := libNativeSSHd.c
+LOCAL_SRC_FILES := NativeSSHd.c
 
 # Don't prelink this library.  For more efficient code, you may want
 # to add this library to the prelink map and set this to true. However,

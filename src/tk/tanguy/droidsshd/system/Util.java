@@ -187,7 +187,7 @@ public class Util {
 	}
 	
 	public static int chmod(String path, int mode){
-		int out = NativeTask.chmod(path, mode);
+		int out = NativeSSHd.chmod(path, mode);
 		if(Base.debug) {
 			Log.d(TAG, "chmod " + mode + " " + path + " returned " + out);
 		}
@@ -227,7 +227,7 @@ public class Util {
 	}
 		
 	public static int symlink(String orig, String dest){
-		int out = NativeTask.symlink(orig, dest);
+		int out = NativeSSHd.symlink(orig, dest);
 		if(Base.debug) {
 			Log.d(TAG, "symlink " + orig + " to " + dest + " returned " + out);
 		}
