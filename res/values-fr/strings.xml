@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
-    <string name="activity_initial_setup">tk.tanguy.activity.InitialSetup</string>
-    <string name="activity_auth_keys_management">tk.tanguy.activity.AuthorizedKeysManagement</string>
-    <string name="activity_file_chooser">com.h3r3t1c.filechooser.FileChooser</string>
-    <string name="activity_about">tk.tanguy.activity.About</string>
     <string name="act_main_status">Etat du service:</string>
     <string name="act_main_ip">Adresse(s) IP: </string>
     <string name="act_main_defip">0.0.0.0</string>

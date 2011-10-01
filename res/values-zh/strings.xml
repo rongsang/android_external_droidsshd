@@ -1,22 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
-    <string name="activity_initial_setup">tk.tanguy.activity.InitialSetup</string>
-    <string name="activity_auth_keys_management">tk.tanguy.activity.AuthorizedKeysManagement</string>
-    <string name="activity_file_chooser">com.h3r3t1c.filechooser.FileChooser</string>
-    <string name="activity_about">tk.tanguy.activity.About</string>
-    <string name="pref_dropbear_auth_password_key">auth_password</string>
-    <string name="pref_dropbear_auth_username_key">auth_username</string>
-    <string name="pref_dropbear_port_key">dropbear_port</string>
-    <string name="pref_wifi_auto_enable_key">wifi_auto_enable</string>
-    <string name="pref_wifi_lock_key">wifi_lock</string>
-    <string name="pref_prevent_device_sleep_key">prevent_device_sleep</string>
-    <string name="pref_path_to_su_key">path_to_su</string>
-    <string name="pref_path_to_sh_key">path_to_sh</string>
-    <string name="pref_interface_notification_key">notification</string>
-    <string name="pref_dropbear_start_on_boot_only_if_was_running_key">only_if_was_running</string>
-    <string name="pref_dropbear_start_on_boot_key">start_on_boot</string>
-    <string name="pref_debug_key">debug</string>
-    <string name="pref_dropbear_as_root_key">dropbear_runs_as_root</string>
     <string name="act_main_status">状态:</string>
     <string name="act_main_ip">IP地址: </string>
     <string name="act_main_defip">0.0.0.0</string>
@@ -82,21 +65,6 @@
     <string name="pref_dropbear_as_root_summary_disabled">服务将以USER权限启动</string>
     <string name="pref_droidsshd_settings_title">设置</string>
     <string name="app_description">Dropbear SSH服务端与管理工具</string>
-    <string name="app_label">DroidSSHd</string>
-    <string name="app_webpage_url">http://github.com/tpruvot/android_external_droidsshd/</string>
-    <string name="ssh_icon_downwloaded_url">http://iconfinder.net</string>
-    <string name="ssh_icon_created_by">Tanguy Pruvot</string>
-    <string name="ssh_icon_created_by_url">http://tanguy.tk/</string>
-    <string name="app_based_on">rsyncdroid</string>
-    <string name="app_based_on_webpage_url">http://code.google.com/p/droidsshd/</string>
-    <string name="pref_dropbear_auth_username_default">android</string>
-    <string name="pref_dropbear_auth_password_default">password</string>
-    <string name="pref_debug_default">true</string>
-    <string name="pref_interface_notification_default">true</string>
-    <string name="pref_dropbear_start_on_boot_default">false</string>
-    <string name="pref_dropbear_start_on_boot_only_if_was_running_default">true</string>
-    <string name="pref_dropbear_as_root_default">false</string>
-    <string name="pref_dropbear_port_default">2222</string>
     <string name="act_main_busy">...</string>
     <string name="act_main_stopping">Stopping...</string>
     <string name="act_main_starting">Starting...</string>

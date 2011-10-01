@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
-    <string name="activity_initial_setup">tk.tanguy.activity.InitialSetup</string>
-    <string name="activity_auth_keys_management">tk.tanguy.activity.AuthorizedKeysManagement</string>
-    <string name="activity_file_chooser">com.h3r3t1c.filechooser.FileChooser</string>
-    <string name="activity_about">tk.tanguy.activity.About</string>
-    <string name="pref_dropbear_auth_password_key">auth_password</string>
-    <string name="pref_dropbear_auth_username_key">auth_username</string>
-    <string name="pref_dropbear_port_key">dropbear_port</string>
-    <string name="pref_wifi_auto_enable_key">wifi_auto_enable</string>
-    <string name="pref_wifi_lock_key">wifi_lock</string>
-    <string name="pref_prevent_device_sleep_key">prevent_device_sleep</string>
-    <string name="pref_path_to_su_key">path_to_su</string>
-    <string name="pref_path_to_sh_key">path_to_sh</string>
-    <string name="pref_interface_notification_key">notification</string>
-    <string name="pref_dropbear_start_on_boot_only_if_was_running_key">only_if_was_running</string>
-    <string name="pref_dropbear_start_on_boot_key">start_on_boot</string>
-    <string name="pref_debug_key">debug</string>
-    <string name="pref_dropbear_as_root_key">dropbear_runs_as_root</string>
+    <string name="activity_initial_setup" translatable="false">tk.tanguy.activity.InitialSetup</string>
+    <string name="activity_auth_keys_management" translatable="false">tk.tanguy.activity.AuthorizedKeysManagement</string>
+    <string name="activity_file_chooser" translatable="false">com.h3r3t1c.filechooser.FileChooser</string>
+    <string name="activity_about" translatable="false">tk.tanguy.activity.About</string>
+    <string name="pref_dropbear_auth_password_key" translatable="false">auth_password</string>
+    <string name="pref_dropbear_auth_username_key" translatable="false">auth_username</string>
+    <string name="pref_dropbear_port_key" translatable="false">dropbear_port</string>
+    <string name="pref_wifi_auto_enable_key" translatable="false">wifi_auto_enable</string>
+    <string name="pref_wifi_lock_key" translatable="false">wifi_lock</string>
+    <string name="pref_prevent_device_sleep_key" translatable="false">prevent_device_sleep</string>
+    <string name="pref_path_to_su_key" translatable="false">path_to_su</string>
+    <string name="pref_path_to_sh_key" translatable="false">path_to_sh</string>
+    <string name="pref_interface_notification_key" translatable="false">notification</string>
+    <string name="pref_dropbear_start_on_boot_only_if_was_running_key" translatable="false">only_if_was_running</string>
+    <string name="pref_dropbear_start_on_boot_key" translatable="false">start_on_boot</string>
+    <string name="pref_debug_key" translatable="false">debug</string>
+    <string name="pref_dropbear_as_root_key" translatable="false">dropbear_runs_as_root</string>
     <string name="act_main_status">Status:</string>
     <string name="act_main_unknown"> </string>
     <string name="act_main_ip">IP address(es): </string>
@@ -84,25 +84,26 @@
     <string name="pref_dropbear_as_root_summary_disabled">Daemon will be launched as USER</string>
     <string name="pref_droidsshd_settings_title">Settings</string>
     <string name="app_description">Dropbear SSH Server and Management Tools</string>
-    <string name="app_label">DroidSSHd</string>
-    <string name="app_webpage_url">http://github.com/tpruvot/android_external_droidsshd/</string>
-    <string name="ssh_icon_downwloaded_url">http://iconfinder.net</string>
-    <string name="ssh_icon_created_by">Tanguy Pruvot</string>
-    <string name="ssh_icon_created_by_url">http://tanguy.tk/</string>
-    <string name="app_based_on">rsyncdroid</string>
-    <string name="app_based_on_webpage_url">http://code.google.com/p/droidsshd/</string>
-    <string name="pref_dropbear_auth_username_default">android</string>
-    <string name="pref_dropbear_auth_password_default">password</string>
-    <string name="pref_debug_default">true</string>
-    <string name="pref_interface_notification_default">true</string>
-    <string name="pref_dropbear_start_on_boot_default">false</string>
-    <string name="pref_dropbear_start_on_boot_only_if_was_running_default">true</string>
-    <string name="pref_dropbear_as_root_default">false</string>
-    <string name="pref_dropbear_port_default">2222</string>
     <string name="act_main_stopping">Stopping...</string>
     <string name="act_main_starting">Starting...</string>
     <string name="act_main_stop">Stop</string>
     <string name="act_main_running">Running</string>
     <string name="act_main_busy">please wait...</string>
     <string name="act_main_stopped">Stopped</string>
+
+    <string name="app_label" translatable="false">DroidSSHd</string>
+    <string name="app_webpage_url" translatable="false">http://github.com/tpruvot/android_external_droidsshd/</string>
+    <string name="ssh_icon_downwloaded_url" translatable="false">http://iconfinder.net</string>
+    <string name="ssh_icon_created_by" translatable="false">Tanguy Pruvot</string>
+    <string name="ssh_icon_created_by_url" translatable="false">http://tanguy.tk/</string>
+    <string name="app_based_on" translatable="false">rsyncdroid</string>
+    <string name="app_based_on_webpage_url" translatable="false">http://code.google.com/p/droidsshd/</string>
+    <string name="pref_dropbear_auth_username_default" translatable="false">shell</string>
+    <string name="pref_dropbear_auth_password_default" translatable="false">password</string>
+    <string name="pref_debug_default" translatable="false">true</string>
+    <string name="pref_interface_notification_default" translatable="false">true</string>
+    <string name="pref_dropbear_start_on_boot_default" translatable="false">false</string>
+    <string name="pref_dropbear_start_on_boot_only_if_was_running_default" translatable="false">true</string>
+    <string name="pref_dropbear_as_root_default" translatable="false">false</string>
+    <string name="pref_dropbear_port_default" translatable="false">2222</string>
 </resources>

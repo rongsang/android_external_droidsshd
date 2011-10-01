@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources>
-    <string name="activity_initial_setup">tk.tanguy.activity.InitialSetup</string>
-    <string name="activity_auth_keys_management">tk.tanguy.activity.AuthorizedKeysManagement</string>
-    <string name="activity_file_chooser">com.h3r3t1c.filechooser.FileChooser</string>
-    <string name="activity_about">tk.tanguy.activity.About</string>
     <string name="act_main_status">Status:</string>
     <string name="act_main_ip">Endereço(os) IP: </string>
     <string name="act_main_defip">0.0.0.0</string>
@@ -65,21 +61,6 @@
     <string name="pref_dropbear_as_root_summary_disabled">O serviço será executado como USUÁRIO</string>
     <string name="pref_droidsshd_settings_title">Configurações</string>
     <string name="app_description">Dropbear SSH Servidor e Ferramentas de Gerenciamento</string>
-    <string name="app_label">DroidSSHd</string>
-    <string name="app_webpage_url">http://github.com/tpruvot/android_external_droidsshd/</string>
-    <string name="ssh_icon_downwloaded_url">http://iconfinder.net</string>
-    <string name="ssh_icon_created_by">Tanguy Pruvot</string>
-    <string name="ssh_icon_created_by_url">http://tanguy.tk/</string>
-    <string name="app_based_on">rsyncdroid</string>
-    <string name="app_based_on_webpage_url">http://code.google.com/p/droidsshd/</string>
-    <string name="pref_dropbear_auth_username_default">android</string>
-    <string name="pref_dropbear_auth_password_default">password</string>
-    <string name="pref_debug_default">true</string>
-    <string name="pref_interface_notification_default">true</string>
-    <string name="pref_dropbear_start_on_boot_default">false</string>
-    <string name="pref_dropbear_start_on_boot_only_if_was_running_default">true</string>
-    <string name="pref_dropbear_as_root_default">false</string>
-    <string name="pref_dropbear_port_default">2222</string>
     <string name="act_main_busy">...</string>
     <string name="act_main_stopped">Stopped</string>
     <string name="act_main_stopping">Stopping...</string>

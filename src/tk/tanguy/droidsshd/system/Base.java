@@ -69,7 +69,7 @@ public class Base {
 	protected static boolean wifiLock;
 
 	protected static Context context = null;
-	protected static String username = "android";
+	protected static String username = "shell";
 	protected static String password = "password";
 //	protected static File homeDir = null;
 
@@ -283,11 +283,11 @@ public class Base {
 			runDaemonAsRoot = sp.getBoolean(context.getString(R.string.pref_dropbear_as_root_key),false);
 			pathToSuBinary = sp.getString(context.getString(R.string.pref_path_to_su_key), "/system/xbin/su");
 			pathToShBinary = sp.getString(context.getString(R.string.pref_path_to_sh_key), "/system/bin/sh");
-//			username = sp.getString(context.getString(R.string.pref_dropbear_auth_username_key), "android");
+//			username = sp.getString(context.getString(R.string.pref_dropbear_auth_username_key), "shell");
 			if(runDaemonAsRoot) {
 				username="root";
 			} else {
-				username="android";
+				username="shell";
 			}
 			wakeLock = sp.getBoolean(context.getString(R.string.pref_prevent_device_sleep_key), false);
 			wifiLock = sp.getBoolean(context.getString(R.string.pref_wifi_lock_key), false);
