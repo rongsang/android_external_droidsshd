@@ -27,7 +27,7 @@
     <string name="pref_dropbear_auth_pkey_desc">Vous pouvez utiliser une clé publique présente sur la carte SD</string>
     <string name="pref_category_sshd_title">Paramètres Dropbear SSHd</string>
     <string name="pref_screen_server_settings_title">Service et Authentification</string>
-    <string name="pref_screen_server_settings_summary">Service, port, permissions et authentification.</string>
+    <string name="pref_screen_server_settings_summary">Port, mot de passe et/ou clé publique.</string>
     <string name="pref_dropbear_port_title">Port TCP à utiliser</string>
     <string name="pref_dropbear_port_summary">Ecoute sur le port</string>
     <string name="pref_wifi_auto_enable_summary">Activer le Wifi lors du démarrage du service s\'il est désactivé</string>
@@ -44,10 +44,10 @@
     <string name="pref_path_to_sh_summary">Chemin du shell personnalisé comme ash, bash ou toolbox</string>
     <string name="pref_path_to_sh_default">/system/xbin/ash</string>
     <string name="pref_screen_system_settings_title">Paramètres Système</string>
-    <string name="pref_screen_system_settings_summary">Wifi, root, chemins des exécutables</string>
+    <string name="pref_screen_system_settings_summary">Wifi, mode root, chemin du shell</string>
     <string name="pref_screen_ui_settings">Préférences Interface</string>
     <string name="pref_category_paths_title">Fichiers et Répertoires</string>
-    <string name="pref_interface_notification_summary">Affiche l\icone de notification lorsque le service est actif</string>
+    <string name="pref_interface_notification_summary">Affiche une icône de notification lorsque le service est actif</string>
     <string name="pref_interface_notification_label">Notification</string>
     <string name="pref_path_to_sh_title">Location de SH</string>
     <string name="pref_category_interface_title">Interface Utilisateur</string>
