@@ -16,6 +16,8 @@ LOCAL_JAVACFLAGS += -Xlint:unchecked
 LOCAL_JNI_SHARED_LIBRARIES := libNativeSSHd
 LOCAL_REQUIRED_MODULES := libNativeSSHd
 
+LOCAL_REQUIRED_MODULES += dropbear dropbearkey sftp-server scp ssh
+
 include $(BUILD_PACKAGE)
 
 # Use the folloing include to make our test apk.
