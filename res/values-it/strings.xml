@@ -19,7 +19,7 @@
     <string name="setup_confirmyes">Si, facciamolo!</string>
     <string name="setup_cancelno">No, esci da DroidSSHd.</string>
     <string name="table_runningasroot">In esecuzione come amministratore:</string>
-    <string name="about_text">Versione iniziale di mestre,\n\nAdattata per Motorola Defy CM7\nda Tanguy Pruvot\n\nQuesta versione usa la versione dropbear di Cyanogen, non inclusa nell\'apk.\n\nLa sorgente completa è disponibile su github: tpruvot\'s fork\n\nTranslation by Alberto Marchetti</string>
+    <string name="about_text">Versione iniziale di mestre,\n\nAdattata per Motorola Defy ICS\nda Tanguy Pruvot\n\nQuesta versione usa la versione dropbear di Cyanogen, non inclusa nell\'apk.\n\nLa sorgente completa è disponibile su github: tpruvot\'s fork\n\nTranslation by Alberto Marchetti</string>
     <string name="about_ok">Ok</string>
     <string name="pref_dropbear_auth_password_title">Password</string>
     <string name="pref_dropbear_auth_username_title">Nome utente</string>

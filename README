@@ -1,6 +1,9 @@
-Tool to configure and manage a Dropbear SSH daemon on Android (AOSP) Cyanogen devices: secure, remote access to your device via network.
+Tool to configure and manage a Dropbear SSH daemon on Android (AOSP) CyanogenMod devices: secure, remote access to your device via network.
 
 This version doesn't include dropbear daemon.
+
+Requires several binary tools from dropbear repository : dropbear, dropbearkey, sftp-server, scp
+
 
 Based on the common app DroidSSHd by mestre :
 http://code.google.com/p/droidsshd/
