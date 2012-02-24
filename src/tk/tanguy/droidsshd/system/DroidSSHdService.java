@@ -96,6 +96,12 @@ public class DroidSSHdService extends Service{
 	}
 	
 	private void handleStart(Intent intent, int flags, int startId) {
+		String data = intent.getDataString();
+		if ( data != null && data.contentEquals("stop") ) {
+			handleStop();
+			return;
+		}
+
 		setUpPidFileWatchdog(Base.getDropbearTmpDirPath());
 		if (serviceHandler!=null) {
 			serviceHandler.post(new updateDaemonStatus());
@@ -116,6 +122,28 @@ public class DroidSSHdService extends Service{
 	}
 	
 	private void handleStop() {
+		if ((Base.getDropbearDaemonStatus()==Base.DAEMON_STATUS_STARTED) ||
+				Base.getDropbearDaemonStatus()==Base.DAEMON_STATUS_STARTING) {
+			if (Base.debug) {
+				Log.d(TAG, "handleStop called, stopping dropbear daemon");
+			}
+			Base.setDropbearDaemonStatus(Base.DAEMON_STATUS_STOPPING);
+			int pid = Util.getDropbearPidFromPidFile(Base.getDropbearPidFilePath());
+			if(Base.debug) {
+				Log.d(TAG, "stopDropbear() killing pid " + pid);
+				Log.d(TAG, "dropbearDaemonStatus = Base.DAEMON_STATUS_STOPPING");
+			}
+			String cmd = "kill -2 " + pid;
+			//Util.doRun(cmd, Base.runDaemonAsRoot(), mLogviewHandler);
+			Util.doRun(cmd, Base.runDaemonAsRoot(), null);
+			Util.releaseWakeLock();
+			Util.releaseWifiLock();
+			hideNotification();
+		} else {
+			if (Base.debug) {
+				Log.d(TAG, "handleStop called, but dropbear is not running");
+			}
+		}
 		if (mPidWatchdog!=null) {
 			mPidWatchdog.stopWatching();
 			mPidWatchdog = null;
@@ -126,6 +154,7 @@ public class DroidSSHdService extends Service{
 
 	@Override
 	public void onDestroy() {
+		Log.d(TAG, "onDestroy called");
 		handleStop();
 		super.onDestroy();
 	}
