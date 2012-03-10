@@ -3,7 +3,7 @@ ifeq ($(LOCAL_JNI_SHARED_LIBRARIES),libNativeSSHd)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := libNativeSSHd
-LOCAL_MODULE_TAGS := eng
+LOCAL_MODULE_TAGS := optional
 
 LOCAL_SHARED_LIBRARIES := libc
 LOCAL_SHARED_LIBRARIES += libcutils
