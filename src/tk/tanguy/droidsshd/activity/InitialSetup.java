@@ -262,28 +262,33 @@ public class InitialSetup extends Activity {
 	public boolean generateHostKey(String which) {
 		String path = "";
 		String type = "none";
+		int keylen = 0;
 		if (which == Base.DROPBEAR_DSS_HOST_KEY) {
 			type = "dss";
+			keylen = 1024;
 			path = Base.getDropbearDssHostKeyFilePath();
 		}
 		if (which == Base.DROPBEAR_RSA_HOST_KEY) {
 			type = "rsa";
+			keylen = 1024;
 			path = Base.getDropbearRsaHostKeyFilePath();
 		}
 		if (type == "none") {
-			Log.e(TAG,
-					"generateHostKey has been asked to create an unknown type of key: " + which);
+			Log.e(TAG, "generateHostKey has been asked to create an unknown type of key: " + which);
 			return false;
 		}
 		String cmd = Base.getDropbearBinDirPath() + "/" + Base.DROPBEAR_BIN_KEY
 				+ " -t " + type + " -f " + path;
+
+		if (keylen > 0)
+			cmd = cmd + " -s " + keylen;
+
 		if (Base.debug) {
 			Log.v(TAG, "generateHostKey('" + which + "'), keyType = " + type);
 			Log.v(TAG, "cmd = '" + cmd + "'");
 		}
-		ShellSession p = new ShellSession(TAG + "-shell", cmd, false,
-				Base.debug);
-		
+
+		ShellSession p = new ShellSession(TAG + "-shell", cmd, false, Base.debug);
 		try {
 			p.start();
 			p.join();
@@ -291,8 +296,8 @@ public class InitialSetup extends Activity {
 		} catch (InterruptedException e) {
 //			TODO - do we really care? :-)
 //			TODO - I mean: host keys are 'checked' in lots of places already :-)
-// 			TODO - yeah, yeah - it's highly unlikely... so probably WONTFIX
-//			e.printStackTrace();
+//			TODO - yeah, yeah - it's highly unlikely... so probably WONTFIX
+			e.printStackTrace();
 		}
 		return true;
 	}
