@@ -1,13 +1,18 @@
-Tool to configure and manage a Dropbear SSH daemon on Android (AOSP) CyanogenMod devices: secure, remote access to your device via network.
+This is DroidSSHd.
+A tool to install, configure and manage a Dropbear SSH daemon on Android devices: secure, remote access to your device via network.
 
-This version doesn't include dropbear daemon.
+This variant is for Android (AOSP) CyanogenMod devices and doesn't include dropbear daemon.
 
 Requires several binary tools from dropbear repository : dropbear, dropbearkey, sftp-server, scp
 
+Note : These tools are included in CM7 roms but not in CM9 by default.
 
-Based on the common app DroidSSHd by mestre :
+To include this tool in your AOSP roms,
+just edit the .repo/manifest.xml and add this project.
+
+Based on the common app DroidSSHd by Augusto Bott (mestre) <augusto@bott.com.br> :
 http://code.google.com/p/droidsshd/
-
+https://github.com/mestre/droidsshd
 
 Translated by XDA Defy Team in these languages :
  - French
@@ -17,4 +22,12 @@ Translated by XDA Defy Team in these languages :
  - Italian
  - Brazil
  - Chinese (simplified)
+
+
+DroidSSHd is open source software: you can redistribute it and/or modify
+it under the terms of the Apache License 2.0
+
+DroidSSHd is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
