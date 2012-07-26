@@ -19,7 +19,7 @@
     <string name="setup_confirmyes">Sim, faça isso agora!</string>
     <string name="setup_cancelno">Não, sair do DroidSSHd.</string>
     <string name="table_runningasroot">Executando como root:</string>
-    <string name="about_text">Versão inicial por mestre,\n\nAdaptado para o ICS do Motorola Defy\nAdapted for Motorola Defy\npor Tanguy Pruvot\nTraduzido para o Português Brasileiro por Dedraks\n\nEsta versão usa a versão do dropbear da Cyanogen, não incluída no apk.\n\nO código fonte está disponível no github: for do tpruvot\n\n</string>
+    <string name="about_text">Versão inicial por mestre,\n\nAdaptado para o do Motorola Defy\nAdapted for Motorola Defy\npor Tanguy Pruvot\nTraduzido para o Português Brasileiro por Dedraks\n\nEsta versão usa a versão do dropbear da Cyanogen, não incluída no apk.\n\nO código fonte está disponível no github: for do tpruvot\n\n</string>
     <string name="about_ok">Ok</string>
     <string name="pref_dropbear_auth_password_title">Senha</string>
     <string name="pref_dropbear_auth_username_title">Usuário</string>

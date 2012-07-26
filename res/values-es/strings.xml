@@ -19,7 +19,7 @@
     <string name="setup_confirmyes">Si, Hagamoslo ahora!</string>
     <string name="setup_cancelno">No, salir de DroidSSHd.</string>
     <string name="table_runningasroot">Funcionando como root:</string>
-    <string name="about_text">Versión inicial por mestre,\n\nAdaptada para Motorola Defy ICS\npor Tanguy Pruvot\n\nEsta versión usa la versión de CyanogenMod 7.1+ dropbear, no incluida en el apk.\n\nTodas las fuentes están en github: tpruvot\'s fork\n\nTranslation by cocolopes from XDA</string>
+    <string name="about_text">Versión inicial por mestre,\n\nAdaptada para Motorola Defy\npor Tanguy Pruvot\n\nEsta versión usa la versión de CyanogenMod 7.1+ dropbear, no incluida en el apk.\n\nTodas las fuentes están en github: tpruvot\'s fork\n\nTranslation by cocolopes from XDA</string>
     <string name="about_ok">Ok</string>
     <string name="pref_dropbear_auth_password_title">Contraseña</string>
     <string name="pref_dropbear_auth_username_title">Usuario</string>
