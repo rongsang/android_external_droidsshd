@@ -19,7 +19,7 @@
     <string name="setup_confirmyes">Erstmalige Installation durchführen</string>
     <string name="setup_cancelno">DroidSSHd beenden, nicht installieren</string>
     <string name="table_runningasroot">Als root ausführen:</string>
-    <string name="about_text">Ursprüngliche Version von mestre,\n\nAdaptiert für Defy / CM9\nvom großen Tanguy Pruvot\n\nDiese Version benutzt CyanogenMod dropbear, der nicht im apk enthalten ist.\n\nDen Quelltext könnt ihr auf github einsehen: tpruvot\'s fork\n\nÜbersetzung von AkkiandDefy from XDA\nWeitere Übersetzung von Patrick Schaaf</string>
+    <string name="about_text">Ursprüngliche Version von mestre,\n\nAngepasst für Motorola Defy ROMs\nvon Tanguy Pruvot\n\nDiese Version verwendet CyanogenMod 7.1+ dropbear, welches nicht im apk enthalten ist.\n\nDer Quelltext ist auf github verfügbar: tpruvot\'s fork\n\nÜbersetzung von AkkiandDefy (XDA) \ Patrick Schaaf \ G00fY2 (XDA)</string>
     <string name="about_ok">Ok</string>
     <string name="pref_dropbear_auth_password_title">Passwort</string>
     <string name="pref_dropbear_auth_username_title">Benutzername</string>
